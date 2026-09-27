@@ -1,0 +1,5 @@
+--flash-mode dio --flash-freq 80m --flash-size 4MB
+0x1000 Spectro18_V_Flu.ino.bootloader.bin
+0x8000 Spectro18_V_Flu.ino.partitions.bin
+0xe000 boot_app0.bin
+0x10000 Spectro18_V_Flu.ino.bin
