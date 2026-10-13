@@ -4,9 +4,13 @@
 #include <Preferences.h>
 #include <math.h>
 #include "SparkFun_AS7265X.h"
+#include "SpectrumStats.h"
 
 constexpr uint8_t LED_PIN = 4;
 constexpr uint8_t SAMPLE_COUNT = 10;
+constexpr uint8_t CHANNEL_COUNT = 18;
+const uint16_t wavelengths[CHANNEL_COUNT] = {410,435,460,485,510,535,560,585,610,645,680,705,730,760,810,860,900,940};
+SpectrumStats spectrum[CHANNEL_COUNT];
 constexpr uint8_t READINGS_BEFORE_COOLDOWN = 3;
 constexpr unsigned long LED_WARMUP_MS = 10000;
 constexpr unsigned long LED_COOLDOWN_MS = 60000;
@@ -72,9 +76,13 @@ summary{cursor:pointer;font-weight:700;color:#a7ffb8}details[open] summary{margi
 <section class="card"><div>435 nm</div><div id="avg435" class="value">--</div></section>
 <section class="card"><div>645 nm</div><div id="avg645" class="value">--</div></section></div>
 <section class="card" style="margin-top:16px"><div>Chlorophyll A · Chl(A)</div><div id="chlorophyll" class="value">--</div></section>
+<details class="card" style="margin-top:16px"><summary>18-channel spectrum · mean ± SD</summary>
+<p class="muted">Each point is the mean of 10 readings. Error bars show the standard deviation calculated from those 10 readings.</p>
+<svg id="spectrumChart" viewBox="0 0 700 360" style="width:100%;height:auto" role="img" aria-label="Spectrum with mean intensity and standard deviation error bars"></svg>
+<table><thead><tr><th>Wavelength (nm)</th><th>Mean intensity</th><th>SD (n = 10)</th></tr></thead><tbody id="spectrumRows"></tbody></table></details>
 <section class="card" style="margin-top:16px"><h2>Save measurement</h2>
 <label>File name <input id="filename" value="fluorometer-measurement" maxlength="80"></label>
-<button id="save" onclick="saveExcel()" disabled>Save Excel</button></section>
+<button id="save" onclick="saveExcel()" disabled>Save Excel + spectrum CSV</button><p class="muted">Downloads two files. Allow multiple downloads in your browser if prompted.</p></section>
 <section class="card" style="margin-top:16px"><h2>Firmware update</h2>
 <form id="updateForm" onsubmit="uploadFirmware(event)">
 <label>Firmware .bin <input type="file" name="firmware" accept=".bin" required></label> <button type="submit">Install .bin</button>
@@ -85,6 +93,7 @@ let latest=null,whiteDownloadPending=false,lastWhiteRevision=0;
 const rows=document.querySelector('#rows');rows.innerHTML=Array.from({length:10},()=>'<tr><td>--</td><td>--</td></tr>').join('');
 async function refresh(){try{const r=await fetch('/api/data');const d=await r.json();
 latest=d;
+renderSpectrum(d.spectrum);
 document.querySelector('#build').textContent=d.build;
 rows.querySelectorAll('tr').forEach((row,i)=>{row.cells[0].textContent=d.nm435[i]==null?'--':d.nm435[i].toFixed(6);row.cells[1].textContent=d.nm645[i]==null?'--':d.nm645[i].toFixed(6);});
 document.querySelector('#avg435').textContent=d.avg435==null?'--':d.avg435.toFixed(6);document.querySelector('#avg645').textContent=d.avg645==null?'--':d.avg645.toFixed(6);
@@ -98,8 +107,20 @@ const start=document.querySelector('#start');start.textContent=d.state==='cooldo
 async function command(path){const r=await fetch(path,{method:'POST'});if(!r.ok)document.querySelector('#status').textContent=await r.text();refresh();return r.ok;}
 function toggleLight(){command(document.querySelector('#start').textContent==='Stop'?'/api/stop':'/api/start');}async function measureWhite(){whiteDownloadPending=await command('/api/white');}function measure(){command('/api/measure');}
 function setCooling(){command('/api/cooling?enabled='+(document.querySelector('#cooling').checked?'1':'0'));}
+function renderSpectrum(data){
+document.querySelector('#spectrumRows').innerHTML=data.map(p=>'<tr><td>'+p[0]+'</td><td>'+(p[1]==null?'--':p[1].toFixed(6))+'</td><td>'+(p[2]==null?'--':p[2].toFixed(6))+'</td></tr>').join('');
+const chart=document.querySelector('#spectrumChart');if(!data.length||data.some(p=>p[1]==null)){chart.innerHTML='<text x="70" y="160" fill="#a7b8ab">Take a measurement to display the spectrum.</text>';return;}
+const lo=Math.min(0,...data.map(p=>p[1]-p[2])),hi=Math.max(...data.map(p=>p[1]+p[2])),range=hi-lo||1;
+const x=nm=>75+(nm-410)*600/530,y=v=>300-(v-lo)*260/range;
+let svg='<g font-family="system-ui" font-size="12" fill="#a7b8ab"><text x="75" y="18">Calibrated intensity</text><text x="330" y="352">Wavelength (nm)</text>';
+for(let i=0;i<=4;i++){const v=lo+range*i/4,py=y(v);svg+='<path d="M75 '+py+' H675" stroke="#285238"/><text x="2" y="'+(py+4)+'">'+v.toPrecision(3)+'</text>';}
+for(const nm of [410,510,610,710,810,940])svg+='<text x="'+(x(nm)-12)+'" y="325">'+nm+'</text>';
+svg+='<polyline fill="none" stroke="#76ff93" stroke-width="2" points="'+data.map(p=>x(p[0])+','+y(p[1])).join(' ')+'"/>';
+for(const [nm,mean,sd] of data){const px=x(nm),top=y(mean+sd),bottom=y(mean-sd);svg+='<g><title>'+nm+' nm: '+mean.toFixed(6)+' ± '+sd.toFixed(6)+'</title><path d="M'+px+' '+top+' V'+bottom+' M'+(px-4)+' '+top+' H'+(px+4)+' M'+(px-4)+' '+bottom+' H'+(px+4)+'" stroke="#ffd479" stroke-width="2"/><circle cx="'+px+'" cy="'+y(mean)+'" r="3" fill="#76ff93"/></g>';}
+chart.innerHTML=svg+'</g>';}
+function saveSpectrumCsv(){const csv='wavelength_nm,mean_intensity,standard_deviation,n\n'+latest.spectrum.map(p=>p.join(',')+',10').join('\n')+'\n',url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'})),a=document.createElement('a');const name=document.querySelector('#filename').value.trim().replace(/[\\/:*?"<>|]/g,'_')||'fluorometer-measurement';a.href=url;a.download=name+'-spectrum.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 async function downloadWhite(){const r=await fetch('/white.csv',{cache:'no-store'}),url=URL.createObjectURL(await r.blob()),a=document.createElement('a'),stamp=new Date().toISOString().slice(0,19).replace(/[:T]/g,'-');a.href=url;a.download='white-reference-'+stamp+'.csv';a.click();URL.revokeObjectURL(url);}
-function saveExcel(){if(!latest||latest.avg435==null)return;const cell=(v,t='Number')=>'<Cell><Data ss:Type="'+t+'">'+v+'</Data></Cell>';
+function saveExcel(){if(!latest||latest.avg435==null)return;saveSpectrumCsv();const cell=(v,t='Number')=>'<Cell><Data ss:Type="'+t+'">'+v+'</Data></Cell>';
 const data=latest.nm435.map((v,i)=>'<Row>'+cell(v)+cell(latest.nm645[i])+'</Row>').join('');
 const chl=latest.chlorophyll==null?cell('Not available','String'):cell(latest.chlorophyll);const xml='<?xml version="1.0"?><Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"><Worksheet ss:Name="Measurement"><Table><Row>'+cell('435 nm','String')+cell('645 nm','String')+'</Row>'+data+'<Row>'+cell('Average 435 nm','String')+cell('Average 645 nm','String')+'</Row><Row>'+cell(latest.avg435)+cell(latest.avg645)+'</Row><Row>'+cell('Chlorophyll A','String')+chl+'</Row></Table></Worksheet></Workbook>';
 const url=URL.createObjectURL(new Blob([xml],{type:'application/vnd.ms-excel'}));const a=document.createElement('a');const name=document.querySelector('#filename').value.trim().replace(/[\\/:*?"<>|]/g,'_')||'fluorometer-measurement';a.href=url;a.download=name+'.xls';a.click();URL.revokeObjectURL(url);}
@@ -123,7 +144,7 @@ void sendData() {
   const unsigned long remaining = duration && elapsed < duration ? (duration - elapsed + 999) / 1000 : 0;
   const uint8_t visibleSamples = hasMeasurement ? SAMPLE_COUNT : measurementState == READING && !measuringWhite ? samplesTaken : 0;
   String json;
-  json.reserve(700);
+  json.reserve(2000);
   json = "{\"sensor\":" + String(sensorOnline ? "true" : "false") + ",\"state\":\"" + state +
          "\",\"mode\":\"" + (measuringWhite ? "white" : "sample") + "\",\"remaining\":" + remaining +
          ",\"count\":" + samplesTaken + ",\"readings\":" + readingsSinceCooldown + ",\"coolingEnabled\":" + String(coolingEnabled ? "true" : "false") + ",\"whiteRevision\":" + whiteRevision + ",\"whiteSaved\":" + String(whiteSaved ? "true" : "false") +
@@ -141,6 +162,12 @@ void sendData() {
   json += "],\"avg435\":" + String(hasMeasurement ? String(average435, 6) : "null") +
           ",\"avg645\":" + String(hasMeasurement ? String(average645, 6) : "null");
   json += ",\"chlorophyll\":" + String(hasMeasurement && average645 > 0 ? String(chlorophyllA, 3) : "null");
+  json += ",\"spectrum\":[";
+  for (uint8_t i = 0; i < CHANNEL_COUNT; i++) {
+    if (i) json += ',';
+    json += '[' + String(wavelengths[i]) + ',' + (hasMeasurement ? String(spectrum[i].mean, 6) : String("null")) + ',' + (hasMeasurement ? String(spectrum[i].sd(), 6) : String("null")) + ']';
+  }
+  json += ']';
   json += ",\"build\":\"" __DATE__ " " __TIME__ "\"}";
   server.sendHeader("Cache-Control", "no-store");
   server.send(200, "application/json", json);
@@ -200,6 +227,7 @@ void startReadings(bool white) {
   measuringWhite = white;
   if (!white) {
     hasMeasurement = false;
+    for (uint8_t i = 0; i < CHANNEL_COUNT; i++) spectrum[i] = SpectrumStats{};
     average435 = average645 = chlorophyllA = 0;
   }
   measurementState = READING;
@@ -314,12 +342,22 @@ void loop() {
   }
   if (measurementState == READING) {
     sensor.takeMeasurements();
-    const float value435 = sensor.getCalibratedB() * CALIBRATION_435;
-    const float value645 = sensor.getCalibratedI() * CALIBRATION_645;
+    // Wavelength order differs from the sensor's letter order (R=610, I=645).
+    const float values[CHANNEL_COUNT] = {
+      sensor.getCalibratedA(), sensor.getCalibratedB() * CALIBRATION_435,
+      sensor.getCalibratedC(), sensor.getCalibratedD(), sensor.getCalibratedE(), sensor.getCalibratedF(),
+      sensor.getCalibratedG(), sensor.getCalibratedH(), sensor.getCalibratedR(),
+      sensor.getCalibratedI() * CALIBRATION_645, sensor.getCalibratedS(), sensor.getCalibratedJ(),
+      sensor.getCalibratedT(), sensor.getCalibratedU(), sensor.getCalibratedV(), sensor.getCalibratedW(),
+      sensor.getCalibratedK(), sensor.getCalibratedL()
+    };
+    const float value435 = values[1];
+    const float value645 = values[9];
     if (measuringWhite) {
       lastWhiteReadings435[samplesTaken] = value435;
       lastWhiteReadings645[samplesTaken] = value645;
     } else {
+      for (uint8_t i = 0; i < CHANNEL_COUNT; i++) spectrum[i].add(values[i]);
       readings435[samplesTaken] = value435;
       readings645[samplesTaken] = value645;
     }

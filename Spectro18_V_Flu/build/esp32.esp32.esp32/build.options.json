@@ -1,9 +1,9 @@
 {
-  "additionalFiles": "",
+  "additionalFiles": "../..",
   "compiler.optimization_flags": "-Os",
   "customBuildProperties": "",
   "fqbn": "esp32:esp32:esp32",
-  "hardwareFolders": "/Users/alex/Library/Arduino15/packages/esp32/hardware/esp32/3.3.7,/Users/alex/Library/Arduino15/packages/esp32/hardware/esp32/3.3.7",
+  "hardwareFolders": "/Users/alex/Library/Arduino15/packages/esp32/hardware/esp32/3.3.12,/Users/alex/Library/Arduino15/packages/esp32/hardware/esp32/3.3.12",
   "otherLibrariesFolders": "/Users/alex/.arduino-user/libraries",
   "sketchLocation": "/Users/alex/Nube /repos/Fluorometer/Spectro18_V_Flu"
 }
