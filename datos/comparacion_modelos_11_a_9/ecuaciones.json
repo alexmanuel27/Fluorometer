@@ -1,0 +1,544 @@
+{
+  "calibration_n": 11,
+  "comparison_n": 9,
+  "blank645": {
+    "11": 1256.0,
+    "9": 1214.0
+  },
+  "source_sha256": {
+    "11": "47ea24812c3912aef8265ffa5647bca06c60a32d1f507f50d096b026b8513e58",
+    "9": "d2f13be46fa8b396155f44a8f9bc08c27b6d141eaa5950b29883d78062696000"
+  },
+  "models": {
+    "linear_460": {
+      "features": "I460",
+      "coefficients": [
+        5.634836311964684,
+        -0.0006438776243824136
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "log_460": {
+      "features": "ln(I460)",
+      "coefficients": [
+        34.888890258321,
+        -3.814899203667674
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "linear_485": {
+      "features": "I485",
+      "coefficients": [
+        3.1683243340955607,
+        -0.0016082058691166356
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "log_485": {
+      "features": "ln(I485)",
+      "coefficients": [
+        10.098191909190465,
+        -1.2500357715152903
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "linear_510": {
+      "features": "I510",
+      "coefficients": [
+        5.69722836148829,
+        -0.006985839319908341
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "log_510": {
+      "features": "ln(I510)",
+      "coefficients": [
+        26.338295306809773,
+        -3.8910458528175895
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "linear_535": {
+      "features": "I535",
+      "coefficients": [
+        5.548246016039528,
+        -0.011534183342983327
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "log_535": {
+      "features": "ln(I535)",
+      "coefficients": [
+        23.29819497946459,
+        -3.729514942600337
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "linear_560": {
+      "features": "I560",
+      "coefficients": [
+        5.118335299863002,
+        -0.003430681556762262
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "log_560": {
+      "features": "ln(I560)",
+      "coefficients": [
+        24.2594826656109,
+        -3.2790565639130738
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "linear_585": {
+      "features": "I585",
+      "coefficients": [
+        5.170361384588121,
+        -0.006971212308841374
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "log_585": {
+      "features": "ln(I585)",
+      "coefficients": [
+        22.36408454364196,
+        -3.3400617251690257
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "linear_610": {
+      "features": "I610",
+      "coefficients": [
+        5.2972865880594675,
+        -0.01427378722215727
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "log_610": {
+      "features": "ln(I610)",
+      "coefficients": [
+        20.77426995887184,
+        -3.463167358821072
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "linear_645": {
+      "features": "I645",
+      "coefficients": [
+        5.292703707333301,
+        -0.004701246670591567
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "log_645": {
+      "features": "ln(I645)",
+      "coefficients": [
+        24.629045946394292,
+        -3.46519495286695
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "linear_680": {
+      "features": "I680",
+      "coefficients": [
+        -2.864209562894369,
+        0.04014444590493054
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "log_680": {
+      "features": "ln(I680)",
+      "coefficients": [
+        -19.32661256489813,
+        4.454462849476905
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "linear_705": {
+      "features": "I705",
+      "coefficients": [
+        5.708901592623466,
+        -0.005662433920179632
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "log_705": {
+      "features": "ln(I705)",
+      "coefficients": [
+        27.13772461619523,
+        -3.8865999034656307
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "linear_730": {
+      "features": "I730",
+      "coefficients": [
+        19.119731928587356,
+        -0.06671567749094146
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "log_730": {
+      "features": "ln(I730)",
+      "coefficients": [
+        98.69051465807043,
+        -17.4314474696521
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "linear_760": {
+      "features": "I760",
+      "coefficients": [
+        6.884178371465236,
+        -0.03161016995769812
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "log_760": {
+      "features": "ln(I760)",
+      "coefficients": [
+        27.59977994117144,
+        -5.088729549768984
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "linear_810": {
+      "features": "I810",
+      "coefficients": [
+        5.598454207236555,
+        -0.02401923698004765
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "log_810": {
+      "features": "ln(I810)",
+      "coefficients": [
+        20.842407177814852,
+        -3.7748631399453227
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "linear_860": {
+      "features": "I860",
+      "coefficients": [
+        5.406815328093837,
+        -0.06576983790900308
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "log_860": {
+      "features": "ln(I860)",
+      "coefficients": [
+        16.078421699170168,
+        -3.58440490630152
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "linear_900": {
+      "features": "I900",
+      "coefficients": [
+        5.132464348777183,
+        -0.023075474146509744
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "log_900": {
+      "features": "ln(I900)",
+      "coefficients": [
+        18.136442758631826,
+        -3.301659094160441
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "linear_940": {
+      "features": "I940",
+      "coefficients": [
+        5.188263936035118,
+        -0.008133959267942312
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "log_940": {
+      "features": "ln(I940)",
+      "coefficients": [
+        21.979403238148592,
+        -3.3587043864069726
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "ratio_680_645": {
+      "features": "I680/I645",
+      "coefficients": [
+        -0.24897851951312733,
+        12.11614692239594
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "sqrt_680_645": {
+      "features": "sqrt(I680/I645)",
+      "coefficients": [
+        -2.214124141828074,
+        9.928307526028117
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "log_680_645": {
+      "features": "log(I680/I645)",
+      "coefficients": [
+        5.430125798242968,
+        1.9668941812447545
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "ratio_680_705": {
+      "features": "I680/I705",
+      "coefficients": [
+        -0.38665402593909026,
+        12.17174069827215
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "sqrt_680_705": {
+      "features": "sqrt(I680/I705)",
+      "coefficients": [
+        -2.4781051826588167,
+        10.244697314197335
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "log_680_705": {
+      "features": "log(I680/I705)",
+      "coefficients": [
+        5.520551227528614,
+        2.094034152845188
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "ratio_680_460": {
+      "features": "I680/I460",
+      "coefficients": [
+        -0.3664331731653394,
+        103.86002118939408
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "sqrt_680_460": {
+      "features": "sqrt(I680/I460)",
+      "coefficients": [
+        -2.436425423111784,
+        29.780447714720164
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "log_680_460": {
+      "features": "log(I680/I460)",
+      "coefficients": [
+        9.948491220819514,
+        2.072838754103174
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "ratio_680_860": {
+      "features": "I680/I860",
+      "coefficients": [
+        -0.29593359490331483,
+        0.9191493929260802
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "sqrt_680_860": {
+      "features": "sqrt(I680/I860)",
+      "coefficients": [
+        -2.304109411019718,
+        2.762292716331237
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "log_680_860": {
+      "features": "log(I680/I860)",
+      "coefficients": [
+        0.2735852511355472,
+        2.0113758428229187
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "nd_680_645": {
+      "features": "(I680-I645)/(I680+I645)",
+      "coefficients": [
+        7.7939406438228955,
+        8.378089124893531
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "nd_680_705": {
+      "features": "(I680-I705)/(I680+I705)",
+      "coefficients": [
+        7.775922816560603,
+        8.537398277719635
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "quadratic_ratio_680_645": {
+      "features": "r; r\u00b2, r=I680/I645",
+      "coefficients": [
+        -0.6308524837544142,
+        16.994286135171812,
+        -13.663027288410223
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "pair_raw": {
+      "features": "I645; I680",
+      "coefficients": [
+        15.95368585412554,
+        -0.010824257224649374,
+        -0.05261015583638731
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "pair_log": {
+      "features": "ln(I645); ln(I680)",
+      "coefficients": [
+        28.51440479343814,
+        -3.765594707241159,
+        -0.4019849556752853
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "pair_mixed": {
+      "features": "ln(I645); I680",
+      "coefficients": [
+        28.585035000241184,
+        -3.96220806074803,
+        -0.005868203954512313
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "No"
+    },
+    "blank_log_645": {
+      "features": "ln(B645/I645)",
+      "coefficients": [
+        -0.09750183376418632,
+        3.4651949528669506
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "645, sesi\u00f3n"
+    },
+    "blank_linear_645": {
+      "features": "I645/B645",
+      "coefficients": [
+        5.2927037073333025,
+        -5.904765818263011
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "645, sesi\u00f3n"
+    },
+    "blank_subtract_645": {
+      "features": "B645-I645",
+      "coefficients": [
+        -0.6120621109297063,
+        0.004701246670591568
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "645, sesi\u00f3n"
+    },
+    "blank_ratio_ratio": {
+      "features": "ratio(B645 \u00d7 I680/I645)",
+      "coefficients": [
+        -0.24897851951312716,
+        0.009646613791716508
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "645, normalizaci\u00f3n parcial"
+    },
+    "blank_sqrt_ratio": {
+      "features": "sqrt(B645 \u00d7 I680/I645)",
+      "coefficients": [
+        -2.214124141828072,
+        0.28014340380769953
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "645, normalizaci\u00f3n parcial"
+    },
+    "blank_log_ratio": {
+      "features": "log(B645 \u00d7 I680/I645)",
+      "coefficients": [
+        -8.605016123808515,
+        1.9668941812447565
+      ],
+      "equation": "C = intercept + sum(coefficient_i * feature_i), coefficients in feature order",
+      "blank": "645, normalizaci\u00f3n parcial"
+    },
+    "pls": {
+      "n_components": 1,
+      "channel_order": [
+        460,
+        485,
+        510,
+        535,
+        560,
+        585,
+        610,
+        645,
+        680,
+        705,
+        730,
+        760,
+        810,
+        860,
+        900,
+        940
+      ],
+      "scale": true
+    }
+  }
+}

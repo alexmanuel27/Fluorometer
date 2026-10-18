@@ -1,0 +1,66 @@
+{
+  "method": "Frozen equations fitted previously on all 11; apply to 85 without fitting or blank.",
+  "source_sha256": {
+    "/Users/alex/Nube /repos/Fluorometer/datos/11Samples.xlsx": "47ea24812c3912aef8265ffa5647bca06c60a32d1f507f50d096b026b8513e58",
+    "/Users/alex/Nube /repos/Fluorometer/datos/calibracion_85_puntos (1).xlsx": "2fde9fbda48ce1ad920386fdc754a0181fc80f09944e3a4ca91569b01490e4e8",
+    "/Users/alex/Nube /repos/Fluorometer/datos/cv_11_exclusivo/resultados_11.json": "f9fe303d12b4a8b4d8afb52556712714441bed27fa74f23e58a9534a4adb58d2"
+  },
+  "training_concentration_range_ug_ml": [
+    0.7944,
+    3.07062
+  ],
+  "test_concentration_range_ug_ml": [
+    0.02384,
+    7.98964
+  ],
+  "within_training_I645_range_n": 41,
+  "outside_training_I645_range_n": 44,
+  "within_training_concentration_range_n": 38,
+  "models": {
+    "quadratic_log_645": {
+      "coefficients_from_11": [
+        38.758178330167226,
+        -7.764909412039903,
+        0.32676846639229834
+      ],
+      "all_85": {
+        "n": 85,
+        "r2_predictive": 0.8092444804203418,
+        "rmse_ug_ml": 0.8165811432900894,
+        "mae_ug_ml": 0.44408876138911807,
+        "bias_ug_ml": 0.3100698904653759,
+        "max_abs_error_ug_ml": 3.3846168970805786
+      },
+      "within_training_signal_range": {
+        "n": 41,
+        "r2_predictive": 0.8840830715303136,
+        "rmse_ug_ml": 0.22478321688555672,
+        "mae_ug_ml": 0.1682213102589282,
+        "bias_ug_ml": 0.0880393573661419,
+        "max_abs_error_ug_ml": 0.638096959365688
+      }
+    },
+    "log_645": {
+      "coefficients_from_11": [
+        24.629045946394292,
+        -3.46519495286695
+      ],
+      "all_85": {
+        "n": 85,
+        "r2_predictive": 0.8905699428305052,
+        "rmse_ug_ml": 0.6184849032243972,
+        "mae_ug_ml": 0.3607668609279618,
+        "bias_ug_ml": 0.18447865614781728,
+        "max_abs_error_ug_ml": 2.9441142874832367
+      },
+      "within_training_signal_range": {
+        "n": 41,
+        "r2_predictive": 0.8833501982739194,
+        "rmse_ug_ml": 0.22549268204269207,
+        "mae_ug_ml": 0.16749803139757818,
+        "bias_ug_ml": 0.0912874972354101,
+        "max_abs_error_ug_ml": 0.6522225932419567
+      }
+    }
+  }
+}

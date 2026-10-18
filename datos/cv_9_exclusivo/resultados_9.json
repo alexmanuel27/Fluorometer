@@ -1,0 +1,8004 @@
+{
+  "input_file": "/Users/alex/Nube /repos/Fluorometer/datos/9Samples.xlsx",
+  "input_sha256": "d2f13be46fa8b396155f44a8f9bc08c27b6d141eaa5950b29883d78062696000",
+  "model_count": 55,
+  "validation": "LOOCV: train on 8, predict the held-out 1, repeat 9 times",
+  "blank_used": false,
+  "saturated_channels_excluded": [
+    410,
+    435
+  ],
+  "source_concentrations_ug_ml": [
+    0.0244,
+    0.0489,
+    0.0977,
+    0.1955,
+    0.2932,
+    0.4887,
+    0.9775,
+    1.9549,
+    3.9098
+  ],
+  "n_below_1": 7,
+  "models_ranked_by_global_rmse": [
+    {
+      "model": "sqrt_680_460",
+      "label": "sqrt(I680/I460)",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.9963879542458339,
+      "rmse_cv9_ug_ml": 0.07318323533815277,
+      "mae_cv9_ug_ml": 0.06053583437411652,
+      "bias_cv9_ug_ml": -0.0005730209451051836,
+      "max_error_cv9_ug_ml": 0.14235455325082447,
+      "low_n": 7,
+      "low_mape_cv9_percent": 46.853691664649986,
+      "low_mae_cv9_ug_ml": 0.06109783736453344,
+      "low_rmse_cv9_ug_ml": 0.07325343923207907,
+      "negative_predictions_n": 1
+    },
+    {
+      "model": "sqrt_680_645",
+      "label": "sqrt(I680/I645)",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.99618766598221,
+      "rmse_cv9_ug_ml": 0.07518487047826285,
+      "mae_cv9_ug_ml": 0.06314518899375658,
+      "bias_cv9_ug_ml": -0.0016976175146389088,
+      "max_error_cv9_ug_ml": 0.13745026715646447,
+      "low_n": 7,
+      "low_mape_cv9_percent": 54.59559350016549,
+      "low_mae_cv9_ug_ml": 0.06574160965009794,
+      "low_rmse_cv9_ug_ml": 0.07545386891485331,
+      "negative_predictions_n": 1
+    },
+    {
+      "model": "nd_680_705",
+      "label": "ND(680,705)",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.9950954747583047,
+      "rmse_cv9_ug_ml": 0.08527730573509378,
+      "mae_cv9_ug_ml": 0.06211761131964652,
+      "bias_cv9_ug_ml": 0.01478827921614727,
+      "max_error_cv9_ug_ml": 0.18413993833242825,
+      "low_n": 7,
+      "low_mape_cv9_percent": 27.9945905495709,
+      "low_mae_cv9_ug_ml": 0.03439495960745805,
+      "low_rmse_cv9_ug_ml": 0.04398895721310143,
+      "negative_predictions_n": 0
+    },
+    {
+      "model": "sqrt_680_860",
+      "label": "sqrt(I680/I860)",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.994296629672519,
+      "rmse_cv9_ug_ml": 0.09196038263237791,
+      "mae_cv9_ug_ml": 0.08278170441717718,
+      "bias_cv9_ug_ml": -0.012946362115941253,
+      "max_error_cv9_ug_ml": 0.1431900414352577,
+      "low_n": 7,
+      "low_mape_cv9_percent": 80.29227627553625,
+      "low_mae_cv9_ug_ml": 0.07912993602181276,
+      "low_rmse_cv9_ug_ml": 0.08914154112634065,
+      "negative_predictions_n": 2
+    },
+    {
+      "model": "log_460",
+      "label": "ln(I460)",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.9935921871555508,
+      "rmse_cv9_ug_ml": 0.09747424793056476,
+      "mae_cv9_ug_ml": 0.08026851505489065,
+      "bias_cv9_ug_ml": -0.016812587426584213,
+      "max_error_cv9_ug_ml": 0.18160616379778416,
+      "low_n": 7,
+      "low_mape_cv9_percent": 63.59185580091557,
+      "low_mae_cv9_ug_ml": 0.0746556919433098,
+      "low_rmse_cv9_ug_ml": 0.08635331995372232,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "log_900",
+      "label": "ln(I900)",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.9908608437553168,
+      "rmse_cv9_ug_ml": 0.11640939571500492,
+      "mae_cv9_ug_ml": 0.09705253379693901,
+      "bias_cv9_ug_ml": -0.021324404891737394,
+      "max_error_cv9_ug_ml": 0.2342544685703678,
+      "low_n": 7,
+      "low_mape_cv9_percent": 87.46579244334208,
+      "low_mae_cv9_ug_ml": 0.08917870263041536,
+      "low_rmse_cv9_ug_ml": 0.09773224871635854,
+      "negative_predictions_n": 2
+    },
+    {
+      "model": "log_585",
+      "label": "ln(I585)",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.9906758900007494,
+      "rmse_cv9_ug_ml": 0.11758141381687504,
+      "mae_cv9_ug_ml": 0.09884513908760383,
+      "bias_cv9_ug_ml": -0.021375195715802868,
+      "max_error_cv9_ug_ml": 0.23393056753653552,
+      "low_n": 7,
+      "low_mape_cv9_percent": 89.01040008325901,
+      "low_mae_cv9_ug_ml": 0.09106851447424003,
+      "low_rmse_cv9_ug_ml": 0.09955177548429987,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "log_560",
+      "label": "ln(I560)",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.990417289692045,
+      "rmse_cv9_ug_ml": 0.11920079814909192,
+      "mae_cv9_ug_ml": 0.09957310441564718,
+      "bias_cv9_ug_ml": -0.021763065761275877,
+      "max_error_cv9_ug_ml": 0.2383310238051144,
+      "low_n": 7,
+      "low_mape_cv9_percent": 94.81257091514442,
+      "low_mae_cv9_ug_ml": 0.09160078629251663,
+      "low_rmse_cv9_ug_ml": 0.10057088777380384,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "sqrt_680_705",
+      "label": "sqrt(I680/I705)",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.9900409965350929,
+      "rmse_cv9_ug_ml": 0.12151864701323585,
+      "mae_cv9_ug_ml": 0.10206369058898566,
+      "bias_cv9_ug_ml": -0.02189225803650398,
+      "max_error_cv9_ug_ml": 0.23865642606491333,
+      "low_n": 7,
+      "low_mape_cv9_percent": 95.36395445616839,
+      "low_mae_cv9_ug_ml": 0.09439432596476978,
+      "low_rmse_cv9_ug_ml": 0.103907357546683,
+      "negative_predictions_n": 2
+    },
+    {
+      "model": "log_940",
+      "label": "ln(I940)",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.9900378433706557,
+      "rmse_cv9_ug_ml": 0.12153788277077,
+      "mae_cv9_ug_ml": 0.1020348131488758,
+      "bias_cv9_ug_ml": -0.02224985284454874,
+      "max_error_cv9_ug_ml": 0.24381494042647445,
+      "low_n": 7,
+      "low_mape_cv9_percent": 97.5801969873202,
+      "low_mae_cv9_ug_ml": 0.09384942237369501,
+      "low_rmse_cv9_ug_ml": 0.10225269809017348,
+      "negative_predictions_n": 2
+    },
+    {
+      "model": "log_610",
+      "label": "ln(I610)",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.9892263469446387,
+      "rmse_cv9_ug_ml": 0.12639109506398613,
+      "mae_cv9_ug_ml": 0.10665187543890024,
+      "bias_cv9_ug_ml": -0.023048907558348916,
+      "max_error_cv9_ug_ml": 0.2515110913676799,
+      "low_n": 7,
+      "low_mape_cv9_percent": 111.34901614955868,
+      "low_mae_cv9_ug_ml": 0.09745891625482665,
+      "low_rmse_cv9_ug_ml": 0.10679156944302139,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "log_645",
+      "label": "ln(I645)",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.9889177498456269,
+      "rmse_cv9_ug_ml": 0.12818846829504948,
+      "mae_cv9_ug_ml": 0.10470422382080637,
+      "bias_cv9_ug_ml": -0.024141904850665474,
+      "max_error_cv9_ug_ml": 0.26870703937919194,
+      "low_n": 7,
+      "low_mape_cv9_percent": 96.068363516946,
+      "low_mae_cv9_ug_ml": 0.0954433880852796,
+      "low_rmse_cv9_ug_ml": 0.10396189345621129,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "log_860",
+      "label": "ln(I860)",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.9845897808509725,
+      "rmse_cv9_ug_ml": 0.15116087290261748,
+      "mae_cv9_ug_ml": 0.11847397658884368,
+      "bias_cv9_ug_ml": -0.029576166499225533,
+      "max_error_cv9_ug_ml": 0.33697804870870085,
+      "low_n": 7,
+      "low_mape_cv9_percent": 124.2021327843093,
+      "low_mae_cv9_ug_ml": 0.10237681895106641,
+      "low_rmse_cv9_ug_ml": 0.11460008567554275,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "log_810",
+      "label": "ln(I810)",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.9790564214643156,
+      "rmse_cv9_ug_ml": 0.17622212280816546,
+      "mae_cv9_ug_ml": 0.1377063430188131,
+      "bias_cv9_ug_ml": -0.03508324586748319,
+      "max_error_cv9_ug_ml": 0.4103628918020301,
+      "low_n": 7,
+      "low_mape_cv9_percent": 131.34539572320946,
+      "low_mae_cv9_ug_ml": 0.11227926446934904,
+      "low_rmse_cv9_ug_ml": 0.1249217131967202,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "log_535",
+      "label": "ln(I535)",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.9786060411801342,
+      "rmse_cv9_ug_ml": 0.17810682486120286,
+      "mae_cv9_ug_ml": 0.1403792796087135,
+      "bias_cv9_ug_ml": -0.03530409308963751,
+      "max_error_cv9_ug_ml": 0.41264109455724407,
+      "low_n": 7,
+      "low_mape_cv9_percent": 130.21078717605383,
+      "low_mae_cv9_ug_ml": 0.11420831324308534,
+      "low_rmse_cv9_ug_ml": 0.12682527154737208,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "log_705",
+      "label": "ln(I705)",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.9775918676804515,
+      "rmse_cv9_ug_ml": 0.1822794938114799,
+      "mae_cv9_ug_ml": 0.1446193376417259,
+      "bias_cv9_ug_ml": -0.036203481239320996,
+      "max_error_cv9_ug_ml": 0.4243900699540428,
+      "low_n": 7,
+      "low_mape_cv9_percent": 134.1403721346127,
+      "low_mae_cv9_ug_ml": 0.11833449099521395,
+      "low_rmse_cv9_ug_ml": 0.12902923278074885,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "log_510",
+      "label": "ln(I510)",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.9765149056001815,
+      "rmse_cv9_ug_ml": 0.1866083783495589,
+      "mae_cv9_ug_ml": 0.14556968261887376,
+      "bias_cv9_ug_ml": -0.03727737547622802,
+      "max_error_cv9_ug_ml": 0.4446758027189328,
+      "low_n": 7,
+      "low_mape_cv9_percent": 118.06469163183813,
+      "low_mae_cv9_ug_ml": 0.11279089168272259,
+      "low_rmse_cv9_ug_ml": 0.12530221183856113,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "nd_680_645",
+      "label": "ND(680,645)",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.9734268766998802,
+      "rmse_cv9_ug_ml": 0.19849806844008283,
+      "mae_cv9_ug_ml": 0.11198156966442041,
+      "bias_cv9_ug_ml": 0.04742960687889666,
+      "max_error_cv9_ug_ml": 0.5332433391015994,
+      "low_n": 7,
+      "low_mape_cv9_percent": 43.64737971236709,
+      "low_mae_cv9_ug_ml": 0.0333424186268782,
+      "low_rmse_cv9_ug_ml": 0.04155961807683491,
+      "negative_predictions_n": 0
+    },
+    {
+      "model": "pair_log",
+      "label": "ln(I645) + ln(I680)",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.9630462827443044,
+      "rmse_cv9_ug_ml": 0.23407986025107513,
+      "mae_cv9_ug_ml": 0.12391736105294522,
+      "bias_cv9_ug_ml": 0.06616076043646044,
+      "max_error_cv9_ug_ml": 0.6699667275173486,
+      "low_n": 7,
+      "low_mape_cv9_percent": 23.727327508945724,
+      "low_mae_cv9_ug_ml": 0.039263630833114856,
+      "low_rmse_cv9_ug_ml": 0.046650401135325745,
+      "negative_predictions_n": 0
+    },
+    {
+      "model": "quadratic_log_680",
+      "label": "Quadratic ln(I680)",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.9472219794582982,
+      "rmse_cv9_ug_ml": 0.2797444844899645,
+      "mae_cv9_ug_ml": 0.18340049673285913,
+      "bias_cv9_ug_ml": -0.057238121428075765,
+      "max_error_cv9_ug_ml": 0.7378772382956487,
+      "low_n": 7,
+      "low_mape_cv9_percent": 119.85620796060641,
+      "low_mae_cv9_ug_ml": 0.0877619701211749,
+      "low_rmse_cv9_ug_ml": 0.10057784811968597,
+      "negative_predictions_n": 0
+    },
+    {
+      "model": "log_760",
+      "label": "ln(I760)",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.9457530499121491,
+      "rmse_cv9_ug_ml": 0.28361072280792765,
+      "mae_cv9_ug_ml": 0.2153475939124844,
+      "bias_cv9_ug_ml": -0.05497797780311169,
+      "max_error_cv9_ug_ml": 0.6986420287269275,
+      "low_n": 7,
+      "low_mape_cv9_percent": 187.6677569406877,
+      "low_mae_cv9_ug_ml": 0.15550315192098463,
+      "low_rmse_cv9_ug_ml": 0.1744479000510531,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "ratio_680_705",
+      "label": "I680/I705",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.9217859299326827,
+      "rmse_cv9_ug_ml": 0.3405472885499167,
+      "mae_cv9_ug_ml": 0.19135857687854685,
+      "bias_cv9_ug_ml": 0.0879531214450212,
+      "max_error_cv9_ug_ml": 0.9421747029477321,
+      "low_n": 7,
+      "low_mape_cv9_percent": 86.35823935977037,
+      "low_mae_cv9_ug_ml": 0.0611318532555497,
+      "low_rmse_cv9_ug_ml": 0.06767963886185295,
+      "negative_predictions_n": 0
+    },
+    {
+      "model": "log_680_460",
+      "label": "log(I680/I460)",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.9059035620959305,
+      "rmse_cv9_ug_ml": 0.3735266349031638,
+      "mae_cv9_ug_ml": 0.2861889481980855,
+      "bias_cv9_ug_ml": -0.06862285602287933,
+      "max_error_cv9_ug_ml": 0.9196304782587341,
+      "low_n": 7,
+      "low_mape_cv9_percent": 224.06759736836196,
+      "low_mae_cv9_ug_ml": 0.20521369977263618,
+      "low_rmse_cv9_ug_ml": 0.22733433397384634,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "log_680_645",
+      "label": "log(I680/I645)",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.8997342673837008,
+      "rmse_cv9_ug_ml": 0.3855771149513379,
+      "mae_cv9_ug_ml": 0.29648619661466924,
+      "bias_cv9_ug_ml": -0.07042133676306034,
+      "max_error_cv9_ug_ml": 0.9480881050581416,
+      "low_n": 7,
+      "low_mape_cv9_percent": 238.99467783779173,
+      "low_mae_cv9_ug_ml": 0.21437883513554684,
+      "low_rmse_cv9_ug_ml": 0.23631590734071786,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "pair_mixed",
+      "label": "ln(I645) + I680",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.898477092641973,
+      "rmse_cv9_ug_ml": 0.38798685049364545,
+      "mae_cv9_ug_ml": 0.18904002226805627,
+      "bias_cv9_ug_ml": 0.11343976176015963,
+      "max_error_cv9_ug_ml": 1.1330840533353652,
+      "low_n": 7,
+      "low_mape_cv9_percent": 35.66378960122524,
+      "low_mae_cv9_ug_ml": 0.05019903132279558,
+      "low_rmse_cv9_ug_ml": 0.058415371145154084,
+      "negative_predictions_n": 0
+    },
+    {
+      "model": "log_680_860",
+      "label": "log(I680/I860)",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.8882724097366221,
+      "rmse_cv9_ug_ml": 0.4070194843308336,
+      "mae_cv9_ug_ml": 0.3095875760902703,
+      "bias_cv9_ug_ml": -0.07317620447357842,
+      "max_error_cv9_ug_ml": 1.0024228490131954,
+      "low_n": 7,
+      "low_mape_cv9_percent": 259.2342995786068,
+      "low_mae_cv9_ug_ml": 0.22080450956048495,
+      "low_rmse_cv9_ug_ml": 0.24766822530148777,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "ratio_680_860",
+      "label": "I680/I860",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.8841144336878018,
+      "rmse_cv9_ug_ml": 0.41452397819236736,
+      "mae_cv9_ug_ml": 0.22921762607207535,
+      "bias_cv9_ug_ml": 0.10987902826607608,
+      "max_error_cv9_ug_ml": 1.156183195503345,
+      "low_n": 7,
+      "low_mape_cv9_percent": 105.16729952464938,
+      "low_mae_cv9_ug_ml": 0.07138968466807251,
+      "low_rmse_cv9_ug_ml": 0.07930392568890544,
+      "negative_predictions_n": 0
+    },
+    {
+      "model": "log_680_705",
+      "label": "log(I680/I705)",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.8762057928452065,
+      "rmse_cv9_ug_ml": 0.4284352000553046,
+      "mae_cv9_ug_ml": 0.3282896531879239,
+      "bias_cv9_ug_ml": -0.07566172782333885,
+      "max_error_cv9_ug_ml": 1.0560098139979357,
+      "low_n": 7,
+      "low_mape_cv9_percent": 266.3914425871298,
+      "low_mae_cv9_ug_ml": 0.2335983142585231,
+      "low_rmse_cv9_ug_ml": 0.2584208993258248,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "quadratic_log_645",
+      "label": "Quadratic ln(I645)",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.8691523612198311,
+      "rmse_cv9_ug_ml": 0.4404716170067422,
+      "mae_cv9_ug_ml": 0.20968463562769035,
+      "bias_cv9_ug_ml": 0.13058706215697552,
+      "max_error_cv9_ug_ml": 1.2921972563528539,
+      "low_n": 7,
+      "low_mape_cv9_percent": 37.73794991376585,
+      "low_mae_cv9_ug_ml": 0.05337221733934592,
+      "low_rmse_cv9_ug_ml": 0.06252277020630116,
+      "negative_predictions_n": 1
+    },
+    {
+      "model": "pls_3",
+      "label": "PLS, 3 components (16 channels)",
+      "method": "PLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.8509047672498957,
+      "rmse_cv9_ug_ml": 0.4701829347306368,
+      "mae_cv9_ug_ml": 0.34858776415868986,
+      "bias_cv9_ug_ml": -0.05556703423634733,
+      "max_error_cv9_ug_ml": 1.1346755996717,
+      "low_n": 7,
+      "low_mape_cv9_percent": 173.892372510301,
+      "low_mae_cv9_ug_ml": 0.2157289918509652,
+      "low_rmse_cv9_ug_ml": 0.25623421139113656,
+      "negative_predictions_n": 1
+    },
+    {
+      "model": "linear_460",
+      "label": "I460",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.8464333957220422,
+      "rmse_cv9_ug_ml": 0.4771812541446601,
+      "mae_cv9_ug_ml": 0.3569113452611182,
+      "bias_cv9_ug_ml": -0.07819987022753444,
+      "max_error_cv9_ug_ml": 1.189015544577078,
+      "low_n": 7,
+      "low_mape_cv9_percent": 250.2604153593583,
+      "low_mae_cv9_ug_ml": 0.23484364842132907,
+      "low_rmse_cv9_ug_ml": 0.26503516841704783,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "log_730",
+      "label": "ln(I730)",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.8333809155414434,
+      "rmse_cv9_ug_ml": 0.4970468840756426,
+      "mae_cv9_ug_ml": 0.37937062226636686,
+      "bias_cv9_ug_ml": -0.0820505404316378,
+      "max_error_cv9_ug_ml": 1.2245253664100448,
+      "low_n": 7,
+      "low_mape_cv9_percent": 329.02369033508757,
+      "low_mae_cv9_ug_ml": 0.2663840920959913,
+      "low_rmse_cv9_ug_ml": 0.2972094076340247,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "ratio_680_460",
+      "label": "I680/I460",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.8292322702141666,
+      "rmse_cv9_ug_ml": 0.5031968180032598,
+      "mae_cv9_ug_ml": 0.2777526320478526,
+      "bias_cv9_ug_ml": 0.1366397554681199,
+      "max_error_cv9_ug_ml": 1.4121395157302579,
+      "low_n": 7,
+      "low_mape_cv9_percent": 135.88410388776708,
+      "low_mae_cv9_ug_ml": 0.08984315083102079,
+      "low_rmse_cv9_ug_ml": 0.10301884147389058,
+      "negative_predictions_n": 0
+    },
+    {
+      "model": "linear_610",
+      "label": "I610",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.8249577029143208,
+      "rmse_cv9_ug_ml": 0.5094557704133909,
+      "mae_cv9_ug_ml": 0.3839662367011598,
+      "bias_cv9_ug_ml": -0.08266359452800941,
+      "max_error_cv9_ug_ml": 1.2594537043846037,
+      "low_n": 7,
+      "low_mape_cv9_percent": 319.4231142083073,
+      "low_mae_cv9_ug_ml": 0.2628781693876713,
+      "low_rmse_cv9_ug_ml": 0.2982997496473437,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "ratio_680_645",
+      "label": "I680/I645",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.8236846795523606,
+      "rmse_cv9_ug_ml": 0.511304964029327,
+      "mae_cv9_ug_ml": 0.2807312217428837,
+      "bias_cv9_ug_ml": 0.13915514490483302,
+      "max_error_cv9_ug_ml": 1.4361376886090276,
+      "low_n": 7,
+      "low_mape_cv9_percent": 134.77547904793522,
+      "low_mae_cv9_ug_ml": 0.0890226801852281,
+      "low_rmse_cv9_ug_ml": 0.10145272565575589,
+      "negative_predictions_n": 0
+    },
+    {
+      "model": "linear_510",
+      "label": "I510",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.8229245706498269,
+      "rmse_cv9_ug_ml": 0.5124059162389463,
+      "mae_cv9_ug_ml": 0.38577257031430634,
+      "bias_cv9_ug_ml": -0.0817639369025777,
+      "max_error_cv9_ug_ml": 1.2713007613125695,
+      "low_n": 7,
+      "low_mape_cv9_percent": 286.3076168933224,
+      "low_mae_cv9_ug_ml": 0.2577849719000396,
+      "low_rmse_cv9_ug_ml": 0.29029343833965254,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "linear_860",
+      "label": "I860",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.8213914932955438,
+      "rmse_cv9_ug_ml": 0.5146192807249775,
+      "mae_cv9_ug_ml": 0.3851310188642909,
+      "bias_cv9_ug_ml": -0.08264065598099536,
+      "max_error_cv9_ug_ml": 1.274170758347395,
+      "low_n": 7,
+      "low_mape_cv9_percent": 324.00833223607174,
+      "low_mae_cv9_ug_ml": 0.2601965044147013,
+      "low_rmse_cv9_ug_ml": 0.2982370062523974,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "linear_645",
+      "label": "I645",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.8206953922424634,
+      "rmse_cv9_ug_ml": 0.5156211329708104,
+      "mae_cv9_ug_ml": 0.39044547251813655,
+      "bias_cv9_ug_ml": -0.08224829807655672,
+      "max_error_cv9_ug_ml": 1.2786359772138076,
+      "low_n": 7,
+      "low_mape_cv9_percent": 296.6736397837391,
+      "low_mae_cv9_ug_ml": 0.2645443436200767,
+      "low_rmse_cv9_ug_ml": 0.29538254550987303,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "linear_585",
+      "label": "I585",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.8202777611281056,
+      "rmse_cv9_ug_ml": 0.5162212686456878,
+      "mae_cv9_ug_ml": 0.3908830208217414,
+      "bias_cv9_ug_ml": -0.08222705037913003,
+      "max_error_cv9_ug_ml": 1.2803397537016439,
+      "low_n": 7,
+      "low_mape_cv9_percent": 294.30569392977156,
+      "low_mae_cv9_ug_ml": 0.26463282118745085,
+      "low_rmse_cv9_ug_ml": 0.29537575333186034,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "pls_2",
+      "label": "PLS, 2 components (16 channels)",
+      "method": "PLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.8183074264890344,
+      "rmse_cv9_ug_ml": 0.5190432790972161,
+      "mae_cv9_ug_ml": 0.3898084740916333,
+      "bias_cv9_ug_ml": -0.0689011705846662,
+      "max_error_cv9_ug_ml": 1.2587543095268208,
+      "low_n": 7,
+      "low_mape_cv9_percent": 304.67732686931697,
+      "low_mae_cv9_ug_ml": 0.24283052419118498,
+      "low_rmse_cv9_ug_ml": 0.27723422706134637,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "linear_900",
+      "label": "I900",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.8174216839450894,
+      "rmse_cv9_ug_ml": 0.5203068964430531,
+      "mae_cv9_ug_ml": 0.393102225307254,
+      "bias_cv9_ug_ml": -0.08225026643912112,
+      "max_error_cv9_ug_ml": 1.2913155064789987,
+      "low_n": 7,
+      "low_mape_cv9_percent": 295.1361597861566,
+      "low_mae_cv9_ug_ml": 0.26462009242106826,
+      "low_rmse_cv9_ug_ml": 0.296053484186812,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "linear_560",
+      "label": "I560",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.8169661474907701,
+      "rmse_cv9_ug_ml": 0.5209555799954697,
+      "mae_cv9_ug_ml": 0.39398516459838384,
+      "bias_cv9_ug_ml": -0.08275373757264001,
+      "max_error_cv9_ug_ml": 1.2911852462621738,
+      "low_n": 7,
+      "low_mape_cv9_percent": 305.3628977058112,
+      "low_mae_cv9_ug_ml": 0.2666748366489026,
+      "low_rmse_cv9_ug_ml": 0.2987789864467962,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "linear_810",
+      "label": "I810",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.8160315066734639,
+      "rmse_cv9_ug_ml": 0.5222839854840908,
+      "mae_cv9_ug_ml": 0.39216287029448316,
+      "bias_cv9_ug_ml": -0.08314266102476753,
+      "max_error_cv9_ug_ml": 1.2930554364931273,
+      "low_n": 7,
+      "low_mape_cv9_percent": 319.45857497122944,
+      "low_mae_cv9_ug_ml": 0.26525821349708334,
+      "low_rmse_cv9_ug_ml": 0.30211973232757516,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "linear_940",
+      "label": "I940",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.8159009445695476,
+      "rmse_cv9_ug_ml": 0.522469284608896,
+      "mae_cv9_ug_ml": 0.3959316730637627,
+      "bias_cv9_ug_ml": -0.08300126019727098,
+      "max_error_cv9_ug_ml": 1.294289504742673,
+      "low_n": 7,
+      "low_mape_cv9_percent": 308.60911563546625,
+      "low_mae_cv9_ug_ml": 0.26917699975267023,
+      "low_rmse_cv9_ug_ml": 0.30082446009991365,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "linear_705",
+      "label": "I705",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.8136287741298632,
+      "rmse_cv9_ug_ml": 0.5256835834071152,
+      "mae_cv9_ug_ml": 0.3985733653876596,
+      "bias_cv9_ug_ml": -0.08361479027569191,
+      "max_error_cv9_ug_ml": 1.3006305849232342,
+      "low_n": 7,
+      "low_mape_cv9_percent": 320.4146573424687,
+      "low_mae_cv9_ug_ml": 0.272200553777842,
+      "low_rmse_cv9_ug_ml": 0.3047697618665684,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "linear_535",
+      "label": "I535",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.8129804413617382,
+      "rmse_cv9_ug_ml": 0.5265971418262678,
+      "mae_cv9_ug_ml": 0.39774473452561393,
+      "bias_cv9_ug_ml": -0.08378370607273249,
+      "max_error_cv9_ug_ml": 1.3019951153837037,
+      "low_n": 7,
+      "low_mape_cv9_percent": 318.11946495970165,
+      "low_mae_cv9_ug_ml": 0.2698132040948624,
+      "low_rmse_cv9_ug_ml": 0.30454109397281526,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "linear_760",
+      "label": "I760",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.8050666852534126,
+      "rmse_cv9_ug_ml": 0.5376232199462686,
+      "mae_cv9_ug_ml": 0.40385403457242774,
+      "bias_cv9_ug_ml": -0.08451655472654808,
+      "max_error_cv9_ug_ml": 1.3286410392624615,
+      "low_n": 7,
+      "low_mape_cv9_percent": 332.07472076390206,
+      "low_mae_cv9_ug_ml": 0.27480193674095765,
+      "low_rmse_cv9_ug_ml": 0.31391707549371234,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "pls_1",
+      "label": "PLS, 1 components (16 channels)",
+      "method": "PLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.8047733753547044,
+      "rmse_cv9_ug_ml": 0.5380275401085917,
+      "mae_cv9_ug_ml": 0.4131866655558323,
+      "bias_cv9_ug_ml": -0.08614293637723397,
+      "max_error_cv9_ug_ml": 1.3138774876916104,
+      "low_n": 7,
+      "low_mape_cv9_percent": 326.15640048216216,
+      "low_mae_cv9_ug_ml": 0.2934775161744202,
+      "low_rmse_cv9_ug_ml": 0.328669725389653,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "linear_680",
+      "label": "I680",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.7906423496596696,
+      "rmse_cv9_ug_ml": 0.5571593223052353,
+      "mae_cv9_ug_ml": 0.41875298608985057,
+      "bias_cv9_ug_ml": -0.08287028820873382,
+      "max_error_cv9_ug_ml": 1.3836935214816095,
+      "low_n": 7,
+      "low_mape_cv9_percent": 294.7886105285858,
+      "low_mae_cv9_ug_ml": 0.2728967063983756,
+      "low_rmse_cv9_ug_ml": 0.30561173007249753,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "linear_730",
+      "label": "I730",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.7660790485090794,
+      "rmse_cv9_ug_ml": 0.5889379558593564,
+      "mae_cv9_ug_ml": 0.4539863808383561,
+      "bias_cv9_ug_ml": -0.0888444601076832,
+      "max_error_cv9_ug_ml": 1.44366469650372,
+      "low_n": 7,
+      "low_mape_cv9_percent": 392.3043242940036,
+      "low_mae_cv9_ug_ml": 0.3222013846494156,
+      "low_rmse_cv9_ug_ml": 0.3561393980984706,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "pair_raw",
+      "label": "I645 + I680",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.7518621222271598,
+      "rmse_cv9_ug_ml": 0.6065708219656397,
+      "mae_cv9_ug_ml": 0.40568811069480804,
+      "bias_cv9_ug_ml": -0.2082176175362866,
+      "max_error_cv9_ug_ml": 1.606004816994147,
+      "low_n": 7,
+      "low_mape_cv9_percent": 271.8784200191843,
+      "low_mae_cv9_ug_ml": 0.21195328497112534,
+      "low_rmse_cv9_ug_ml": 0.24401483677130678,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "quadratic_ratio",
+      "label": "Quadratic I680/I645",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.7176533665723936,
+      "rmse_cv9_ug_ml": 0.6470327906315455,
+      "mae_cv9_ug_ml": 0.26350873255692886,
+      "bias_cv9_ug_ml": 0.20259505973784414,
+      "max_error_cv9_ug_ml": 1.9308741808788805,
+      "low_n": 7,
+      "low_mape_cv9_percent": 32.05590820340186,
+      "low_mae_cv9_ug_ml": 0.04085443271755799,
+      "low_rmse_cv9_ug_ml": 0.047281016586454,
+      "negative_predictions_n": 0
+    },
+    {
+      "model": "log_680",
+      "label": "ln(I680)",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.6623361775734604,
+      "rmse_cv9_ug_ml": 0.7075827714298486,
+      "mae_cv9_ug_ml": 0.5359206733714905,
+      "bias_cv9_ug_ml": -0.0889838291334762,
+      "max_error_cv9_ug_ml": 1.736367525675742,
+      "low_n": 7,
+      "low_mape_cv9_percent": 391.95116758806915,
+      "low_mae_cv9_ug_ml": 0.36777968416939094,
+      "low_rmse_cv9_ug_ml": 0.418922462300246,
+      "negative_predictions_n": 3
+    },
+    {
+      "model": "log_485",
+      "label": "ln(I485)",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.5378430845889374,
+      "rmse_cv9_ug_ml": 0.8278081763850276,
+      "mae_cv9_ug_ml": 0.6939921663205629,
+      "bias_cv9_ug_ml": -0.1386176861681305,
+      "max_error_cv9_ug_ml": 1.6818994225992188,
+      "low_n": 7,
+      "low_mape_cv9_percent": 490.6442997036984,
+      "low_mae_cv9_ug_ml": 0.5244397304744643,
+      "low_rmse_cv9_ug_ml": 0.6025242757028895,
+      "negative_predictions_n": 2
+    },
+    {
+      "model": "linear_485",
+      "label": "I485",
+      "method": "OLS",
+      "n_samples": 9,
+      "n_folds": 9,
+      "training_samples_per_fold": 8,
+      "r2_cv9": 0.07247053737934317,
+      "rmse_cv9_ug_ml": 1.1727321749520643,
+      "mae_cv9_ug_ml": 0.9751336124045543,
+      "bias_cv9_ug_ml": -0.15530089901825195,
+      "max_error_cv9_ug_ml": 2.508646098507522,
+      "low_n": 7,
+      "low_mape_cv9_percent": 874.6719484798683,
+      "low_mae_cv9_ug_ml": 0.8020803827408489,
+      "low_rmse_cv9_ug_ml": 0.8990471720802491,
+      "negative_predictions_n": 2
+    }
+  ],
+  "models_ranked_by_low_mape": [
+    "pair_log",
+    "nd_680_705",
+    "quadratic_ratio",
+    "pair_mixed",
+    "quadratic_log_645",
+    "nd_680_645",
+    "sqrt_680_460",
+    "sqrt_680_645",
+    "log_460",
+    "sqrt_680_860",
+    "ratio_680_705",
+    "log_900",
+    "log_585",
+    "log_560",
+    "sqrt_680_705",
+    "log_645",
+    "log_940",
+    "ratio_680_860",
+    "log_610",
+    "log_510",
+    "quadratic_log_680",
+    "log_860",
+    "log_535",
+    "log_810",
+    "log_705",
+    "ratio_680_645",
+    "ratio_680_460",
+    "pls_3",
+    "log_760",
+    "log_680_460",
+    "log_680_645",
+    "linear_460",
+    "log_680_860",
+    "log_680_705",
+    "pair_raw",
+    "linear_510",
+    "linear_585",
+    "linear_680",
+    "linear_900",
+    "linear_645",
+    "pls_2",
+    "linear_560",
+    "linear_940",
+    "linear_535",
+    "linear_610",
+    "linear_810",
+    "linear_705",
+    "linear_860",
+    "pls_1",
+    "log_730",
+    "linear_760",
+    "log_680",
+    "linear_730",
+    "log_485",
+    "linear_485"
+  ],
+  "folds": [
+    {
+      "model": "linear_460",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_460",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_460",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_460",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_460",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_460",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_460",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_460",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "linear_460",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "log_460",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_460",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_460",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_460",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_460",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_460",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_460",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_460",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "log_460",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "linear_485",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_485",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_485",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_485",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_485",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_485",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_485",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_485",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "linear_485",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "log_485",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_485",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_485",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_485",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_485",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_485",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_485",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_485",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "log_485",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "linear_510",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_510",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_510",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_510",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_510",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_510",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_510",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_510",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "linear_510",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "log_510",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_510",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_510",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_510",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_510",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_510",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_510",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_510",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "log_510",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "linear_535",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_535",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_535",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_535",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_535",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_535",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_535",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_535",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "linear_535",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "log_535",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_535",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_535",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_535",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_535",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_535",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_535",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_535",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "log_535",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "linear_560",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_560",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_560",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_560",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_560",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_560",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_560",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_560",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "linear_560",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "log_560",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_560",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_560",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_560",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_560",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_560",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_560",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_560",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "log_560",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "linear_585",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_585",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_585",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_585",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_585",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_585",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_585",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_585",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "linear_585",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "log_585",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_585",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_585",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_585",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_585",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_585",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_585",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_585",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "log_585",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "linear_610",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_610",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_610",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_610",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_610",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_610",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_610",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_610",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "linear_610",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "log_610",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_610",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_610",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_610",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_610",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_610",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_610",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_610",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "log_610",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "linear_645",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_645",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_645",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_645",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_645",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_645",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_645",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_645",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "linear_645",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "log_645",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_645",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_645",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_645",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_645",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_645",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_645",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_645",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "log_645",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "linear_680",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_680",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_680",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_680",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_680",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_680",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_680",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_680",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "linear_680",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "log_680",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "log_680",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "linear_705",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_705",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_705",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_705",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_705",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_705",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_705",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_705",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "linear_705",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "log_705",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_705",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_705",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_705",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_705",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_705",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_705",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_705",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "log_705",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "linear_730",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_730",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_730",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_730",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_730",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_730",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_730",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_730",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "linear_730",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "log_730",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_730",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_730",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_730",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_730",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_730",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_730",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_730",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "log_730",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "linear_760",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_760",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_760",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_760",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_760",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_760",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_760",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_760",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "linear_760",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "log_760",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_760",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_760",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_760",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_760",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_760",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_760",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_760",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "log_760",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "linear_810",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_810",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_810",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_810",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_810",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_810",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_810",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_810",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "linear_810",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "log_810",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_810",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_810",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_810",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_810",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_810",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_810",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_810",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "log_810",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "linear_860",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_860",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_860",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_860",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_860",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_860",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_860",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_860",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "linear_860",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "log_860",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_860",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_860",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_860",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_860",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_860",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_860",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_860",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "log_860",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "linear_900",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_900",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_900",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_900",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_900",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_900",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_900",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_900",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "linear_900",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "log_900",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_900",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_900",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_900",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_900",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_900",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_900",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_900",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "log_900",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "linear_940",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_940",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_940",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_940",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_940",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_940",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_940",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "linear_940",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "linear_940",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "log_940",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_940",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_940",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_940",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_940",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_940",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_940",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_940",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "log_940",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "quadratic_log_645",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "quadratic_log_645",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "quadratic_log_645",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "quadratic_log_645",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "quadratic_log_645",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "quadratic_log_645",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "quadratic_log_645",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "quadratic_log_645",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "quadratic_log_645",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "quadratic_log_680",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "quadratic_log_680",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "quadratic_log_680",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "quadratic_log_680",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "quadratic_log_680",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "quadratic_log_680",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "quadratic_log_680",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "quadratic_log_680",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "quadratic_log_680",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "ratio_680_645",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_645",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_645",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_645",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_645",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_645",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_645",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_645",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_645",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "sqrt_680_645",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_645",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_645",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_645",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_645",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_645",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_645",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_645",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_645",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "log_680_645",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680_645",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680_645",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680_645",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680_645",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680_645",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680_645",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680_645",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "log_680_645",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "ratio_680_705",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_705",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_705",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_705",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_705",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_705",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_705",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_705",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_705",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "sqrt_680_705",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_705",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_705",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_705",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_705",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_705",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_705",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_705",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_705",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "log_680_705",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680_705",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680_705",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680_705",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680_705",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680_705",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680_705",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680_705",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "log_680_705",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "ratio_680_460",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_460",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_460",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_460",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_460",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_460",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_460",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_460",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_460",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "sqrt_680_460",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_460",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_460",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_460",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_460",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_460",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_460",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_460",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_460",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "log_680_460",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680_460",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680_460",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680_460",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680_460",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680_460",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680_460",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680_460",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "log_680_460",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "ratio_680_860",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_860",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_860",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_860",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_860",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_860",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_860",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_860",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "ratio_680_860",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "sqrt_680_860",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_860",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_860",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_860",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_860",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_860",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_860",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_860",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "sqrt_680_860",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "log_680_860",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680_860",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680_860",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680_860",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680_860",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680_860",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680_860",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "log_680_860",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "log_680_860",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "quadratic_ratio",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "quadratic_ratio",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "quadratic_ratio",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "quadratic_ratio",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "quadratic_ratio",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "quadratic_ratio",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "quadratic_ratio",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "quadratic_ratio",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "quadratic_ratio",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "nd_680_645",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "nd_680_645",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "nd_680_645",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "nd_680_645",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "nd_680_645",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "nd_680_645",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "nd_680_645",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "nd_680_645",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "nd_680_645",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "nd_680_705",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "nd_680_705",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "nd_680_705",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "nd_680_705",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "nd_680_705",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "nd_680_705",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "nd_680_705",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "nd_680_705",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "nd_680_705",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "pair_raw",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pair_raw",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pair_raw",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pair_raw",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pair_raw",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pair_raw",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pair_raw",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pair_raw",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "pair_raw",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "pair_log",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pair_log",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pair_log",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pair_log",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pair_log",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pair_log",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pair_log",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pair_log",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "pair_log",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "pair_mixed",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pair_mixed",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pair_mixed",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pair_mixed",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pair_mixed",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pair_mixed",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pair_mixed",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pair_mixed",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "pair_mixed",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "pls_1",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pls_1",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pls_1",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pls_1",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pls_1",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pls_1",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pls_1",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pls_1",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "pls_1",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "pls_2",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pls_2",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pls_2",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pls_2",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pls_2",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pls_2",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pls_2",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pls_2",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "pls_2",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "model": "pls_3",
+      "held_out_sample": 1,
+      "training_samples": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pls_3",
+      "held_out_sample": 2,
+      "training_samples": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pls_3",
+      "held_out_sample": 3,
+      "training_samples": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pls_3",
+      "held_out_sample": 4,
+      "training_samples": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pls_3",
+      "held_out_sample": 5,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pls_3",
+      "held_out_sample": 6,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pls_3",
+      "held_out_sample": 7,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "model": "pls_3",
+      "held_out_sample": 8,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "model": "pls_3",
+      "held_out_sample": 9,
+      "training_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  ]
+}

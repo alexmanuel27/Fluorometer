@@ -1,0 +1,13 @@
+{
+  "frozen_model_sha256": "35dc89a1186d35db691161320dcd6532e2ae6e1f1d14ea3d0069fb4f6390cbb1",
+  "comparison_sha256": "d2f13be46fa8b396155f44a8f9bc08c27b6d141eaa5950b29883d78062696000",
+  "selected_id": "log_645",
+  "metrics": {
+    "n": 9,
+    "r2": 0.8893380475779576,
+    "rmse_ug_ml": 0.40507379415706884,
+    "mae_ug_ml": 0.3253756992321108,
+    "bias_ug_ml": 0.3253756992321108,
+    "max_abs_error_ug_ml": 0.8168656975950381
+  }
+}

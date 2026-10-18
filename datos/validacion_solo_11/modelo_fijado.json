@@ -1,0 +1,141 @@
+{
+  "protocol": "fit and select using only 11Samples.xlsx; evaluate other data in a separate stage",
+  "training_source": "11Samples.xlsx",
+  "training_sha256": "47ea24812c3912aef8265ffa5647bca06c60a32d1f507f50d096b026b8513e58",
+  "candidate_count": 59,
+  "selected_id": "log_645",
+  "selected_label": "ln(I645)",
+  "blank": "No",
+  "selection_rule": "minimum LOO RMSE; numerical ties within 1e-8 favor lower complexity then no blank",
+  "cv_selected_model": {
+    "rmse": 0.0390530713704917,
+    "r2": 0.9972067909148722,
+    "mae": 0.032228321657250494
+  },
+  "nested_cv_selection_procedure": {
+    "n": 11,
+    "r2": 0.991940686729316,
+    "rmse_ug_ml": 0.06633649037588463,
+    "mae_ug_ml": 0.05543712966126888,
+    "bias_ug_ml": -0.007943832972405135,
+    "max_abs_error_ug_ml": 0.14199110608803567
+  },
+  "nested_fold_models": [
+    "nd_680_645",
+    "log_645",
+    "pair_log",
+    "pair_mixed",
+    "log_645",
+    "log_645",
+    "nd_680_645",
+    "log_645",
+    "log_705",
+    "log_645",
+    "sqrt_680_860"
+  ],
+  "features": "ln(I645)",
+  "coefficients": [
+    24.629045946394292,
+    -3.46519495286695
+  ],
+  "training_fit": {
+    "n": 11,
+    "r2": 0.998063205765989,
+    "rmse_ug_ml": 0.032519601413392205,
+    "mae_ug_ml": 0.026175642665453983,
+    "bias_ug_ml": -2.4626765273503474e-15,
+    "max_abs_error_ug_ml": 0.08141918417761262
+  },
+  "finalists": [
+    {
+      "id": "log_645",
+      "label": "ln(I645)",
+      "blank": "No",
+      "rmse_cv11": 0.0390530713704917,
+      "features": "ln(I645)",
+      "coefficients": [
+        24.629045946394292,
+        -3.46519495286695
+      ]
+    },
+    {
+      "id": "blank_log_645",
+      "label": "ln(B645/I645)",
+      "blank": "645, sesi\u00f3n",
+      "rmse_cv11": 0.03905307137049285,
+      "features": "ln(B645/I645)",
+      "coefficients": [
+        -0.09750183376418632,
+        3.4651949528669506
+      ]
+    },
+    {
+      "id": "pair_log",
+      "label": "ln(I645) + ln(I680)",
+      "blank": "No",
+      "rmse_cv11": 0.039687296557181624,
+      "features": "ln(I645); ln(I680)",
+      "coefficients": [
+        28.51440479343814,
+        -3.765594707241159,
+        -0.4019849556752853
+      ]
+    },
+    {
+      "id": "pair_mixed",
+      "label": "ln(I645) + I680",
+      "blank": "No",
+      "rmse_cv11": 0.03979993868089907,
+      "features": "ln(I645); I680",
+      "coefficients": [
+        28.585035000241184,
+        -3.96220806074803,
+        -0.005868203954512313
+      ]
+    },
+    {
+      "id": "log_940",
+      "label": "ln(I940)",
+      "blank": "No",
+      "rmse_cv11": 0.0408348767906051,
+      "features": "ln(I940)",
+      "coefficients": [
+        21.979403238148592,
+        -3.3587043864069726
+      ]
+    },
+    {
+      "id": "sqrt_680_645",
+      "label": "sqrt(I680/I645)",
+      "blank": "No",
+      "rmse_cv11": 0.042696902749610015,
+      "features": "sqrt(I680/I645)",
+      "coefficients": [
+        -2.214124141828074,
+        9.928307526028117
+      ]
+    },
+    {
+      "id": "blank_sqrt_ratio",
+      "label": "sqrt(B645 \u00d7 I680/I645)",
+      "blank": "645, normalizaci\u00f3n parcial",
+      "rmse_cv11": 0.04269690274961016,
+      "features": "sqrt(B645 \u00d7 I680/I645)",
+      "coefficients": [
+        -2.214124141828072,
+        0.28014340380769953
+      ]
+    },
+    {
+      "id": "nd_680_645",
+      "label": "ND(680,645)",
+      "blank": "No",
+      "rmse_cv11": 0.043657087533874754,
+      "features": "(I680-I645)/(I680+I645)",
+      "coefficients": [
+        7.7939406438228955,
+        8.378089124893531
+      ]
+    }
+  ]
+}
