@@ -1,0 +1,30 @@
+{
+  "calibration_id": "ln645_blank_85_to_9_2026-10-18",
+  "equation": "Chl_a_ug_ml = intercept + slope * ln(B645_session/mean_I645)",
+  "intercept": -0.06211289589760285,
+  "slope": 2.842810327686783,
+  "training_n": 85,
+  "training_dataset": "calibracion_85_puntos (1).xlsx",
+  "transfer_n": 9,
+  "transfer_dataset": "9Samples.xlsx",
+  "session_blanks_I645": {
+    "85": 1356.0,
+    "9": 1214.0
+  },
+  "training_feature_range": [
+    0.0052912601952612255,
+    2.639440883988793
+  ],
+  "training_concentration_range_ug_ml": [
+    0.02384,
+    7.98964
+  ],
+  "source_sha256": {
+    "85": "2fde9fbda48ce1ad920386fdc754a0181fc80f09944e3a4ca91569b01490e4e8",
+    "9": "d2f13be46fa8b396155f44a8f9bc08c27b6d141eaa5950b29883d78062696000"
+  },
+  "fit_method": "Unweighted OLS with free intercept",
+  "selection_status": "Retrospective exploratory selection; not prospectively blind",
+  "blank_source": "Session means supplied by Alex; no blank replicate series available",
+  "firmware_updated": false
+}

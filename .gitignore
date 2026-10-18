@@ -1,0 +1,7 @@
+# Temporales locales; los binarios ya versionados se conservan.
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+build/

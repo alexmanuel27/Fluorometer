@@ -1,0 +1,25 @@
+{
+  "equation": "C_ug_ml = intercept + slope * ln(B645_session/I645)",
+  "intercept": -0.09750183376418632,
+  "slope": 3.4651949528669506,
+  "train_dataset": "11",
+  "test_dataset": "9",
+  "fit_n": 11,
+  "fit_method": "OLS with intercept; equal weight per sample",
+  "session_blanks_I645": {
+    "9": 1214.0,
+    "11": 1256.0
+  },
+  "training_source": "/Users/alex/Nube /repos/Fluorometer/datos/11Samples.xlsx",
+  "training_sha256": "47ea24812c3912aef8265ffa5647bca06c60a32d1f507f50d096b026b8513e58",
+  "training_feature_range": [
+    0.24709815161913584,
+    0.9071777872249854
+  ],
+  "training_concentration_range_ug_ml": [
+    0.7944,
+    3.07062
+  ],
+  "test_used_for_fitting_or_model_selection": false,
+  "dataset_85_used": false
+}

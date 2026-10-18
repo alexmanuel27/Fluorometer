@@ -1,64 +1,182 @@
 # Fluorometer ESP32
 
-El ESP32 crea su propia red Wi-Fi, ejecuta mediciones de 435 nm y 645 nm con el
-LED activo en LOW conectado a GPIO4 y acepta firmware OTA desde el navegador.
+Prototipo de instrumento óptico para estimar clorofila a en extractos, con un **ESP32**, un LED azul y un sensor **AS7265X de 18 canales**. El ESP32 crea su propia red Wi-Fi y sirve una interfaz web en inglés para controlar la adquisición, ver resultados, exportarlos y actualizar el firmware por OTA, sin depender de Internet.
+
+## Estado del proyecto
+
+Hay dos versiones de calibración que no deben confundirse:
+
+| Parte | Estado |
+|---|---|
+| Firmware y binarios existentes | Conservan la fórmula inicial: Chl(a) = −2,7924 × ln(media I645) + 20,1264 |
+| Análisis principal del manuscrito | Calibración con 85 registros y transferencia fija a nueve diluciones, usando el blanco de sesión |
+| Nueva función del estudio | Chl(a) = −0,0621128959 + 2,8428103277 × ln(B645 / media I645) |
+| Instalación de la nueva función en el equipo | Pendiente: esta actualización de documentación no modifica ni recompila el firmware |
+
+Las once muestras quedan fuera del análisis principal vigente. Los datos y análisis previos se conservan como historial, no como resultados principales.
+
+Para la investigación, empezar por [articulo.md](datos/articulo.md). Para utilizar el equipo, seguir la guía rápida de abajo.
+
+## Guía rápida
+
+1. Conectar el ordenador o teléfono a la red **Fluorometer**, con contraseña predeterminada **clorofila**.
+2. Abrir **<http://192.168.4.1>**. Debe ser HTTP; no hace falta conexión a Internet.
+3. Pulsar **Start**: se enciende el LED y comienza una espera programada de 10 s.
+4. Una vez terminado el calentamiento, el botón pasa a **Stop**. El LED permanece encendido entre ciclos; Stop lo apaga.
+5. Con el blanco de la sesión en la cubeta, pulsar **Measure White**. Se toman diez lecturas, se guarda la referencia y se descarga automáticamente un CSV del blanco.
+6. Introducir la muestra y pulsar **Measure**. Se toman diez lecturas por canal. Este botón requiere LED listo y un blanco guardado.
+7. Escribir un nombre y pulsar **Save Excel + spectrum CSV**. El navegador descarga dos archivos; permitir descargas múltiples si lo solicita.
+
+La espera de 10 s es un ajuste del programa, **no una demostración experimental de estabilidad óptica**. La prueba separada de estabilidad se describe más abajo.
+
+### Qué muestra y guarda la interfaz
+
+- Diez lecturas individuales de 435 y 645 nm, en una tabla desplegable, y sus promedios.
+- Cálculo de Chl(a) con la fórmula que esté instalada en el firmware.
+- Un espectro desplegable de los 18 canales: un promedio por canal y barras de desviación estándar muestral calculadas con las diez lecturas.
+- Un archivo .xls compatible con Excel: lecturas de 435/645, promedios y Chl(a).
+- Un CSV espectral: longitud de onda, intensidad media, desviación estándar y número de lecturas.
+
+La desviación de las lecturas no equivale a incertidumbre total de concentración ni al error predictivo de la calibración. Las intensidades de los datos de investigación se utilizan en las unidades instrumentales almacenadas, sin atribuirles una conversión acreditada a irradiancia absoluta.
+
+### Blanco persistente y enfriamiento
+
+El blanco de 435/645 se guarda en memoria no volátil, sobrevive al apagado y solo se sustituye al completar un nuevo **Measure White**. Su persistencia no garantiza que siga siendo válido tras cambiar sesión, cuveta, potencia, atenuador o configuración. El protocolo del estudio usa **un blanco por sesión**, no uno por muestra.
+
+Con **Enable cooling cycle** activado, el LED se apaga 60 s después de tres ciclos completos de adquisición. **Los ciclos de blanco también cuentan.** Al terminar la pausa, pulsar Start para iniciar otro calentamiento. La casilla permite desactivar esta pausa: se trata de una protección por contador, no de una regulación mediante temperatura medida; no desactivarla sin controlar el calentamiento del montaje.
+
+Guardar un blanco es actualmente un requisito de la interfaz. **La fórmula inicial del firmware todavía no incorpora ese blanco matemáticamente.** La normalización B645/I645 corresponde al análisis nuevo del manuscrito y a su futura implementación.
+
+## Hardware y adquisición
+
+| Elemento | Uso |
+|---|---|
+| ESP32 | Punto de acceso Wi-Fi, web local, adquisición y OTA |
+| LED azul nominal 430–435 nm | Excitación, mediante electrónica de potencia; no conectar la potencia del LED directamente al GPIO |
+| GPIO4 | Control del LED; la fuente actual utiliza HIGH para encender y LOW para apagar |
+| AS7265X | Sensor espectral de 18 canales con filtros incorporados |
+| Cubeta y montaje óptico | LED y detector de frente; documentar geometría y condiciones utilizadas |
+
+Longitudes nominales: **410, 435, 460, 485, 510, 535, 560, 585, 610, 645, 680, 705, 730, 760, 810, 860, 900 y 940 nm**.
+
+Los factores CALIBRATION_435 y CALIBRATION_645 de la fuente escalan esos dos canales. Cambiar estos factores o la configuración óptica puede invalidar la aplicación directa de una calibración anterior.
+
+## Investigación: calibración 85 → 9
+
+La función elegida se ajustó exclusivamente con las 85 mediciones. Las nueve diluciones se predijeron sin reajustar coeficientes, usando el blanco de su propia sesión.
+
+**Chl(a) [µg/mL] = −0,0621128959 + 2,8428103277 × ln(B645 / media I645)**
+
+B645 e I645 deben ser positivos y finitos, expresados en la misma escala y configuración. Se aplica el logaritmo natural al cociente de medias. Blancos de los datos existentes: **1356 para las 85** y **1214 para las nueve**; no son constantes universales para sesiones futuras.
+
+| Evaluación | n | R² predictivo | RMSE (µg/mL) | MAE (µg/mL) | Error relativo absoluto medio |
+|---|---:|---:|---:|---:|---:|
+| CV85: entrenar con 84 y predecir el registro omitido | 85 | 0,94052 | 0,45598 | 0,27406 | 20,86 % |
+| Transferencia fija 85 → 9 con blanco de sesión | 9 | 0,99424 | 0,09241 | 0,06937 | 22,80 % |
+
+En las siete diluciones con referencia <1 µg/mL, el error relativo absoluto medio es **28,88 %**. No representa una incertidumbre de ±28,88 % ni un error máximo garantizado.
+
+![Transferencia a nueve diluciones y detalle de bajas concentraciones](datos/articulo_85_a_9/figuras/figura_04_transferencia9.png)
+
+El foco del paper es una **prueba de concepto de estimación empírica de clorofila a en extractos etanólicos**, con evaluación retrospectiva. Las nueve proceden de un único extracto madre, no de nueve extractos independientes. La selección se realizó después de explorar los datos disponibles: no es una validación prospectiva ciega. No se establece desempeño en lagos, LOD/LOQ o exactitud universal entre sesiones.
+
+Materiales vigentes:
+
+- [Guía del artículo para Daniela](datos/articulo.md): función, enfoque, explicaciones, seis figuras con pies y próximos pasos.
+- [Resumen breve](datos/RESUMEN_PARA_DANIELA.md).
+- [Resultados, figuras PNG/SVG y reproducción](datos/articulo_85_a_9/README.md).
+- [Índice de datos e historial](datos/README.md).
+- [Paquete listo para compartir con Daniela](datos/Paquete_Daniela_85_a_9_2026-10-18.zip).
+- [Bibliografía y documentos descargados](datos/bibliografia/README.md).
+
+El paquete contiene los dos Excel utilizados y el análisis principal; excluye el conjunto de once y sus análisis. Los originales permanecen intactos y se verifican por SHA-256.
+
+### Reproducir el análisis principal
+
+Desde la raíz del repositorio, con Python y las dependencias indicadas:
+
+~~~sh
+python3 -m pip install -r datos/articulo_85_a_9/requirements.txt
+python3 datos/articulo_85_a_9/analisis_publicacion.py
+~~~
+
+La ejecución verifica los originales y regenera las tablas y figuras de la carpeta principal. No modifica los Excel, el manuscrito ni el firmware.
 
 ## Primera carga por USB
 
-1. Instala el soporte **ESP32 by Espressif Systems** y la librería
-   **SparkFun AS7265X Spectral Sensor** en Arduino IDE.
-2. Abre `Spectro18_V_Flu/Spectro18_V_Flu.ino` y selecciona tu modelo de ESP32.
-3. Elige una tabla de particiones que incluya OTA (la opción predeterminada sirve;
-   no uses una opción marcada como "No OTA").
-4. Compila y carga el sketch por USB.
+1. Instalar en Arduino IDE el soporte **ESP32 by Espressif Systems** y la biblioteca **SparkFun Spectral Triad AS7265X**.
+2. Abrir [Spectro18_V_Flu.ino](Spectro18_V_Flu/Spectro18_V_Flu.ino).
+3. Seleccionar el modelo de ESP32 y una tabla de particiones que admita OTA; no elegir una opción marcada como No OTA.
+4. Compilar y cargar por USB. Revisar por el monitor serie, a 115200 baudios, la dirección del AP y si se detecta el sensor.
 
-## Uso
+La web y la actualización OTA se inicializan antes de detectar el sensor, de modo que siguen disponibles si este no responde. Esto no habilita mediciones sin sensor.
 
-1. Conecta el teléfono u ordenador a la red `Fluorometer` con contraseña
-   `clorofila`.
-2. Abre <http://192.168.4.1>.
-3. Pulsa **Start**. El LED se enciende y tarda 10 segundos en estabilizarse.
-4. Con el LED listo, pulsa **Measure White** para guardar una referencia blanca,
-   o **Measure** para medir una muestra. Ambos toman 10 lecturas y apagan el LED.
-5. **Measure** solo está disponible cuando el LED está listo y existe un blanco.
-6. La tabla muestra las 10 lecturas de la muestra y el resultado final es su promedio.
-7. Escribe un nombre y pulsa **Save Excel** para descargar un archivo `.xls`
-   con las dos columnas, las 10 lecturas, ambos promedios y el resultado Chl(A).
+### Compilar desde la terminal
 
-El blanco guarda sus 10 lecturas y ambos promedios en la memoria no volátil del
-ESP32. Sobrevive apagados y solo se reemplaza al completar otro **Measure White**.
+Con Arduino CLI, el soporte de ESP32 y la biblioteca instalados, el ejemplo para la placa ESP32 genérica es:
 
-El cálculo usa el promedio de 645 nm y el logaritmo natural:
-
-`Chl(A) = -2.7924 × ln(promedio 645 nm) + 20.1264`
-
-Si el promedio de 645 nm es cero o negativo, Chl(A) se muestra como no disponible.
-
-La interfaz web está en inglés.
-
-El panel y la actualización OTA siguen disponibles si el sensor no es detectado.
-Los factores `CALIBRATION_435` y `CALIBRATION_645`, al principio del sketch,
-permiten ajustar cada canal frente a un patrón de referencia sin cambiar la web.
-
-## Actualizaciones OTA posteriores
-
-En Arduino IDE usa **Sketch > Export Compiled Binary**. En el panel del
-fluorómetro, selecciona el archivo `.bin` generado y pulsa **Install .bin**.
-No desconectes la alimentación durante la carga; al terminar, el ESP32 se
-reinicia automáticamente. La página muestra el progreso, espera el reinicio y
-vuelve a conectarse. Si aparece `No suitable partition found`, la tabla de
-particiones instalada no admite OTA y debes cargar primero el firmware completo
-por USB usando la partición predeterminada.
-
-## Comprobación rápida
-
-Ejecuta `python3 tests/check_firmware.py`. La compilación final debe hacerse en
-Arduino IDE o, desde la raíz del proyecto, con:
-
-```sh
+~~~sh
 arduino-cli compile --fqbn esp32:esp32:esp32 --clean --output-dir output Spectro18_V_Flu
-```
+cp output/Spectro18_V_Flu.ino.bin output/Fluorometer-OTA.bin
+cp output/Spectro18_V_Flu.ino.merged.bin output/Fluorometer-USB.bin
+~~~
 
-Para actualizar desde la web usa `output/Fluorometer-OTA.bin`. El archivo
-`*.merged.bin` contiene la imagen completa para una carga inicial por cable, no
-para OTA.
+Adaptar la placa si el hardware es diferente. Los pasos de copia actualizan los alias: **compilar no renueva automáticamente un archivo de nombre distinto que ya exista**.
+
+| Archivo | Uso |
+|---|---|
+| output/Fluorometer-OTA.bin | Aplicación para actualizar desde la web |
+| output/Spectro18_V_Flu.ino.bin | Aplicación original generada por la compilación |
+| output/Fluorometer-USB.bin | Alias de la imagen completa .merged.bin para una carga inicial compatible por cable |
+| Archivos .merged.bin | Imagen completa; no cargarla mediante el formulario OTA |
+
+Los binarios almacenados corresponden a compilaciones anteriores. Una actualización de README, datos o artículo no los recompila ni instala la función nueva del estudio. Revisar **Firmware build** en la interfaz para identificar el firmware ejecutándose.
+
+## Actualizaciones OTA
+
+1. Conectarse al punto de acceso del equipo y abrir su web.
+2. Seleccionar el .bin de aplicación correspondiente a la placa.
+3. Pulsar **Install .bin** y esperar a que termine la carga y el reinicio.
+4. No desconectar la alimentación durante el proceso. La página muestra progreso e intenta reconectar.
+
+Si aparece **No suitable partition found**, la tabla de particiones instalada no admite OTA: cargar por USB una configuración compatible antes de intentar otra actualización.
+
+La contraseña del AP es una configuración predeterminada. Usar el equipo en un entorno local de confianza y cambiarla antes de compartir acceso; el formulario OTA no añade autenticación propia.
+
+## Prueba independiente de estabilidad del LED
+
+[LED_Stability_Test](LED_Stability_Test/README.md) contiene un firmware separado, no una opción del firmware principal. Enciende el LED y registra intensidad frente a tiempo hasta cumplir el criterio de estabilidad o el límite de seguridad.
+
+Utiliza el canal de 435 nm: **debe atenuarse la señal para evitar saturación durante esta prueba**. No confundir una señal saturada y constante con estabilidad. No hay resultados experimentales de esta prueba incluidos en el análisis principal del paper.
+
+## Comprobaciones disponibles
+
+~~~sh
+python3 tests/check_firmware.py
+python3 tests/check_led_stability.py
+~~~
+
+La primera comprueba elementos esperados de la fuente del firmware y la fórmula inicial; la segunda, los elementos de la prueba de estabilidad. Son comprobaciones de software, no pruebas físicas del equipo.
+
+La media y la desviación estándar tienen una prueba C++ independiente:
+
+~~~sh
+c++ -std=c++11 tests/check_spectrum.cpp -o /tmp/fluorometer-check-spectrum
+/tmp/fluorometer-check-spectrum
+~~~
+
+El análisis científico incluye sus propias comprobaciones numéricas: coeficientes por un segundo cálculo, exclusión del registro omitido en CV85, equivalencia de la normalización por blanco y reconciliación de métricas y rangos.
+
+## Mapa del repositorio
+
+| Ruta | Contenido |
+|---|---|
+| [Spectro18_V_Flu/](Spectro18_V_Flu/) | Fuente del firmware principal y cálculo de estadísticas espectrales |
+| [output/](output/) | Binarios del firmware principal |
+| [LED_Stability_Test/](LED_Stability_Test/) | Firmware, instrucciones y binarios de estabilidad del LED |
+| [datos/articulo.md](datos/articulo.md) | Guía vigente del manuscrito |
+| [datos/articulo_85_a_9/](datos/articulo_85_a_9/) | Único análisis principal de la versión actual del paper |
+| [datos/README.md](datos/README.md) | Índice de originales, resultados principales e historial exploratorio |
+| [tests/](tests/) | Comprobaciones del firmware y estadísticas |
+
+Las carpetas históricas no se han movido para conservar trazabilidad y referencias internas. Los temporales locales, cachés de Python y nuevas carpetas de compilación se excluyen mediante .gitignore; los binarios ya versionados se mantienen.

@@ -1,5 +1,7 @@
 # Validación cruzada exclusivamente sobre las 11 muestras
 
+> Informe histórico de exploración. La decisión vigente es 85 → 9 con blanco; consultar [articulo.md](../articulo.md). Este informe conserva sus resultados originales y no es la guía actual del manuscrito.
+
 Fecha: 18 de octubre de 2026. Único archivo de entrada: 11Samples.xlsx, Sheet1. No se abre ni se utiliza ningún otro conjunto de muestras.
 
 ## Método

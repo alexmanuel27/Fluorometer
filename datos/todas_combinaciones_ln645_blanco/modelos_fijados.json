@@ -1,0 +1,230 @@
+{
+  "session_blanks_I645": {
+    "85": 1356.0,
+    "9": 1214.0,
+    "11": 1256.0
+  },
+  "models": {
+    "85": {
+      "train_datasets": [
+        "85"
+      ],
+      "fit_n": 85,
+      "intercept": -0.06211289589760285,
+      "slope": 2.842810327686783,
+      "equation": "C_ug_ml = intercept + slope * ln(B645_session/I645)",
+      "method": "OLS with intercept; equal weight per sample, not per dataset",
+      "training_feature_range": [
+        0.0052912601952612255,
+        2.639440883988793
+      ],
+      "training_concentration_range_ug_ml": [
+        0.02384,
+        7.98964
+      ],
+      "sources": {
+        "85": {
+          "path": "/Users/alex/Nube /repos/Fluorometer/datos/calibracion_85_puntos (1).xlsx",
+          "sha256": "2fde9fbda48ce1ad920386fdc754a0181fc80f09944e3a4ca91569b01490e4e8"
+        }
+      },
+      "training_fit_not_cv": {
+        "n": 85,
+        "rmse_ug_ml": 0.4359483921967064,
+        "mae_ug_ml": 0.26482112181420797,
+        "bias_ug_ml": 4.702121045471251e-17,
+        "max_abs_error_ug_ml": 2.1160008332084925,
+        "mape_percent": 20.340145221393584,
+        "negative_predictions_n": 1,
+        "r2_predictive": 0.9456313461486879
+      }
+    },
+    "9": {
+      "train_datasets": [
+        "9"
+      ],
+      "fit_n": 9,
+      "intercept": -0.11724436514274957,
+      "slope": 2.919715099201707,
+      "equation": "C_ug_ml = intercept + slope * ln(B645_session/I645)",
+      "method": "OLS with intercept; equal weight per sample, not per dataset",
+      "training_feature_range": [
+        0.026373952887050422,
+        1.3581664376658351
+      ],
+      "training_concentration_range_ug_ml": [
+        0.0244,
+        3.9098
+      ],
+      "sources": {
+        "9": {
+          "path": "/Users/alex/Nube /repos/Fluorometer/datos/9Samples.xlsx",
+          "sha256": "d2f13be46fa8b396155f44a8f9bc08c27b6d141eaa5950b29883d78062696000"
+        }
+      },
+      "training_fit_not_cv": {
+        "n": 9,
+        "rmse_ug_ml": 0.08182180911029358,
+        "mae_ug_ml": 0.07100270950598817,
+        "bias_ug_ml": 7.401486830834377e-17,
+        "max_abs_error_ug_ml": 0.1343770005504168,
+        "mape_percent": 62.364193157775794,
+        "negative_predictions_n": 2,
+        "r2_predictive": 0.9954848915326164
+      }
+    },
+    "11": {
+      "train_datasets": [
+        "11"
+      ],
+      "fit_n": 11,
+      "intercept": -0.09750183376418632,
+      "slope": 3.4651949528669506,
+      "equation": "C_ug_ml = intercept + slope * ln(B645_session/I645)",
+      "method": "OLS with intercept; equal weight per sample, not per dataset",
+      "training_feature_range": [
+        0.24709815161913584,
+        0.9071777872249854
+      ],
+      "training_concentration_range_ug_ml": [
+        0.7944,
+        3.07062
+      ],
+      "sources": {
+        "11": {
+          "path": "/Users/alex/Nube /repos/Fluorometer/datos/11Samples.xlsx",
+          "sha256": "47ea24812c3912aef8265ffa5647bca06c60a32d1f507f50d096b026b8513e58"
+        }
+      },
+      "training_fit_not_cv": {
+        "n": 11,
+        "rmse_ug_ml": 0.03251960141339183,
+        "mae_ug_ml": 0.02617564266545346,
+        "bias_ug_ml": 6.055761952500853e-17,
+        "max_abs_error_ug_ml": 0.0814191841776144,
+        "mape_percent": 1.8187776669948637,
+        "negative_predictions_n": 0,
+        "r2_predictive": 0.998063205765989
+      }
+    },
+    "85+9": {
+      "train_datasets": [
+        "85",
+        "9"
+      ],
+      "fit_n": 94,
+      "intercept": -0.06917235112939711,
+      "slope": 2.848657414061852,
+      "equation": "C_ug_ml = intercept + slope * ln(B645_session/I645)",
+      "method": "OLS with intercept; equal weight per sample, not per dataset",
+      "training_feature_range": [
+        0.0052912601952612255,
+        2.639440883988793
+      ],
+      "training_concentration_range_ug_ml": [
+        0.02384,
+        7.98964
+      ],
+      "sources": {
+        "85": {
+          "path": "/Users/alex/Nube /repos/Fluorometer/datos/calibracion_85_puntos (1).xlsx",
+          "sha256": "2fde9fbda48ce1ad920386fdc754a0181fc80f09944e3a4ca91569b01490e4e8"
+        },
+        "9": {
+          "path": "/Users/alex/Nube /repos/Fluorometer/datos/9Samples.xlsx",
+          "sha256": "d2f13be46fa8b396155f44a8f9bc08c27b6d141eaa5950b29883d78062696000"
+        }
+      },
+      "training_fit_not_cv": {
+        "n": 94,
+        "rmse_ug_ml": 0.41551293521588073,
+        "mae_ug_ml": 0.24616966719291966,
+        "bias_ug_ml": -4.104281926140871e-16,
+        "max_abs_error_ug_ml": 2.1195475726520008,
+        "mape_percent": 21.54508453350916,
+        "negative_predictions_n": 1,
+        "r2_predictive": 0.949837343849304
+      }
+    },
+    "85+11": {
+      "train_datasets": [
+        "85",
+        "11"
+      ],
+      "fit_n": 96,
+      "intercept": -0.01995352823089974,
+      "slope": 2.8314409480622005,
+      "equation": "C_ug_ml = intercept + slope * ln(B645_session/I645)",
+      "method": "OLS with intercept; equal weight per sample, not per dataset",
+      "training_feature_range": [
+        0.0052912601952612255,
+        2.639440883988793
+      ],
+      "training_concentration_range_ug_ml": [
+        0.02384,
+        7.98964
+      ],
+      "sources": {
+        "85": {
+          "path": "/Users/alex/Nube /repos/Fluorometer/datos/calibracion_85_puntos (1).xlsx",
+          "sha256": "2fde9fbda48ce1ad920386fdc754a0181fc80f09944e3a4ca91569b01490e4e8"
+        },
+        "11": {
+          "path": "/Users/alex/Nube /repos/Fluorometer/datos/11Samples.xlsx",
+          "sha256": "47ea24812c3912aef8265ffa5647bca06c60a32d1f507f50d096b026b8513e58"
+        }
+      },
+      "training_fit_not_cv": {
+        "n": 96,
+        "rmse_ug_ml": 0.4231978802123252,
+        "mae_ug_ml": 0.2653942184438687,
+        "bias_ug_ml": -2.0354088784794536e-16,
+        "max_abs_error_ug_ml": 2.1375369629237446,
+        "mape_percent": 17.625194650738752,
+        "negative_predictions_n": 1,
+        "r2_predictive": 0.9436031911005586
+      }
+    },
+    "9+11": {
+      "train_datasets": [
+        "9",
+        "11"
+      ],
+      "fit_n": 20,
+      "intercept": -0.05856629094569295,
+      "slope": 3.1681675640261884,
+      "equation": "C_ug_ml = intercept + slope * ln(B645_session/I645)",
+      "method": "OLS with intercept; equal weight per sample, not per dataset",
+      "training_feature_range": [
+        0.026373952887050422,
+        1.3581664376658351
+      ],
+      "training_concentration_range_ug_ml": [
+        0.0244,
+        3.9098
+      ],
+      "sources": {
+        "9": {
+          "path": "/Users/alex/Nube /repos/Fluorometer/datos/9Samples.xlsx",
+          "sha256": "d2f13be46fa8b396155f44a8f9bc08c27b6d141eaa5950b29883d78062696000"
+        },
+        "11": {
+          "path": "/Users/alex/Nube /repos/Fluorometer/datos/11Samples.xlsx",
+          "sha256": "47ea24812c3912aef8265ffa5647bca06c60a32d1f507f50d096b026b8513e58"
+        }
+      },
+      "training_fit_not_cv": {
+        "n": 20,
+        "rmse_ug_ml": 0.16619465148222706,
+        "mae_ug_ml": 0.13358167052994377,
+        "bias_ug_ml": 6.7723604502134545e-16,
+        "max_abs_error_ug_ml": 0.3345325634162015,
+        "mape_percent": 18.596726907352448,
+        "negative_predictions_n": 0,
+        "r2_predictive": 0.9758648546572141
+      }
+    }
+  },
+  "blank_source": "Fixed session means supplied by Alex, not fitted",
+  "form_selection": "Same linear ln(B/I) form for every combination; no selection of extra terms"
+}

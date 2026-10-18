@@ -1,0 +1,18 @@
+{
+  "equation": "C_ug_ml = intercept + slope_lnI645 * ln(I645)",
+  "intercept": 20.44107230547342,
+  "slope_lnI645": -2.842810327686783,
+  "fit_n": 85,
+  "blank_used": false,
+  "training_source": "/Users/alex/Nube /repos/Fluorometer/datos/calibracion_85_puntos (1).xlsx",
+  "training_sha256": "2fde9fbda48ce1ad920386fdc754a0181fc80f09944e3a4ca91569b01490e4e8",
+  "training_concentration_range_ug_ml": [
+    0.02384,
+    7.98964
+  ],
+  "training_lnI645_range": [
+    4.572853584511548,
+    7.207003208305079
+  ],
+  "purpose": "Full fit on 85 for application; CV85 uses a separate fit on 84 in each fold."
+}

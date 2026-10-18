@@ -1,5 +1,7 @@
 # Modelos ajustados con 11 y aplicados a 9
 
+> Informe histórico de exploración. La decisión vigente es 85 → 9 con blanco; consultar [articulo.md](../articulo.md). Este informe conserva sus resultados originales y no es la guía actual del manuscrito.
+
 Fecha: 18 de octubre de 2026. Todos los errores de concentración están en µg/mL.
 
 ## Qué significaban las tablas anteriores

@@ -1,5 +1,7 @@
 # Modelos 1 y 2 aplicados a las 85 muestras
 
+> Informe histórico de exploración. La decisión vigente es 85 → 9 con blanco; consultar [articulo.md](../articulo.md). Este informe conserva sus resultados originales y no es la guía actual del manuscrito.
+
 Coeficientes tomados del análisis exclusivo de las once muestras. No se vuelve a calibrar, no se usa blanco y no se abre el conjunto de nueve.
 Las métricas siguientes corresponden a las 85 predicciones externas. No son validación cruzada ni un reajuste sobre las 85.
 

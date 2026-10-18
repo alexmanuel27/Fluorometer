@@ -1,5 +1,7 @@
 # Relación con 645 nm, sin blanco
 
+> Informe histórico de exploración. La decisión vigente es 85 → 9 con blanco; consultar [articulo.md](../articulo.md). Este informe conserva sus resultados originales y no es la guía actual del manuscrito.
+
 C (µg/mL) = 24.62904595 -3.46519495 × ln(I645).
 ln es el logaritmo natural. Los coeficientes se ajustan solo con las 11 muestras y se aplican sin cambios a las nueve y las 85. No se utiliza blanco ni I680. Las predicciones negativas se conservan para mostrar el comportamiento real de la ecuación.
 

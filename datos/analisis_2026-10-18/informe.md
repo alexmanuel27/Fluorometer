@@ -1,5 +1,7 @@
 # Análisis de calibración de clorofila a
 
+> Informe histórico de exploración. La decisión vigente es 85 → 9 con blanco; consultar [articulo.md](../articulo.md). Este informe conserva sus resultados originales y no es la guía actual del manuscrito.
+
 Fecha: 18 de octubre de 2026. Unidad de concentración: µg/mL.
 
 ## Resultado principal

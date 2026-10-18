@@ -1,0 +1,37 @@
+{
+  "equation": "C_ug_ml = intercept + slope * ln(B645_session/I645)",
+  "intercept": -0.06917235112939711,
+  "slope": 2.848657414061852,
+  "fit_n": 94,
+  "fit_datasets": [
+    "85",
+    "9"
+  ],
+  "test_dataset": "11",
+  "fit_method": "OLS with intercept; equal weight per sample",
+  "session_blanks_I645": {
+    "85": 1356.0,
+    "9": 1214.0,
+    "11": 1256.0
+  },
+  "blank_source": "Fixed session means supplied by Alex",
+  "training_sources": {
+    "85": {
+      "path": "/Users/alex/Nube /repos/Fluorometer/datos/calibracion_85_puntos (1).xlsx",
+      "sha256": "2fde9fbda48ce1ad920386fdc754a0181fc80f09944e3a4ca91569b01490e4e8"
+    },
+    "9": {
+      "path": "/Users/alex/Nube /repos/Fluorometer/datos/9Samples.xlsx",
+      "sha256": "d2f13be46fa8b396155f44a8f9bc08c27b6d141eaa5950b29883d78062696000"
+    }
+  },
+  "training_concentration_range_ug_ml": [
+    0.02384,
+    7.98964
+  ],
+  "training_feature_range": [
+    0.0052912601952612255,
+    2.639440883988793
+  ],
+  "test_used_for_fitting_or_selection": false
+}

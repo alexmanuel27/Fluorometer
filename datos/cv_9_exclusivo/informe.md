@@ -1,5 +1,7 @@
 # Validación cruzada exclusivamente sobre las nueve muestras
 
+> Informe histórico de exploración. La decisión vigente es 85 → 9 con blanco; consultar [articulo.md](../articulo.md). Este informe conserva sus resultados originales y no es la guía actual del manuscrito.
+
 Único Excel utilizado: 9Samples.xlsx, Sheet1, A1:AL10. No se leen los conjuntos de once ni de 85 ni sus resultados o coeficientes. Se reutilizan únicamente las definiciones matemáticas de los modelos y las funciones de ajuste.
 
 ## Método

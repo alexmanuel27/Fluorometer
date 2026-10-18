@@ -1,0 +1,243 @@
+{
+  "model": {
+    "equation": "C_ug_ml = intercept + slope * ln(B645_session/I645)",
+    "intercept": -0.06917235112939711,
+    "slope": 2.848657414061852,
+    "fit_n": 94,
+    "fit_datasets": [
+      "85",
+      "9"
+    ],
+    "test_dataset": "11",
+    "fit_method": "OLS with intercept; equal weight per sample",
+    "session_blanks_I645": {
+      "85": 1356.0,
+      "9": 1214.0,
+      "11": 1256.0
+    },
+    "blank_source": "Fixed session means supplied by Alex",
+    "training_sources": {
+      "85": {
+        "path": "/Users/alex/Nube /repos/Fluorometer/datos/calibracion_85_puntos (1).xlsx",
+        "sha256": "2fde9fbda48ce1ad920386fdc754a0181fc80f09944e3a4ca91569b01490e4e8"
+      },
+      "9": {
+        "path": "/Users/alex/Nube /repos/Fluorometer/datos/9Samples.xlsx",
+        "sha256": "d2f13be46fa8b396155f44a8f9bc08c27b6d141eaa5950b29883d78062696000"
+      }
+    },
+    "training_concentration_range_ug_ml": [
+      0.02384,
+      7.98964
+    ],
+    "training_feature_range": [
+      0.0052912601952612255,
+      2.639440883988793
+    ],
+    "test_used_for_fitting_or_selection": false
+  },
+  "calibration_94_in_sample": {
+    "n": 94,
+    "rmse_ug_ml": 0.41551293521588073,
+    "mae_ug_ml": 0.24616966719291966,
+    "bias_ug_ml": -4.104281926140871e-16,
+    "max_abs_error_ug_ml": 2.1195475726520008,
+    "mape_percent": 21.54508453350916,
+    "negative_predictions_n": 1,
+    "r2_predictive": 0.949837343849304
+  },
+  "test_11": {
+    "n": 11,
+    "rmse_ug_ml": 0.32672848659849285,
+    "mae_ug_ml": 0.2973926811512355,
+    "bias_ug_ml": -0.2973926811512355,
+    "max_abs_error_ug_ml": 0.5555536216787167,
+    "mape_percent": 17.071274920242537,
+    "negative_predictions_n": 0,
+    "r2_predictive": 0.8044908633252759,
+    "outside_training_feature_range_n": 0
+  },
+  "metrics": [
+    {
+      "evaluation": "Ajuste de calibración 85+9, no CV",
+      "dataset": "94",
+      "n": 94,
+      "rmse_ug_ml": 0.41551293521588073,
+      "mae_ug_ml": 0.24616966719291966,
+      "bias_ug_ml": -4.104281926140871e-16,
+      "max_abs_error_ug_ml": 2.1195475726520008,
+      "mape_percent": 21.54508453350916,
+      "negative_predictions_n": 1,
+      "r2_predictive": 0.949837343849304
+    },
+    {
+      "evaluation": "Parte de la calibración, no CV",
+      "dataset": "85",
+      "n": 85,
+      "rmse_ug_ml": 0.43597159819328224,
+      "mae_ug_ml": 0.2648917587771785,
+      "bias_ug_ml": -0.002499984891237366,
+      "max_abs_error_ug_ml": 2.1195475726520008,
+      "mape_percent": 20.913255140743995,
+      "negative_predictions_n": 1,
+      "r2_predictive": 0.9456255577920937
+    },
+    {
+      "evaluation": "Parte de la calibración, no CV",
+      "dataset": "9",
+      "n": 9,
+      "rmse_ug_ml": 0.09014741663209254,
+      "mae_ug_ml": 0.0693499133415857,
+      "bias_ug_ml": 0.023610968417237563,
+      "max_abs_error_ug_ml": 0.1644316667341419,
+      "mape_percent": 27.512362131846846,
+      "negative_predictions_n": 0,
+      "r2_predictive": 0.9945192927658468
+    },
+    {
+      "evaluation": "Prueba: no utilizada para ajustar",
+      "dataset": "11",
+      "n": 11,
+      "rmse_ug_ml": 0.32672848659849285,
+      "mae_ug_ml": 0.2973926811512355,
+      "bias_ug_ml": -0.2973926811512355,
+      "max_abs_error_ug_ml": 0.5555536216787167,
+      "mape_percent": 17.071274920242537,
+      "negative_predictions_n": 0,
+      "r2_predictive": 0.8044908633252759
+    }
+  ],
+  "test_11_ranges": [
+    {
+      "range_ug_ml": "0–<0,1",
+      "lower_ug_ml": 0,
+      "upper_ug_ml": 0.1,
+      "upper_inclusive": false,
+      "n": 0,
+      "rmse_ug_ml": null,
+      "mae_ug_ml": null,
+      "bias_ug_ml": null,
+      "max_abs_error_ug_ml": null,
+      "mape_percent": null,
+      "negative_predictions_n": null
+    },
+    {
+      "range_ug_ml": "0,1–<0,25",
+      "lower_ug_ml": 0.1,
+      "upper_ug_ml": 0.25,
+      "upper_inclusive": false,
+      "n": 0,
+      "rmse_ug_ml": null,
+      "mae_ug_ml": null,
+      "bias_ug_ml": null,
+      "max_abs_error_ug_ml": null,
+      "mape_percent": null,
+      "negative_predictions_n": null
+    },
+    {
+      "range_ug_ml": "0,25–<0,5",
+      "lower_ug_ml": 0.25,
+      "upper_ug_ml": 0.5,
+      "upper_inclusive": false,
+      "n": 0,
+      "rmse_ug_ml": null,
+      "mae_ug_ml": null,
+      "bias_ug_ml": null,
+      "max_abs_error_ug_ml": null,
+      "mape_percent": null,
+      "negative_predictions_n": null
+    },
+    {
+      "range_ug_ml": "0,5–<1",
+      "lower_ug_ml": 0.5,
+      "upper_ug_ml": 1,
+      "upper_inclusive": false,
+      "n": 3,
+      "rmse_ug_ml": 0.13930153249002253,
+      "mae_ug_ml": 0.13845317671798466,
+      "bias_ug_ml": -0.13845317671798466,
+      "max_abs_error_ug_ml": 0.15967436951856617,
+      "mape_percent": 16.53515741449074,
+      "negative_predictions_n": 0
+    },
+    {
+      "range_ug_ml": "1–<2",
+      "lower_ug_ml": 1,
+      "upper_ug_ml": 2,
+      "upper_inclusive": false,
+      "n": 4,
+      "rmse_ug_ml": 0.26250908921280924,
+      "mae_ug_ml": 0.2621401270097513,
+      "bias_ug_ml": -0.2621401270097513,
+      "max_abs_error_ug_ml": 0.2772783048665015,
+      "mape_percent": 16.863040405010974,
+      "negative_predictions_n": 0
+    },
+    {
+      "range_ug_ml": "2–<3",
+      "lower_ug_ml": 2,
+      "upper_ug_ml": 3,
+      "upper_inclusive": false,
+      "n": 3,
+      "rmse_ug_ml": 0.42101776621438713,
+      "mae_ug_ml": 0.41728194426397164,
+      "bias_ug_ml": -0.41728194426397164,
+      "max_abs_error_ug_ml": 0.49601266935431365,
+      "mape_percent": 17.544611651684345,
+      "negative_predictions_n": 0
+    },
+    {
+      "range_ug_ml": "3–<5",
+      "lower_ug_ml": 3,
+      "upper_ug_ml": 5,
+      "upper_inclusive": false,
+      "n": 1,
+      "rmse_ug_ml": 0.5555536216787167,
+      "mae_ug_ml": 0.5555536216787167,
+      "bias_ug_ml": -0.5555536216787167,
+      "max_abs_error_ug_ml": 0.5555536216787167,
+      "mape_percent": 18.092555304098738,
+      "negative_predictions_n": 0
+    },
+    {
+      "range_ug_ml": "5–8",
+      "lower_ug_ml": 5,
+      "upper_ug_ml": 8,
+      "upper_inclusive": true,
+      "n": 0,
+      "rmse_ug_ml": null,
+      "mae_ug_ml": null,
+      "bias_ug_ml": null,
+      "max_abs_error_ug_ml": null,
+      "mape_percent": null,
+      "negative_predictions_n": null
+    }
+  ],
+  "test_11_low_high": [
+    {
+      "range_ug_ml": "<1",
+      "n": 3,
+      "rmse_ug_ml": 0.13930153249002253,
+      "mae_ug_ml": 0.13845317671798466,
+      "bias_ug_ml": -0.13845317671798466,
+      "max_abs_error_ug_ml": 0.15967436951856617,
+      "mape_percent": 16.53515741449074,
+      "negative_predictions_n": 0
+    },
+    {
+      "range_ug_ml": ">=1",
+      "n": 8,
+      "rmse_ug_ml": 0.37350565468312363,
+      "mae_ug_ml": 0.3569949953137046,
+      "bias_ug_ml": -0.3569949953137046,
+      "max_abs_error_ug_ml": 0.5555536216787167,
+      "mape_percent": 17.27231898489946,
+      "negative_predictions_n": 0
+    }
+  ],
+  "source_sha256": {
+    "85": "2fde9fbda48ce1ad920386fdc754a0181fc80f09944e3a4ca91569b01490e4e8",
+    "9": "d2f13be46fa8b396155f44a8f9bc08c27b6d141eaa5950b29883d78062696000",
+    "11": "47ea24812c3912aef8265ffa5647bca06c60a32d1f507f50d096b026b8513e58"
+  }
+}

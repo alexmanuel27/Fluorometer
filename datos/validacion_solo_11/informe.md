@@ -1,5 +1,7 @@
 # Selección solo con 11; evaluación posterior en 9
 
+> Informe histórico de exploración. La decisión vigente es 85 → 9 con blanco; consultar [articulo.md](../articulo.md). Este informe conserva sus resultados originales y no es la guía actual del manuscrito.
+
 El procedimiento de entrenamiento abre únicamente 11Samples.xlsx. Compara 59 candidatos predefinidos usando dejar-una-fuera. Las equivalencias numéricas favorecen menor complejidad y ausencia de blanco. El modelo elegido se guarda en modelo_fijado.json antes de que la etapa de evaluación abra 9Samples.xlsx.
 Modelo elegido: **ln(I645)**.
 C = 24.62904595 -3.46519495 × feature1; features: ln(I645)

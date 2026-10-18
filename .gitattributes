@@ -1,0 +1,4 @@
+# Los CSV para Excel usan CRLF; conservarlos sin reescribir los datos.
+*.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# Las figuras SVG generadas por Matplotlib conservan su formato original.
+datos/articulo_85_a_9/figuras/*.svg -whitespace
