@@ -11,7 +11,7 @@ Hay dos versiones de calibración que no deben confundirse:
 | Firmware y binarios existentes | Conservan la fórmula inicial: Chl(a) = −2,7924 × ln(media I645) + 20,1264 |
 | Análisis principal del manuscrito | Calibración con 85 registros y transferencia fija a nueve diluciones, usando el blanco de sesión |
 | Nueva función del estudio | Chl(a) = −0,0621128959 + 2,8428103277 × ln(B645 / media I645) |
-| Instalación de la nueva función en el equipo | Pendiente: esta actualización de documentación no modifica ni recompila el firmware |
+| Instalación de la nueva función en el equipo | Pendiente: el firmware conserva la fórmula inicial, aunque se actualicen otras funciones |
 
 Las once muestras quedan fuera del análisis principal vigente. Los datos y análisis previos se conservan como historial, no como resultados principales.
 
@@ -21,13 +21,15 @@ Para la investigación, empezar por [articulo.md](datos/articulo.md). Para utili
 
 1. Conectar el ordenador o teléfono a la red **Fluorometer**, con contraseña predeterminada **clorofila**.
 2. Abrir **<http://192.168.4.1>**. Debe ser HTTP; no hace falta conexión a Internet.
-3. Pulsar **Start**: se enciende el LED y comienza una espera programada de 10 s.
-4. Una vez terminado el calentamiento, el botón pasa a **Stop**. El LED permanece encendido entre ciclos; Stop lo apaga.
+3. Pulsar **Start**: se enciende el LED y el equipo queda listo para medir inmediatamente, sin espera por software.
+4. El botón pasa directamente a **Stop**. El LED permanece encendido entre ciclos; Stop lo apaga.
 5. Con el blanco de la sesión en la cubeta, pulsar **Measure White**. Se toman diez lecturas, se guarda la referencia y se descarga automáticamente un CSV del blanco.
 6. Introducir la muestra y pulsar **Measure**. Se toman diez lecturas por canal. Este botón requiere LED listo y un blanco guardado.
 7. Escribir un nombre y pulsar **Save Excel + spectrum CSV**. El navegador descarga dos archivos; permitir descargas múltiples si lo solicita.
 
-La espera de 10 s es un ajuste del programa, **no una demostración experimental de estabilidad óptica**. La prueba separada de estabilidad se describe más abajo.
+La estabilización del LED se realiza por hardware. El firmware principal no añade un temporizador de espera antes de medir.
+
+Para registrar el fondo con la excitación apagada, pulsar **Measure Dark** con la cámara óptica cerrada. Puede hacerse antes de Start o con el LED encendido: el equipo lo apaga antes de tomar diez lecturas de los 18 canales y lo deja apagado al terminar. Después, pulsar Start para volver a encenderlo.
 
 ### Qué muestra y guarda la interfaz
 
@@ -36,16 +38,30 @@ La espera de 10 s es un ajuste del programa, **no una demostración experimental
 - Un espectro desplegable de los 18 canales: un promedio por canal y barras de desviación estándar muestral calculadas con las diez lecturas.
 - Un archivo .xls compatible con Excel: lecturas de 435/645, promedios y Chl(a).
 - Un CSV espectral: longitud de onda, intensidad media, desviación estándar y número de lecturas.
+- Un espectro desplegable del blanco con el promedio y la desviación estándar de los 18 canales. Su CSV automático contiene las diez lecturas por canal, una fila de promedios y otra de desviaciones estándar.
+- Un espectro desplegable **dark**, con el mismo formato de promedios y desviaciones, y descarga automática de `dark-reference-<fecha>.csv` (diez lecturas por canal, promedio y desviación estándar).
 
 La desviación de las lecturas no equivale a incertidumbre total de concentración ni al error predictivo de la calibración. Las intensidades de los datos de investigación se utilizan en las unidades instrumentales almacenadas, sin atribuirles una conversión acreditada a irradiancia absoluta.
 
 ### Blanco persistente y enfriamiento
 
-El blanco de 435/645 se guarda en memoria no volátil, sobrevive al apagado y solo se sustituye al completar un nuevo **Measure White**. Su persistencia no garantiza que siga siendo válido tras cambiar sesión, cuveta, potencia, atenuador o configuración. El protocolo del estudio usa **un blanco por sesión**, no uno por muestra.
+El blanco guarda las **diez lecturas de los 18 canales** en memoria no volátil, sobrevive al apagado y solo se sustituye al completar y guardar correctamente un nuevo **Measure White**. Los promedios y las desviaciones estándar se calculan a partir de esas lecturas. Si falla el guardado o se reciben valores inválidos, se conserva el blanco anterior y la interfaz muestra el fallo, sin descargar un archivo como si se hubiera guardado.
 
-Con **Enable cooling cycle** activado, el LED se apaga 60 s después de tres ciclos completos de adquisición. **Los ciclos de blanco también cuentan.** Al terminar la pausa, pulsar Start para iniciar otro calentamiento. La casilla permite desactivar esta pausa: se trata de una protección por contador, no de una regulación mediante temperatura medida; no desactivarla sin controlar el calentamiento del montaje.
+Los blancos guardados con firmware anterior conservan sus datos de 435/645 nm. La interfaz los identifica como referencias antiguas: **realizar un nuevo Measure White para guardar los 18 canales**; los canales que no se midieron no se rellenan con ceros. La descarga `/white.csv` utiliza el blanco persistente y también funciona tras reiniciar el equipo.
+
+La persistencia del blanco no garantiza que siga siendo válido tras cambiar sesión, cuveta, potencia, atenuador o configuración. El protocolo del estudio usa **un blanco por sesión**, no uno por muestra.
+
+Con **Enable cooling cycle** activado, el LED se apaga 60 s después de tres ciclos completos de adquisición. **Los ciclos de blanco también cuentan.** Al terminar la pausa, pulsar Start para encenderlo y volver a medir inmediatamente. La casilla permite desactivar esta pausa: se trata de una protección por contador, no de una regulación mediante temperatura medida; no desactivarla sin controlar el calentamiento del montaje.
 
 Guardar un blanco es actualmente un requisito de la interfaz. **La fórmula inicial del firmware todavía no incorpora ese blanco matemáticamente.** La normalización B645/I645 corresponde al análisis nuevo del manuscrito y a su futura implementación.
+
+### Medición dark
+
+**Measure Dark** registra la señal del sensor sin el LED de excitación. No requiere un blanco guardado ni se convierte en un requisito para medir muestras. Durante la toma se desactiva también el LED indicador controlable del AS7265X; después se restaura a su estado habitual. La cámara debe permanecer cerrada: apagar el LED no elimina la luz ambiental que pueda llegar al sensor.
+
+Las diez lecturas de los 18 canales se guardan por separado en memoria no volátil, sobreviven al apagado y solo se sustituyen al guardar correctamente otra toma dark. Un valor cero es válido en dark. Los datos no finitos o negativos y los fallos de escritura no reemplazan la referencia anterior. `/dark.csv` permite volver a descargar la referencia guardada, incluso tras reiniciar.
+
+La toma dark no altera el blanco ni la última medición de muestra, **no se resta automáticamente** de las señales y no cambia la fórmula de clorofila. Tampoco cuenta como adquisición con LED encendido para el enfriamiento; no reinicia ese contador y no puede interrumpir un enfriamiento en curso. Al terminar, el LED de excitación queda apagado.
 
 ## Hardware y adquisición
 
@@ -130,7 +146,7 @@ Adaptar la placa si el hardware es diferente. Los pasos de copia actualizan los 
 | output/Fluorometer-USB.bin | Alias de la imagen completa .merged.bin para una carga inicial compatible por cable |
 | Archivos .merged.bin | Imagen completa; no cargarla mediante el formulario OTA |
 
-Los binarios almacenados corresponden a compilaciones anteriores. Una actualización de README, datos o artículo no los recompila ni instala la función nueva del estudio. Revisar **Firmware build** en la interfaz para identificar el firmware ejecutándose.
+Los binarios actuales permiten medir inmediatamente al pulsar Start, guardan blanco y dark de 18 canales por separado y conservan la fórmula inicial de clorofila. Una actualización de README, datos o artículo no los recompila ni instala la función nueva del estudio. Revisar **Firmware build** en la interfaz para identificar el firmware ejecutándose.
 
 ## Actualizaciones OTA
 
@@ -153,10 +169,12 @@ Utiliza el canal de 435 nm: **debe atenuarse la señal para evitar saturación d
 
 ~~~sh
 python3 tests/check_firmware.py
+python3 tests/check_white.py
+node tests/check_web.js
 python3 tests/check_led_stability.py
 ~~~
 
-La primera comprueba elementos esperados de la fuente del firmware y la fórmula inicial; la segunda, los elementos de la prueba de estabilidad. Son comprobaciones de software, no pruebas físicas del equipo.
+Las comprobaciones verifican elementos esperados de la fuente y la fórmula inicial, las referencias de 18 canales (promedios, desviaciones, CSV, recuperación tras reinicio simulado, compatibilidad con blancos anteriores y fallos de guardado), la captura dark con LED apagado, su independencia del blanco y el contador térmico, los controles y descargas de la web, y los elementos de la prueba de estabilidad. La prueba de referencias necesita un compilador C++; la de la web, Node.js, sin dependencias adicionales. Son comprobaciones de software, no pruebas físicas del equipo.
 
 La media y la desviación estándar tienen una prueba C++ independiente:
 
