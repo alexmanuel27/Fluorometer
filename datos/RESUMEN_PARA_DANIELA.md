@@ -1,5 +1,7 @@
 # Resumen actual para Daniela: 85 → 9 con blanco
 
+**Resumen de la versión de octubre.** La palabra «actual» del título se refiere a esa etapa. Para la entrega posterior de extractos, caolín y AO, abrir la [guía de noviembre](datos%20para%20el%20paper/00_LEEME_DANIELA.md).
+
 Actualizado el 18 de octubre de 2026. Documento breve de la decisión vigente. El historial completo anterior se conserva en el repositorio, en la carpeta historial_documentos; no forma parte del paquete nuevo.
 
 ## Qué hemos decidido

@@ -1,0 +1,649 @@
+﻿geometria,preparacion,clorofila_nominal_ug_mL,caolin_nominal_g_L,nm,calidad,replica,intensidad,DE_interna,n_lecturas_internas
+90°,blanco_etanol,0,0.0,410,utilizable,1,390.151886,1.0371,10
+90°,blanco_etanol,0,0.0,410,utilizable,2,383.451904,0.672677,10
+90°,blanco_etanol,0,0.0,410,utilizable,3,384.514099,0.878319,10
+90°,blanco_etanol,0,0.0,435,utilizable,1,778.085327,1.023265,10
+90°,blanco_etanol,0,0.0,435,utilizable,2,784.748718,1.204072,10
+90°,blanco_etanol,0,0.0,435,utilizable,3,783.130432,1.422565,10
+90°,blanco_etanol,0,0.0,460,utilizable,1,58.591053,0.0,10
+90°,blanco_etanol,0,0.0,460,utilizable,2,59.935768,0.496003,10
+90°,blanco_etanol,0,0.0,460,utilizable,3,59.551563,0.0,10
+90°,blanco_etanol,0,0.0,485,excluido: canal inestable,1,5.629374,7.272067,10
+90°,blanco_etanol,0,0.0,485,excluido: canal inestable,2,4.289047,6.906021,10
+90°,blanco_etanol,0,0.0,485,excluido: canal inestable,3,5.629374,7.272067,10
+90°,blanco_etanol,0,0.0,510,utilizable,1,7.686697,0.0,10
+90°,blanco_etanol,0,0.0,510,utilizable,2,7.686697,0.0,10
+90°,blanco_etanol,0,0.0,510,utilizable,3,7.686697,0.0,10
+90°,blanco_etanol,0,0.0,535,utilizable,1,4.349254,0.0,10
+90°,blanco_etanol,0,0.0,535,utilizable,2,4.349254,0.0,10
+90°,blanco_etanol,0,0.0,535,utilizable,3,4.349254,0.0,10
+90°,blanco_etanol,0,0.0,560,utilizable,1,7.956847,0.0,10
+90°,blanco_etanol,0,0.0,560,utilizable,2,7.843178,0.239636,10
+90°,blanco_etanol,0,0.0,560,utilizable,3,7.786343,0.274537,10
+90°,blanco_etanol,0,0.0,585,utilizable,1,4.264779,0.0,10
+90°,blanco_etanol,0,0.0,585,utilizable,2,4.264779,0.0,10
+90°,blanco_etanol,0,0.0,585,utilizable,3,4.264779,0.0,10
+90°,blanco_etanol,0,0.0,610,utilizable,1,2.225898,0.0,10
+90°,blanco_etanol,0,0.0,610,utilizable,2,2.225898,0.0,10
+90°,blanco_etanol,0,0.0,610,utilizable,3,2.225898,0.0,10
+90°,blanco_etanol,0,0.0,645,utilizable,1,2.925449,0.198948,10
+90°,blanco_etanol,0,0.0,645,utilizable,2,3.302927,0.0,10
+90°,blanco_etanol,0,0.0,645,utilizable,3,3.302927,0.0,10
+90°,blanco_etanol,0,0.0,680,utilizable,1,1.270322,0.446346,10
+90°,blanco_etanol,0,0.0,680,utilizable,2,2.011343,0.334759,10
+90°,blanco_etanol,0,0.0,680,utilizable,3,2.011343,0.334759,10
+90°,blanco_etanol,0,0.0,705,utilizable,1,8.341624,0.0,10
+90°,blanco_etanol,0,0.0,705,utilizable,2,8.341624,0.0,10
+90°,blanco_etanol,0,0.0,705,utilizable,3,8.341624,0.0,10
+90°,blanco_etanol,0,0.0,730,utilizable,1,2.432338,0.0,10
+90°,blanco_etanol,0,0.0,730,utilizable,2,2.432338,0.0,10
+90°,blanco_etanol,0,0.0,730,utilizable,3,2.432338,0.0,10
+90°,blanco_etanol,0,0.0,760,utilizable,1,0.995919,0.34993,10
+90°,blanco_etanol,0,0.0,760,utilizable,2,1.161906,0.428575,10
+90°,blanco_etanol,0,0.0,760,utilizable,3,1.493879,0.34993,10
+90°,blanco_etanol,0,0.0,810,utilizable,1,0.799133,0.0,10
+90°,blanco_etanol,0,0.0,810,utilizable,2,0.799133,0.0,10
+90°,blanco_etanol,0,0.0,810,utilizable,3,0.799133,0.0,10
+90°,blanco_etanol,0,0.0,860,utilizable,1,0.220378,0.464597,10
+90°,blanco_etanol,0,0.0,860,utilizable,2,0.330567,0.532263,10
+90°,blanco_etanol,0,0.0,860,utilizable,3,0.220378,0.464597,10
+90°,blanco_etanol,0,0.0,900,utilizable,1,1.749846,0.313058,10
+90°,blanco_etanol,0,0.0,900,utilizable,2,1.944273,0.0,10
+90°,blanco_etanol,0,0.0,900,utilizable,3,1.944273,0.0,10
+90°,blanco_etanol,0,0.0,940,utilizable,1,2.961455,0.0,10
+90°,blanco_etanol,0,0.0,940,utilizable,2,2.961455,0.0,10
+90°,blanco_etanol,0,0.0,940,utilizable,3,2.961455,0.0,10
+90°,extracto_puro,3,0.0,410,utilizable,1,272.820312,0.602879,10
+90°,extracto_puro,3,0.0,410,utilizable,2,270.614258,0.64452,10
+90°,extracto_puro,3,0.0,410,utilizable,3,270.369141,0.258385,10
+90°,extracto_puro,3,0.0,435,utilizable,1,588.942322,1.557675,10
+90°,extracto_puro,3,0.0,435,utilizable,2,587.895142,1.361084,10
+90°,extracto_puro,3,0.0,435,utilizable,3,588.466309,0.98312,10
+90°,extracto_puro,3,0.0,460,utilizable,1,49.754368,0.404987,10
+90°,extracto_puro,3,0.0,460,utilizable,2,49.946472,0.0,10
+90°,extracto_puro,3,0.0,460,utilizable,3,49.946472,0.0,10
+90°,extracto_puro,3,0.0,485,excluido: canal inestable,1,6.701635,7.064144,10
+90°,extracto_puro,3,0.0,485,excluido: canal inestable,2,4.020981,6.474395,10
+90°,extracto_puro,3,0.0,485,excluido: canal inestable,3,4.020981,6.474395,10
+90°,extracto_puro,3,0.0,510,utilizable,1,9.224037,0.0,10
+90°,extracto_puro,3,0.0,510,utilizable,2,9.224037,0.0,10
+90°,extracto_puro,3,0.0,510,utilizable,3,9.224037,0.0,10
+90°,extracto_puro,3,0.0,535,utilizable,1,5.07413,0.0,10
+90°,extracto_puro,3,0.0,535,utilizable,2,5.07413,0.0,10
+90°,extracto_puro,3,0.0,535,utilizable,3,5.07413,0.0,10
+90°,extracto_puro,3,0.0,560,utilizable,1,7.388501,0.0,10
+90°,extracto_puro,3,0.0,560,utilizable,2,7.388501,0.0,10
+90°,extracto_puro,3,0.0,560,utilizable,3,7.388501,0.0,10
+90°,extracto_puro,3,0.0,585,utilizable,1,4.797876,0.0,10
+90°,extracto_puro,3,0.0,585,utilizable,2,4.797876,0.0,10
+90°,extracto_puro,3,0.0,585,utilizable,3,4.797876,0.0,10
+90°,extracto_puro,3,0.0,610,utilizable,1,5.564745,0.0,10
+90°,extracto_puro,3,0.0,610,utilizable,2,5.564745,0.0,10
+90°,extracto_puro,3,0.0,610,utilizable,3,5.564745,0.0,10
+90°,extracto_puro,3,0.0,645,utilizable,1,21.704947,0.0,10
+90°,extracto_puro,3,0.0,645,utilizable,2,21.752131,0.149211,10
+90°,extracto_puro,3,0.0,645,utilizable,3,21.704947,0.0,10
+90°,extracto_puro,3,0.0,680,utilizable,1,102.79023,0.334759,10
+90°,extracto_puro,3,0.0,680,utilizable,2,102.684372,0.0,10
+90°,extracto_puro,3,0.0,680,utilizable,3,102.049217,0.740183,10
+90°,extracto_puro,3,0.0,705,utilizable,1,47.361889,0.195395,10
+90°,extracto_puro,3,0.0,705,utilizable,2,47.269207,0.0,10
+90°,extracto_puro,3,0.0,705,utilizable,3,47.269207,0.0,10
+90°,extracto_puro,3,0.0,730,utilizable,1,110.914589,0.341854,10
+90°,extracto_puro,3,0.0,730,utilizable,2,110.509201,0.391642,10
+90°,extracto_puro,3,0.0,730,utilizable,3,110.103813,0.341856,10
+90°,extracto_puro,3,0.0,760,utilizable,1,27.387775,0.0,10
+90°,extracto_puro,3,0.0,760,utilizable,2,27.387775,0.0,10
+90°,extracto_puro,3,0.0,760,utilizable,3,27.387775,0.0,10
+90°,extracto_puro,3,0.0,810,utilizable,1,9.829339,0.386018,10
+90°,extracto_puro,3,0.0,810,utilizable,2,9.749427,0.336944,10
+90°,extracto_puro,3,0.0,810,utilizable,3,9.5896,0.0,10
+90°,extracto_puro,3,0.0,860,utilizable,1,3.305667,0.0,10
+90°,extracto_puro,3,0.0,860,utilizable,2,3.305667,0.0,10
+90°,extracto_puro,3,0.0,860,utilizable,3,3.305667,0.0,10
+90°,extracto_puro,3,0.0,900,utilizable,1,3.240455,0.0,10
+90°,extracto_puro,3,0.0,900,utilizable,2,3.240455,0.0,10
+90°,extracto_puro,3,0.0,900,utilizable,3,3.240455,0.0,10
+90°,extracto_puro,3,0.0,940,utilizable,1,5.92291,0.0,10
+90°,extracto_puro,3,0.0,940,utilizable,2,5.92291,0.0,10
+90°,extracto_puro,3,0.0,940,utilizable,3,5.92291,0.0,10
+90°,kaolin_b,0,1.25,410,utilizable,1,1383.057861,8.006126,10
+90°,kaolin_b,0,1.25,410,utilizable,2,1341.30542,2.809404,10
+90°,kaolin_b,0,1.25,410,utilizable,3,1302.08606,2.185675,10
+90°,kaolin_b,0,1.25,435,utilizable,1,1874.106201,8.961197,10
+90°,kaolin_b,0,1.25,435,utilizable,2,1830.889893,2.585491,10
+90°,kaolin_b,0,1.25,435,utilizable,3,1803.09436,2.684902,10
+90°,kaolin_b,0,1.25,460,utilizable,1,101.910004,0.30374,10
+90°,kaolin_b,0,1.25,460,utilizable,2,100.181107,0.463969,10
+90°,kaolin_b,0,1.25,460,utilizable,3,99.796898,0.303739,10
+90°,kaolin_b,0,1.25,485,excluido: canal inestable,1,16.083923,16.953945,10
+90°,kaolin_b,0,1.25,485,excluido: canal inestable,2,16.083923,16.953945,10
+90°,kaolin_b,0,1.25,485,excluido: canal inestable,3,6.25486,13.186403,10
+90°,kaolin_b,0,1.25,510,utilizable,1,13.836055,0.0,10
+90°,kaolin_b,0,1.25,510,utilizable,2,13.836055,0.0,10
+90°,kaolin_b,0,1.25,510,utilizable,3,13.836055,0.0,10
+90°,kaolin_b,0,1.25,535,utilizable,1,7.248756,0.0,10
+90°,kaolin_b,0,1.25,535,utilizable,2,7.176269,0.229226,10
+90°,kaolin_b,0,1.25,535,utilizable,3,6.52388,0.0,10
+90°,kaolin_b,0,1.25,560,utilizable,1,12.503616,0.0,10
+90°,kaolin_b,0,1.25,560,utilizable,2,12.162608,0.293493,10
+90°,kaolin_b,0,1.25,560,utilizable,3,11.93527,0.0,10
+90°,kaolin_b,0,1.25,585,utilizable,1,7.99646,0.0,10
+90°,kaolin_b,0,1.25,585,utilizable,2,7.99646,0.0,10
+90°,kaolin_b,0,1.25,585,utilizable,3,7.889841,0.224774,10
+90°,kaolin_b,0,1.25,610,utilizable,1,5.564745,0.0,10
+90°,kaolin_b,0,1.25,610,utilizable,2,5.564745,0.0,10
+90°,kaolin_b,0,1.25,610,utilizable,3,5.564745,0.0,10
+90°,kaolin_b,0,1.25,645,utilizable,1,8.917902,0.149211,10
+90°,kaolin_b,0,1.25,645,utilizable,2,8.49324,0.0,10
+90°,kaolin_b,0,1.25,645,utilizable,3,8.49324,0.0,10
+90°,kaolin_b,0,1.25,680,utilizable,1,1.905483,0.446346,10
+90°,kaolin_b,0,1.25,680,utilizable,2,1.905483,0.446346,10
+90°,kaolin_b,0,1.25,680,utilizable,3,1.693763,0.54666,10
+90°,kaolin_b,0,1.25,705,utilizable,1,12.049013,0.0,10
+90°,kaolin_b,0,1.25,705,utilizable,2,11.585589,0.0,10
+90°,kaolin_b,0,1.25,705,utilizable,3,11.585589,0.0,10
+90°,kaolin_b,0,1.25,730,utilizable,1,4.053896,0.0,10
+90°,kaolin_b,0,1.25,730,utilizable,2,4.053896,0.0,10
+90°,kaolin_b,0,1.25,730,utilizable,3,4.053896,0.0,10
+90°,kaolin_b,0,1.25,760,utilizable,1,2.489798,0.0,10
+90°,kaolin_b,0,1.25,760,utilizable,2,2.489798,0.0,10
+90°,kaolin_b,0,1.25,760,utilizable,3,2.489798,0.0,10
+90°,kaolin_b,0,1.25,810,utilizable,1,2.3974,0.0,10
+90°,kaolin_b,0,1.25,810,utilizable,2,2.3974,0.0,10
+90°,kaolin_b,0,1.25,810,utilizable,3,2.3974,0.0,10
+90°,kaolin_b,0,1.25,860,utilizable,1,1.101889,0.0,10
+90°,kaolin_b,0,1.25,860,utilizable,2,1.101889,0.0,10
+90°,kaolin_b,0,1.25,860,utilizable,3,1.101889,0.0,10
+90°,kaolin_b,0,1.25,900,utilizable,1,2.592364,0.0,10
+90°,kaolin_b,0,1.25,900,utilizable,2,2.592364,0.0,10
+90°,kaolin_b,0,1.25,900,utilizable,3,2.592364,0.0,10
+90°,kaolin_b,0,1.25,940,utilizable,1,6.910062,0.0,10
+90°,kaolin_b,0,1.25,940,utilizable,2,6.910062,0.0,10
+90°,kaolin_b,0,1.25,940,utilizable,3,6.910062,0.0,10
+90°,kaolin_a,0,2.5,410,utilizable,1,1840.373047,5.127258,10
+90°,kaolin_a,0,2.5,410,utilizable,2,1816.923096,6.627283,10
+90°,kaolin_a,0,2.5,410,utilizable,3,1800.418213,6.031929,10
+90°,kaolin_a,0,2.5,435,utilizable,1,2379.662109,3.871857,10
+90°,kaolin_a,0,2.5,435,utilizable,2,2367.477539,4.220216,10
+90°,kaolin_a,0,2.5,435,utilizable,3,2357.197021,5.017977,10
+90°,kaolin_a,0,2.5,460,utilizable,1,122.17675,0.404987,10
+90°,kaolin_a,0,2.5,460,utilizable,2,122.272797,0.46397,10
+90°,kaolin_a,0,2.5,460,utilizable,3,122.17675,0.404986,10
+90°,kaolin_a,0,2.5,485,excluido: canal inestable,1,16.173279,20.881208,10
+90°,kaolin_a,0,2.5,485,excluido: canal inestable,2,16.083925,20.764257,10
+90°,kaolin_a,0,2.5,485,excluido: canal inestable,3,8.041962,16.953945,10
+90°,kaolin_a,0,2.5,510,utilizable,1,16.142065,0.0,10
+90°,kaolin_a,0,2.5,510,utilizable,2,16.142065,0.0,10
+90°,kaolin_a,0,2.5,510,utilizable,3,16.142065,0.0,10
+90°,kaolin_a,0,2.5,535,utilizable,1,7.973632,0.0,10
+90°,kaolin_a,0,2.5,535,utilizable,2,7.973632,0.0,10
+90°,kaolin_a,0,2.5,535,utilizable,3,7.973632,0.0,10
+90°,kaolin_a,0,2.5,560,utilizable,1,14.777001,0.0,10
+90°,kaolin_a,0,2.5,560,utilizable,2,14.663332,0.239636,10
+90°,kaolin_a,0,2.5,560,utilizable,3,14.606497,0.274537,10
+90°,kaolin_a,0,2.5,585,utilizable,1,9.595752,0.0,10
+90°,kaolin_a,0,2.5,585,utilizable,2,9.595752,0.0,10
+90°,kaolin_a,0,2.5,585,utilizable,3,9.595752,0.0,10
+90°,kaolin_a,0,2.5,610,utilizable,1,7.234169,0.586576,10
+90°,kaolin_a,0,2.5,610,utilizable,2,7.011579,0.537605,10
+90°,kaolin_a,0,2.5,610,utilizable,3,6.677694,0.0,10
+90°,kaolin_a,0,2.5,645,utilizable,1,11.796166,0.0,10
+90°,kaolin_a,0,2.5,645,utilizable,2,11.796166,0.0,10
+90°,kaolin_a,0,2.5,645,utilizable,3,11.701797,0.198948,10
+90°,kaolin_a,0,2.5,680,utilizable,1,2.117203,0.0,10
+90°,kaolin_a,0,2.5,680,utilizable,2,2.117203,0.0,10
+90°,kaolin_a,0,2.5,680,utilizable,3,2.117203,0.0,10
+90°,kaolin_a,0,2.5,705,utilizable,1,13.902707,0.0,10
+90°,kaolin_a,0,2.5,705,utilizable,2,13.902707,0.0,10
+90°,kaolin_a,0,2.5,705,utilizable,3,13.902707,0.0,10
+90°,kaolin_a,0,2.5,730,utilizable,1,5.513299,0.341855,10
+90°,kaolin_a,0,2.5,730,utilizable,2,5.351142,0.418685,10
+90°,kaolin_a,0,2.5,730,utilizable,3,5.351142,0.418685,10
+90°,kaolin_a,0,2.5,760,utilizable,1,3.31973,0.0,10
+90°,kaolin_a,0,2.5,760,utilizable,2,3.31973,0.0,10
+90°,kaolin_a,0,2.5,760,utilizable,3,3.31973,0.0,10
+90°,kaolin_a,0,2.5,810,utilizable,1,3.196533,0.0,10
+90°,kaolin_a,0,2.5,810,utilizable,2,3.196533,0.0,10
+90°,kaolin_a,0,2.5,810,utilizable,3,3.196533,0.0,10
+90°,kaolin_a,0,2.5,860,utilizable,1,1.101889,0.0,10
+90°,kaolin_a,0,2.5,860,utilizable,2,1.101889,0.0,10
+90°,kaolin_a,0,2.5,860,utilizable,3,1.101889,0.0,10
+90°,kaolin_a,0,2.5,900,utilizable,1,3.240455,0.0,10
+90°,kaolin_a,0,2.5,900,utilizable,2,3.240455,0.0,10
+90°,kaolin_a,0,2.5,900,utilizable,3,3.240455,0.0,10
+90°,kaolin_a,0,2.5,940,utilizable,1,8.884365,0.0,10
+90°,kaolin_a,0,2.5,940,utilizable,2,8.884365,0.0,10
+90°,kaolin_a,0,2.5,940,utilizable,3,8.884365,0.0,10
+90°,extracto+kaolin_b,3,1.25,410,utilizable,1,565.250488,11.300711,10
+90°,extracto+kaolin_b,3,1.25,410,utilizable,2,552.830933,1.168289,10
+90°,extracto+kaolin_b,3,1.25,410,utilizable,3,549.317505,3.59366,10
+90°,extracto+kaolin_b,3,1.25,435,utilizable,1,932.008057,15.423902,10
+90°,extracto+kaolin_b,3,1.25,435,utilizable,2,920.490051,1.187216,10
+90°,extracto+kaolin_b,3,1.25,435,utilizable,3,919.157349,4.624325,10
+90°,extracto+kaolin_b,3,1.25,460,utilizable,1,69.540863,1.214958,10
+90°,extracto+kaolin_b,3,1.25,460,utilizable,2,69.156654,0.0,10
+90°,extracto+kaolin_b,3,1.25,460,utilizable,3,69.156654,0.452789,10
+90°,extracto+kaolin_b,3,1.25,485,excluido: canal inestable,1,5.897439,9.49578,10
+90°,extracto+kaolin_b,3,1.25,485,excluido: canal inestable,2,5.897439,9.49578,10
+90°,extracto+kaolin_b,3,1.25,485,excluido: canal inestable,3,3.931626,8.288596,10
+90°,extracto+kaolin_b,3,1.25,510,utilizable,1,12.14498,0.3241,10
+90°,extracto+kaolin_b,3,1.25,510,utilizable,2,11.991248,0.39694,10
+90°,extracto+kaolin_b,3,1.25,510,utilizable,3,11.914381,0.405125,10
+90°,extracto+kaolin_b,3,1.25,535,utilizable,1,6.52388,0.0,10
+90°,extracto+kaolin_b,3,1.25,535,utilizable,2,6.52388,0.0,10
+90°,extracto+kaolin_b,3,1.25,535,utilizable,3,6.52388,0.0,10
+90°,extracto+kaolin_b,3,1.25,560,utilizable,1,9.093539,0.0,10
+90°,extracto+kaolin_b,3,1.25,560,utilizable,2,9.093539,0.0,10
+90°,extracto+kaolin_b,3,1.25,560,utilizable,3,9.036705,0.179727,10
+90°,extracto+kaolin_b,3,1.25,585,utilizable,1,5.86407,0.0,10
+90°,extracto+kaolin_b,3,1.25,585,utilizable,2,5.86407,0.0,10
+90°,extracto+kaolin_b,3,1.25,585,utilizable,3,5.86407,0.0,10
+90°,extracto+kaolin_b,3,1.25,610,utilizable,1,6.677694,0.0,10
+90°,extracto+kaolin_b,3,1.25,610,utilizable,2,6.677694,0.0,10
+90°,extracto+kaolin_b,3,1.25,610,utilizable,3,6.677694,0.0,10
+90°,extracto+kaolin_b,3,1.25,645,utilizable,1,24.205734,0.447633,10
+90°,extracto+kaolin_b,3,1.25,645,utilizable,2,24.06418,0.0,10
+90°,extracto+kaolin_b,3,1.25,645,utilizable,3,23.875443,0.243661,10
+90°,extracto+kaolin_b,3,1.25,680,utilizable,1,104.589851,1.983602,10
+90°,extracto+kaolin_b,3,1.25,680,utilizable,2,103.848824,0.334757,10
+90°,extracto+kaolin_b,3,1.25,680,utilizable,3,103.742966,0.499027,10
+90°,extracto+kaolin_b,3,1.25,705,utilizable,1,49.725349,0.312787,10
+90°,extracto+kaolin_b,3,1.25,705,utilizable,2,49.679005,0.195397,10
+90°,extracto+kaolin_b,3,1.25,705,utilizable,3,49.586323,0.0,10
+90°,extracto+kaolin_b,3,1.25,730,utilizable,1,114.482018,0.341853,10
+90°,extracto+kaolin_b,3,1.25,730,utilizable,2,114.400932,0.598244,10
+90°,extracto+kaolin_b,3,1.25,730,utilizable,3,113.914467,0.427319,10
+90°,extracto+kaolin_b,3,1.25,760,utilizable,1,28.217707,0.0,10
+90°,extracto+kaolin_b,3,1.25,760,utilizable,2,28.217707,0.0,10
+90°,extracto+kaolin_b,3,1.25,760,utilizable,3,28.217707,0.0,10
+90°,extracto+kaolin_b,3,1.25,810,utilizable,1,10.468646,0.252708,10
+90°,extracto+kaolin_b,3,1.25,810,utilizable,2,10.388733,0.0,10
+90°,extracto+kaolin_b,3,1.25,810,utilizable,3,10.388733,0.0,10
+90°,extracto+kaolin_b,3,1.25,860,utilizable,1,3.305667,0.0,10
+90°,extracto+kaolin_b,3,1.25,860,utilizable,2,3.526045,0.464597,10
+90°,extracto+kaolin_b,3,1.25,860,utilizable,3,3.305667,0.0,10
+90°,extracto+kaolin_b,3,1.25,900,utilizable,1,3.888546,0.0,10
+90°,extracto+kaolin_b,3,1.25,900,utilizable,2,3.888546,0.0,10
+90°,extracto+kaolin_b,3,1.25,900,utilizable,3,3.888546,0.0,10
+90°,extracto+kaolin_b,3,1.25,940,utilizable,1,6.910062,0.0,10
+90°,extracto+kaolin_b,3,1.25,940,utilizable,2,6.910062,0.0,10
+90°,extracto+kaolin_b,3,1.25,940,utilizable,3,6.910062,0.0,10
+90°,extracto+kaolin_a,3,2.5,410,utilizable,1,816.581787,1.731139,10
+90°,extracto+kaolin_a,3,2.5,410,utilizable,2,812.741577,2.039951,10
+90°,extracto+kaolin_a,3,2.5,410,utilizable,3,802.936646,1.767173,10
+90°,extracto+kaolin_a,3,2.5,435,utilizable,1,1181.692261,2.624201,10
+90°,extracto+kaolin_a,3,2.5,435,utilizable,2,1182.358521,2.351026,10
+90°,extracto+kaolin_a,3,2.5,435,utilizable,3,1176.266357,1.557694,10
+90°,extracto+kaolin_a,3,2.5,460,utilizable,1,80.682762,0.0,10
+90°,extracto+kaolin_a,3,2.5,460,utilizable,2,80.778809,0.30374,10
+90°,extracto+kaolin_a,3,2.5,460,utilizable,3,80.682762,0.0,10
+90°,extracto+kaolin_a,3,2.5,485,excluido: canal inestable,1,10.007776,12.919983,10
+90°,extracto+kaolin_a,3,2.5,485,excluido: canal inestable,2,7.505832,12.085538,10
+90°,extracto+kaolin_a,3,2.5,485,excluido: canal inestable,3,5.003888,10.549122,10
+90°,extracto+kaolin_a,3,2.5,510,utilizable,1,13.836055,0.0,10
+90°,extracto+kaolin_a,3,2.5,510,utilizable,2,13.836055,0.0,10
+90°,extracto+kaolin_a,3,2.5,510,utilizable,3,13.836055,0.0,10
+90°,extracto+kaolin_a,3,2.5,535,utilizable,1,7.248756,0.0,10
+90°,extracto+kaolin_a,3,2.5,535,utilizable,2,7.248756,0.0,10
+90°,extracto+kaolin_a,3,2.5,535,utilizable,3,7.248756,0.0,10
+90°,extracto+kaolin_a,3,2.5,560,utilizable,1,9.661885,0.0,10
+90°,extracto+kaolin_a,3,2.5,560,utilizable,2,9.661885,0.0,10
+90°,extracto+kaolin_a,3,2.5,560,utilizable,3,9.661885,0.0,10
+90°,extracto+kaolin_a,3,2.5,585,utilizable,1,6.930265,0.0,10
+90°,extracto+kaolin_a,3,2.5,585,utilizable,2,6.930265,0.0,10
+90°,extracto+kaolin_a,3,2.5,585,utilizable,3,6.930265,0.0,10
+90°,extracto+kaolin_a,3,2.5,610,utilizable,1,7.790643,0.0,10
+90°,extracto+kaolin_a,3,2.5,610,utilizable,2,7.790643,0.0,10
+90°,extracto+kaolin_a,3,2.5,610,utilizable,3,7.790643,0.0,10
+90°,extracto+kaolin_a,3,2.5,645,utilizable,1,25.479721,0.0,10
+90°,extracto+kaolin_a,3,2.5,645,utilizable,2,25.479721,0.0,10
+90°,extracto+kaolin_a,3,2.5,645,utilizable,3,25.479721,0.0,10
+90°,extracto+kaolin_a,3,2.5,680,utilizable,1,104.060562,0.511354,10
+90°,extracto+kaolin_a,3,2.5,680,utilizable,2,103.954697,0.446348,10
+90°,extracto+kaolin_a,3,2.5,680,utilizable,3,103.742966,0.499027,10
+90°,extracto+kaolin_a,3,2.5,705,utilizable,1,51.440018,0.0,10
+90°,extracto+kaolin_a,3,2.5,705,utilizable,2,51.254646,0.239311,10
+90°,extracto+kaolin_a,3,2.5,705,utilizable,3,51.208305,0.244246,10
+90°,extracto+kaolin_a,3,2.5,730,utilizable,1,117.562981,0.0,10
+90°,extracto+kaolin_a,3,2.5,730,utilizable,2,117.481903,0.256392,10
+90°,extracto+kaolin_a,3,2.5,730,utilizable,3,117.076515,0.418688,10
+90°,extracto+kaolin_a,3,2.5,760,utilizable,1,29.04764,0.0,10
+90°,extracto+kaolin_a,3,2.5,760,utilizable,2,29.04764,0.0,10
+90°,extracto+kaolin_a,3,2.5,760,utilizable,3,29.04764,0.0,10
+90°,extracto+kaolin_a,3,2.5,810,utilizable,1,11.187866,0.0,10
+90°,extracto+kaolin_a,3,2.5,810,utilizable,2,11.187866,0.0,10
+90°,extracto+kaolin_a,3,2.5,810,utilizable,3,11.187866,0.0,10
+90°,extracto+kaolin_a,3,2.5,860,utilizable,1,4.407557,0.0,10
+90°,extracto+kaolin_a,3,2.5,860,utilizable,2,4.297368,0.348448,10
+90°,extracto+kaolin_a,3,2.5,860,utilizable,3,3.966801,0.569013,10
+90°,extracto+kaolin_a,3,2.5,900,utilizable,1,3.888546,0.0,10
+90°,extracto+kaolin_a,3,2.5,900,utilizable,2,3.888546,0.0,10
+90°,extracto+kaolin_a,3,2.5,900,utilizable,3,3.888546,0.0,10
+90°,extracto+kaolin_a,3,2.5,940,utilizable,1,7.897213,0.0,10
+90°,extracto+kaolin_a,3,2.5,940,utilizable,2,7.897213,0.0,10
+90°,extracto+kaolin_a,3,2.5,940,utilizable,3,7.897213,0.0,10
+180°,blanco_etanol,0,0.0,410,excluido: blanco próximo a 2^32,1,4294967296.000001,0.0,10
+180°,blanco_etanol,0,0.0,410,excluido: blanco próximo a 2^32,2,4294967296.000001,0.0,10
+180°,blanco_etanol,0,0.0,410,excluido: blanco próximo a 2^32,3,4294967296.000001,0.0,10
+180°,blanco_etanol,0,0.0,435,excluido: blanco próximo a 2^32,1,4294967296.000001,0.0,10
+180°,blanco_etanol,0,0.0,435,excluido: blanco próximo a 2^32,2,4294967296.000001,0.0,10
+180°,blanco_etanol,0,0.0,435,excluido: blanco próximo a 2^32,3,4294967296.000001,0.0,10
+180°,blanco_etanol,0,0.0,460,utilizable,1,7612.03418,26.425068,10
+180°,blanco_etanol,0,0.0,460,utilizable,2,7719.803223,16.696762,10
+180°,blanco_etanol,0,0.0,460,utilizable,3,7730.369141,19.431778,10
+180°,blanco_etanol,0,0.0,485,excluido: canal inestable,1,983.532043,1269.744385,10
+180°,blanco_etanol,0,0.0,485,excluido: canal inestable,2,744.864502,1199.353149,10
+180°,blanco_etanol,0,0.0,485,excluido: canal inestable,3,739.503174,1190.714233,10
+180°,blanco_etanol,0,0.0,510,utilizable,1,595.642212,1.513642,10
+180°,blanco_etanol,0,0.0,510,utilizable,2,600.792236,1.365474,10
+180°,blanco_etanol,0,0.0,510,utilizable,3,597.794495,0.814272,10
+180°,blanco_etanol,0,0.0,535,utilizable,1,372.948486,0.981487,10
+180°,blanco_etanol,0,0.0,535,utilizable,2,375.920502,1.036454,10
+180°,blanco_etanol,0,0.0,535,utilizable,3,373.021027,0.611261,10
+180°,blanco_etanol,0,0.0,560,utilizable,1,1164.029785,3.425257,10
+180°,blanco_etanol,0,0.0,560,utilizable,2,1164.996094,2.689864,10
+180°,blanco_etanol,0,0.0,560,utilizable,3,1163.177368,1.044569,10
+180°,blanco_etanol,0,0.0,585,utilizable,1,628.415161,1.773415,10
+180°,blanco_etanol,0,0.0,585,utilizable,2,629.481323,1.22602,10
+180°,blanco_etanol,0,0.0,585,utilizable,3,629.108154,0.886707,10
+180°,blanco_etanol,0,0.0,610,utilizable,1,309.956299,0.786985,10
+180°,blanco_etanol,0,0.0,610,utilizable,2,310.957977,0.778181,10
+180°,blanco_etanol,0,0.0,610,utilizable,3,309.956299,0.586588,10
+180°,blanco_etanol,0,0.0,645,utilizable,1,941.522827,2.215376,10
+180°,blanco_etanol,0,0.0,645,utilizable,2,945.580688,3.8846,10
+180°,blanco_etanol,0,0.0,645,utilizable,3,941.475647,1.316844,10
+180°,blanco_etanol,0,0.0,680,utilizable,1,44.884712,0.54666,10
+180°,blanco_etanol,0,0.0,680,utilizable,2,45.308155,0.446346,10
+180°,blanco_etanol,0,0.0,680,utilizable,3,45.414013,0.334759,10
+180°,blanco_etanol,0,0.0,705,utilizable,1,834.116089,2.019422,10
+180°,blanco_etanol,0,0.0,705,utilizable,2,832.957581,1.763999,10
+180°,blanco_etanol,0,0.0,705,utilizable,3,831.984375,0.726177,10
+180°,blanco_etanol,0,0.0,730,utilizable,1,226.856003,0.512786,10
+180°,blanco_etanol,0,0.0,730,utilizable,2,227.342468,0.566905,10
+180°,blanco_etanol,0,0.0,730,utilizable,3,226.612762,0.427316,10
+180°,blanco_etanol,0,0.0,760,utilizable,1,178.352493,0.471109,10
+180°,blanco_etanol,0,0.0,760,utilizable,2,178.850464,0.586852,10
+180°,blanco_etanol,0,0.0,760,utilizable,3,178.269531,0.349926,10
+180°,blanco_etanol,0,0.0,810,utilizable,1,188.9151,0.558759,10
+180°,blanco_etanol,0,0.0,810,utilizable,2,189.154861,0.758124,10
+180°,blanco_etanol,0,0.0,810,utilizable,3,188.835205,0.38602,10
+180°,blanco_etanol,0,0.0,860,utilizable,1,55.314835,0.464598,10
+180°,blanco_etanol,0,0.0,860,utilizable,2,56.086159,0.348448,10
+180°,blanco_etanol,0,0.0,860,utilizable,3,56.086159,0.348449,10
+180°,blanco_etanol,0,0.0,900,utilizable,1,187.427933,0.409888,10
+180°,blanco_etanol,0,0.0,900,utilizable,2,188.40007,0.811195,10
+180°,blanco_etanol,0,0.0,900,utilizable,3,188.40007,0.313056,10
+180°,blanco_etanol,0,0.0,940,utilizable,1,537.898987,1.504293,10
+180°,blanco_etanol,0,0.0,940,utilizable,2,538.392517,1.158705,10
+180°,blanco_etanol,0,0.0,940,utilizable,3,537.602844,0.509774,10
+180°,extracto_puro,3,0.0,410,excluido: blanco próximo a 2^32,1,33372.0,42.309761,10
+180°,extracto_puro,3,0.0,410,excluido: blanco próximo a 2^32,2,33387.6875,86.381523,10
+180°,extracto_puro,3,0.0,410,excluido: blanco próximo a 2^32,3,33361.214844,83.851624,10
+180°,extracto_puro,3,0.0,435,excluido: blanco próximo a 2^32,1,41767.117188,29.998671,10
+180°,extracto_puro,3,0.0,435,excluido: blanco próximo a 2^32,2,41851.929688,65.216904,10
+180°,extracto_puro,3,0.0,435,excluido: blanco próximo a 2^32,3,41869.445312,90.114174,10
+180°,extracto_puro,3,0.0,460,utilizable,1,3097.257813,9.103101,10
+180°,extracto_puro,3,0.0,460,utilizable,2,3139.039795,5.681615,10
+180°,extracto_puro,3,0.0,460,utilizable,3,3162.956299,25.955446,10
+180°,extracto_puro,3,0.0,485,excluido: canal inestable,1,304.164886,489.752411,10
+180°,extracto_puro,3,0.0,485,excluido: canal inestable,2,306.845551,494.068726,10
+180°,extracto_puro,3,0.0,485,excluido: canal inestable,3,510.575256,538.196655,10
+180°,extracto_puro,3,0.0,510,utilizable,1,253.353546,0.537458,10
+180°,extracto_puro,3,0.0,510,utilizable,2,255.198349,0.627623,10
+180°,extracto_puro,3,0.0,510,utilizable,3,256.58197,2.370578,10
+180°,extracto_puro,3,0.0,535,utilizable,1,150.701645,0.634695,10
+180°,extracto_puro,3,0.0,535,utilizable,2,151.136581,0.382049,10
+180°,extracto_puro,3,0.0,535,utilizable,3,150.991592,0.489255,10
+180°,extracto_puro,3,0.0,560,utilizable,1,440.809296,1.371383,10
+180°,extracto_puro,3,0.0,560,utilizable,2,441.434509,1.418967,10
+180°,extracto_puro,3,0.0,560,utilizable,3,441.88916,0.898627,10
+180°,extracto_puro,3,0.0,585,utilizable,1,238.827606,0.794694,10
+180°,extracto_puro,3,0.0,585,utilizable,2,239.307388,0.812378,10
+180°,extracto_puro,3,0.0,585,utilizable,3,239.573944,0.51502,10
+180°,extracto_puro,3,0.0,610,utilizable,1,115.635399,0.351945,10
+180°,extracto_puro,3,0.0,610,utilizable,2,115.301514,0.574723,10
+180°,extracto_puro,3,0.0,610,utilizable,3,115.635399,0.351945,10
+180°,extracto_puro,3,0.0,645,utilizable,1,372.947632,1.160056,10
+180°,extracto_puro,3,0.0,645,utilizable,2,374.315979,0.862902,10
+180°,extracto_puro,3,0.0,645,utilizable,3,375.259644,3.417411,10
+180°,extracto_puro,3,0.0,680,utilizable,1,95.062431,0.446345,10
+180°,extracto_puro,3,0.0,680,utilizable,2,95.168304,0.334758,10
+180°,extracto_puro,3,0.0,680,utilizable,3,95.591736,1.004277,10
+180°,extracto_puro,3,0.0,705,utilizable,1,359.616699,0.787673,10
+180°,extracto_puro,3,0.0,705,utilizable,2,359.431305,1.07468,10
+180°,extracto_puro,3,0.0,705,utilizable,3,359.245941,0.526116,10
+180°,extracto_puro,3,0.0,730,utilizable,1,170.912247,0.512781,10
+180°,extracto_puro,3,0.0,730,utilizable,2,170.344696,0.598242,10
+180°,extracto_puro,3,0.0,730,utilizable,3,170.425781,0.341852,10
+180°,extracto_puro,3,0.0,760,utilizable,1,86.561966,0.400895,10
+180°,extracto_puro,3,0.0,760,utilizable,2,86.312988,0.0,10
+180°,extracto_puro,3,0.0,760,utilizable,3,86.478973,0.34993,10
+180°,extracto_puro,3,0.0,810,utilizable,1,75.917664,0.0,10
+180°,extracto_puro,3,0.0,810,utilizable,2,75.917664,0.0,10
+180°,extracto_puro,3,0.0,810,utilizable,3,76.397148,0.859039,10
+180°,extracto_puro,3,0.0,860,utilizable,1,22.037783,0.0,10
+180°,extracto_puro,3,0.0,860,utilizable,2,22.037783,0.0,10
+180°,extracto_puro,3,0.0,860,utilizable,3,22.037783,0.0,10
+180°,extracto_puro,3,0.0,900,utilizable,1,70.512321,0.273257,10
+180°,extracto_puro,3,0.0,900,utilizable,2,70.706734,0.204943,10
+180°,extracto_puro,3,0.0,900,utilizable,3,71.030785,0.696677,10
+180°,extracto_puro,3,0.0,940,utilizable,1,205.426254,0.728386,10
+180°,extracto_puro,3,0.0,940,utilizable,2,205.327545,0.658102,10
+180°,extracto_puro,3,0.0,940,utilizable,3,205.524979,0.416219,10
+180°,kaolin_b,0,1.25,410,excluido: blanco próximo a 2^32,1,10914.204102,20.663668,10
+180°,kaolin_b,0,1.25,410,excluido: blanco próximo a 2^32,2,11323.963867,371.960083,10
+180°,kaolin_b,0,1.25,410,excluido: blanco próximo a 2^32,3,10827.430664,34.159081,10
+180°,kaolin_b,0,1.25,435,excluido: blanco próximo a 2^32,1,13414.879883,23.867485,10
+180°,kaolin_b,0,1.25,435,excluido: blanco próximo a 2^32,2,13969.079102,378.600189,10
+180°,kaolin_b,0,1.25,435,excluido: blanco próximo a 2^32,3,13369.665039,48.454842,10
+180°,kaolin_b,0,1.25,460,utilizable,1,501.769928,0.927933,10
+180°,kaolin_b,0,1.25,460,utilizable,2,525.878723,13.950384,10
+180°,kaolin_b,0,1.25,460,utilizable,3,502.058075,1.813981,10
+180°,kaolin_b,0,1.25,485,excluido: canal inestable,1,46.375317,97.767975,10
+180°,kaolin_b,0,1.25,485,excluido: canal inestable,2,95.699356,123.547607,10
+180°,kaolin_b,0,1.25,485,excluido: canal inestable,3,46.196602,97.391212,10
+180°,kaolin_b,0,1.25,510,utilizable,1,63.722721,0.243075,10
+180°,kaolin_b,0,1.25,510,utilizable,2,65.874992,1.986348,10
+180°,kaolin_b,0,1.25,510,utilizable,3,63.107784,0.243075,10
+180°,kaolin_b,0,1.25,535,utilizable,1,28.777563,0.350148,10
+180°,kaolin_b,0,1.25,535,utilizable,2,29.647413,0.229226,10
+180°,kaolin_b,0,1.25,535,utilizable,3,28.270149,0.0,10
+180°,kaolin_b,0,1.25,560,utilizable,1,96.107338,0.32262,10
+180°,kaolin_b,0,1.25,560,utilizable,2,97.641876,0.359453,10
+180°,kaolin_b,0,1.25,560,utilizable,3,94.629646,0.299547,10
+180°,kaolin_b,0,1.25,585,utilizable,1,62.585625,0.27529,10
+180°,kaolin_b,0,1.25,585,utilizable,2,63.758442,0.275289,10
+180°,kaolin_b,0,1.25,585,utilizable,3,61.945911,0.224772,10
+180°,kaolin_b,0,1.25,610,utilizable,1,31.496458,0.537605,10
+180°,kaolin_b,0,1.25,610,utilizable,2,32.27552,0.0,10
+180°,kaolin_b,0,1.25,610,utilizable,3,31.162573,0.0,10
+180°,kaolin_b,0,1.25,645,utilizable,1,86.67823,0.227923,10
+180°,kaolin_b,0,1.25,645,utilizable,2,89.226204,2.817503,10
+180°,kaolin_b,0,1.25,645,utilizable,3,85.640175,0.333643,10
+180°,kaolin_b,0,1.25,680,utilizable,1,6.03403,0.511353,10
+180°,kaolin_b,0,1.25,680,utilizable,2,6.24575,0.334759,10
+180°,kaolin_b,0,1.25,680,utilizable,3,5.71645,0.54666,10
+180°,kaolin_b,0,1.25,705,utilizable,1,76.46489,0.308951,10
+180°,kaolin_b,0,1.25,705,utilizable,2,77.6698,0.239308,10
+180°,kaolin_b,0,1.25,705,utilizable,3,75.259987,0.239307,10
+180°,kaolin_b,0,1.25,730,utilizable,1,22.701817,0.0,10
+180°,kaolin_b,0,1.25,730,utilizable,2,22.701817,0.0,10
+180°,kaolin_b,0,1.25,730,utilizable,3,21.972115,0.256391,10
+180°,kaolin_b,0,1.25,760,utilizable,1,14.938787,0.0,10
+180°,kaolin_b,0,1.25,760,utilizable,2,14.938787,0.0,10
+180°,kaolin_b,0,1.25,760,utilizable,3,14.357834,0.400896,10
+180°,kaolin_b,0,1.25,810,utilizable,1,16.781799,0.0,10
+180°,kaolin_b,0,1.25,810,utilizable,2,16.941626,0.505416,10
+180°,kaolin_b,0,1.25,810,utilizable,3,16.382233,0.42118,10
+180°,kaolin_b,0,1.25,860,utilizable,1,6.611335,0.0,10
+180°,kaolin_b,0,1.25,860,utilizable,2,6.611335,0.0,10
+180°,kaolin_b,0,1.25,860,utilizable,3,6.611335,0.0,10
+180°,kaolin_b,0,1.25,900,utilizable,1,19.442732,0.0,10
+180°,kaolin_b,0,1.25,900,utilizable,2,19.637159,0.614833,10
+180°,kaolin_b,0,1.25,900,utilizable,3,18.924259,0.273259,10
+180°,kaolin_b,0,1.25,940,utilizable,1,54.984352,0.47684,10
+180°,kaolin_b,0,1.25,940,utilizable,2,55.9715,0.47684,10
+180°,kaolin_b,0,1.25,940,utilizable,3,54.293343,0.0,10
+180°,kaolin_a,0,2.5,410,excluido: blanco próximo a 2^32,1,4501.494629,10.051779,10
+180°,kaolin_a,0,2.5,410,excluido: blanco próximo a 2^32,2,4546.188477,6.581864,10
+180°,kaolin_a,0,2.5,410,excluido: blanco próximo a 2^32,3,4687.624023,10.452496,10
+180°,kaolin_a,0,2.5,435,excluido: blanco próximo a 2^32,1,5339.603516,13.715336,10
+180°,kaolin_a,0,2.5,435,excluido: blanco próximo a 2^32,2,5416.802734,12.984315,10
+180°,kaolin_a,0,2.5,435,excluido: blanco próximo a 2^32,3,5485.149902,14.119216,10
+180°,kaolin_a,0,2.5,460,utilizable,1,201.226639,0.506238,10
+180°,kaolin_a,0,2.5,460,utilizable,2,204.684479,0.955159,10
+180°,kaolin_a,0,2.5,460,utilizable,3,199.977982,0.757663,10
+180°,kaolin_a,0,2.5,485,excluido: canal inestable,1,29.040422,46.760155,10
+180°,kaolin_a,0,2.5,485,excluido: canal inestable,2,29.397839,47.335648,10
+180°,kaolin_a,0,2.5,485,excluido: canal inestable,3,9.650354,30.517101,10
+180°,kaolin_a,0,2.5,510,utilizable,1,27.67211,0.0,10
+180°,kaolin_a,0,2.5,510,utilizable,2,27.748978,0.243075,10
+180°,kaolin_a,0,2.5,510,utilizable,3,27.595243,0.243075,10
+180°,kaolin_a,0,2.5,535,utilizable,1,11.59801,0.0,10
+180°,kaolin_a,0,2.5,535,utilizable,2,12.177911,0.305634,10
+180°,kaolin_a,0,2.5,535,utilizable,3,11.59801,0.0,10
+180°,kaolin_a,0,2.5,560,utilizable,1,37.056171,0.239635,10
+180°,kaolin_a,0,2.5,560,utilizable,2,37.795025,0.299544,10
+180°,kaolin_a,0,2.5,560,utilizable,3,36.374157,0.0,10
+180°,kaolin_a,0,2.5,585,utilizable,1,25.055574,0.0,10
+180°,kaolin_a,0,2.5,585,utilizable,2,25.588673,0.0,10
+180°,kaolin_a,0,2.5,585,utilizable,3,25.108885,0.16858,10
+180°,kaolin_a,0,2.5,610,utilizable,1,13.355389,0.0,10
+180°,kaolin_a,0,2.5,610,utilizable,2,13.355389,0.0,10
+180°,kaolin_a,0,2.5,610,utilizable,3,13.355389,0.0,10
+180°,kaolin_a,0,2.5,645,utilizable,1,34.444805,0.0,10
+180°,kaolin_a,0,2.5,645,utilizable,2,35.058205,0.227925,10
+180°,kaolin_a,0,2.5,645,utilizable,3,35.860348,0.0,10
+180°,kaolin_a,0,2.5,680,utilizable,1,3.175805,0.0,10
+180°,kaolin_a,0,2.5,680,utilizable,2,3.175805,0.0,10
+180°,kaolin_a,0,2.5,680,utilizable,3,3.175805,0.0,10
+180°,kaolin_a,0,2.5,705,utilizable,1,30.215218,0.195397,10
+180°,kaolin_a,0,2.5,705,utilizable,2,30.724983,0.223854,10
+180°,kaolin_a,0,2.5,705,utilizable,3,29.47374,0.239311,10
+180°,kaolin_a,0,2.5,730,utilizable,1,9.72935,0.0,10
+180°,kaolin_a,0,2.5,730,utilizable,2,9.72935,0.0,10
+180°,kaolin_a,0,2.5,730,utilizable,3,9.72935,0.0,10
+180°,kaolin_a,0,2.5,760,utilizable,1,5.975515,0.34993,10
+180°,kaolin_a,0,2.5,760,utilizable,2,6.390481,0.400896,10
+180°,kaolin_a,0,2.5,760,utilizable,3,5.809528,0.0,10
+180°,kaolin_a,0,2.5,810,utilizable,1,6.393066,0.0,10
+180°,kaolin_a,0,2.5,810,utilizable,2,7.032373,0.336944,10
+180°,kaolin_a,0,2.5,810,utilizable,3,6.393066,0.0,10
+180°,kaolin_a,0,2.5,860,utilizable,1,3.305667,0.0,10
+180°,kaolin_a,0,2.5,860,utilizable,2,3.305667,0.0,10
+180°,kaolin_a,0,2.5,860,utilizable,3,3.305667,0.0,10
+180°,kaolin_a,0,2.5,900,utilizable,1,7.777093,0.0,10
+180°,kaolin_a,0,2.5,900,utilizable,2,7.777093,0.0,10
+180°,kaolin_a,0,2.5,900,utilizable,3,7.777093,0.0,10
+180°,kaolin_a,0,2.5,940,utilizable,1,21.816051,0.312165,10
+180°,kaolin_a,0,2.5,940,utilizable,2,22.704489,0.0,10
+180°,kaolin_a,0,2.5,940,utilizable,3,22.704489,0.0,10
+180°,extracto+kaolin_b,3,1.25,410,excluido: blanco próximo a 2^32,1,4708.37793,15.135964,10
+180°,extracto+kaolin_b,3,1.25,410,excluido: blanco próximo a 2^32,2,4824.56543,17.983875,10
+180°,extracto+kaolin_b,3,1.25,410,excluido: blanco próximo a 2^32,3,4683.865723,20.92786,10
+180°,extracto+kaolin_b,3,1.25,435,excluido: blanco próximo a 2^32,1,5327.895508,22.321323,10
+180°,extracto+kaolin_b,3,1.25,435,excluido: blanco próximo a 2^32,2,5488.195801,27.483498,10
+180°,extracto+kaolin_b,3,1.25,435,excluido: blanco próximo a 2^32,3,5293.055664,30.989233,10
+180°,extracto+kaolin_b,3,1.25,460,utilizable,1,240.127258,1.280676,10
+180°,extracto+kaolin_b,3,1.25,460,utilizable,2,247.619232,1.264572,10
+180°,extracto+kaolin_b,3,1.25,460,utilizable,3,235.708939,1.515315,10
+180°,extracto+kaolin_b,3,1.25,485,excluido: canal inestable,1,57.18729,60.286583,10
+180°,extracto+kaolin_b,3,1.25,485,excluido: canal inestable,2,23.411047,49.35482,10
+180°,extracto+kaolin_b,3,1.25,485,excluido: canal inestable,3,33.865601,54.529335,10
+180°,extracto+kaolin_b,3,1.25,510,utilizable,1,33.821468,0.0,10
+180°,extracto+kaolin_b,3,1.25,510,utilizable,2,34.590137,0.0,10
+180°,extracto+kaolin_b,3,1.25,510,utilizable,3,33.514004,0.396939,10
+180°,extracto+kaolin_b,3,1.25,535,utilizable,1,15.222388,0.0,10
+180°,extracto+kaolin_b,3,1.25,535,utilizable,2,15.947264,0.0,10
+180°,extracto+kaolin_b,3,1.25,535,utilizable,3,15.222388,0.0,10
+180°,extracto+kaolin_b,3,1.25,560,utilizable,1,42.910137,0.299546,10
+180°,extracto+kaolin_b,3,1.25,560,utilizable,2,43.819492,0.179727,10
+180°,extracto+kaolin_b,3,1.25,560,utilizable,3,42.284958,0.293494,10
+180°,extracto+kaolin_b,3,1.25,585,utilizable,1,28.307468,0.16858,10
+180°,extracto+kaolin_b,3,1.25,585,utilizable,2,28.840567,0.16858,10
+180°,extracto+kaolin_b,3,1.25,585,utilizable,3,28.254158,0.0,10
+180°,extracto+kaolin_b,3,1.25,610,utilizable,1,17.807184,0.0,10
+180°,extracto+kaolin_b,3,1.25,610,utilizable,2,17.807184,0.0,10
+180°,extracto+kaolin_b,3,1.25,610,utilizable,3,17.695889,0.351946,10
+180°,extracto+kaolin_b,3,1.25,645,utilizable,1,53.507412,0.243661,10
+180°,extracto+kaolin_b,3,1.25,645,utilizable,2,54.167999,0.198948,10
+180°,extracto+kaolin_b,3,1.25,645,utilizable,3,53.41304,0.198948,10
+180°,extracto+kaolin_b,3,1.25,680,utilizable,1,84.052986,0.546659,10
+180°,extracto+kaolin_b,3,1.25,680,utilizable,2,83.311951,0.511355,10
+180°,extracto+kaolin_b,3,1.25,680,utilizable,3,83.841255,0.446346,10
+180°,extracto+kaolin_b,3,1.25,705,utilizable,1,74.147781,0.218457,10
+180°,extracto+kaolin_b,3,1.25,705,utilizable,2,74.611198,0.308949,10
+180°,extracto+kaolin_b,3,1.25,705,utilizable,3,73.452637,0.244246,10
+180°,extracto+kaolin_b,3,1.25,730,utilizable,1,103.779724,0.382205,10
+180°,extracto+kaolin_b,3,1.25,730,utilizable,2,103.374344,0.427317,10
+180°,extracto+kaolin_b,3,1.25,730,utilizable,3,103.050034,0.460237,10
+180°,extracto+kaolin_b,3,1.25,760,utilizable,1,30.707504,0.0,10
+180°,extracto+kaolin_b,3,1.25,760,utilizable,2,30.707504,0.0,10
+180°,extracto+kaolin_b,3,1.25,760,utilizable,3,30.707504,0.0,10
+180°,extracto+kaolin_b,3,1.25,810,utilizable,1,16.781799,0.0,10
+180°,extracto+kaolin_b,3,1.25,810,utilizable,2,16.781799,0.0,10
+180°,extracto+kaolin_b,3,1.25,810,utilizable,3,16.781799,0.0,10
+180°,extracto+kaolin_b,3,1.25,860,utilizable,1,5.509446,0.0,10
+180°,extracto+kaolin_b,3,1.25,860,utilizable,2,5.509446,0.0,10
+180°,extracto+kaolin_b,3,1.25,860,utilizable,3,5.509446,0.0,10
+180°,extracto+kaolin_b,3,1.25,900,utilizable,1,9.721366,0.0,10
+180°,extracto+kaolin_b,3,1.25,900,utilizable,2,9.721366,0.0,10
+180°,extracto+kaolin_b,3,1.25,900,utilizable,3,9.721366,0.0,10
+180°,extracto+kaolin_b,3,1.25,940,utilizable,1,25.665943,0.0,10
+180°,extracto+kaolin_b,3,1.25,940,utilizable,2,26.356949,0.47684,10
+180°,extracto+kaolin_b,3,1.25,940,utilizable,3,25.665943,0.0,10
+180°,extracto+kaolin_a,3,2.5,410,excluido: blanco próximo a 2^32,1,1757.440308,4.999035,10
+180°,extracto+kaolin_a,3,2.5,410,excluido: blanco próximo a 2^32,2,1781.217041,5.253018,10
+180°,extracto+kaolin_a,3,2.5,410,excluido: blanco próximo a 2^32,3,1811.12207,6.881454,10
+180°,extracto+kaolin_a,3,2.5,435,excluido: blanco próximo a 2^32,1,1912.277588,8.25526,10
+180°,extracto+kaolin_a,3,2.5,435,excluido: blanco próximo a 2^32,2,1961.871704,9.075042,10
+180°,extracto+kaolin_a,3,2.5,435,excluido: blanco próximo a 2^32,3,2006.896606,9.645675,10
+180°,extracto+kaolin_a,3,2.5,460,utilizable,1,86.061607,0.496007,10
+180°,extracto+kaolin_a,3,2.5,460,utilizable,2,89.039185,0.463966,10
+180°,extracto+kaolin_a,3,2.5,460,utilizable,3,91.536514,0.648295,10
+180°,extracto+kaolin_a,3,2.5,485,excluido: canal inestable,1,13.403272,21.581318,10
+180°,extracto+kaolin_a,3,2.5,485,excluido: canal inestable,2,9.114224,19.214472,10
+180°,extracto+kaolin_a,3,2.5,485,excluido: canal inestable,3,18.585869,23.994253,10
+180°,extracto+kaolin_a,3,2.5,510,utilizable,1,15.373395,0.0,10
+180°,extracto+kaolin_a,3,2.5,510,utilizable,2,15.373395,0.0,10
+180°,extracto+kaolin_a,3,2.5,510,utilizable,3,15.988331,0.324099,10
+180°,extracto+kaolin_a,3,2.5,535,utilizable,1,6.886319,0.382043,10
+180°,extracto+kaolin_a,3,2.5,535,utilizable,2,7.248756,0.0,10
+180°,extracto+kaolin_a,3,2.5,535,utilizable,3,7.248756,0.0,10
+180°,extracto+kaolin_a,3,2.5,560,utilizable,1,17.050386,0.0,10
+180°,extracto+kaolin_a,3,2.5,560,utilizable,2,17.050386,0.0,10
+180°,extracto+kaolin_a,3,2.5,560,utilizable,3,17.505064,0.239635,10
+180°,extracto+kaolin_a,3,2.5,585,utilizable,1,11.728141,0.0,10
+180°,extracto+kaolin_a,3,2.5,585,utilizable,2,11.78145,0.16858,10
+180°,extracto+kaolin_a,3,2.5,585,utilizable,3,12.261238,0.0,10
+180°,extracto+kaolin_a,3,2.5,610,utilizable,1,8.903592,0.0,10
+180°,extracto+kaolin_a,3,2.5,610,utilizable,2,8.903592,0.0,10
+180°,extracto+kaolin_a,3,2.5,610,utilizable,3,8.903592,0.0,10
+180°,extracto+kaolin_a,3,2.5,645,utilizable,1,29.254494,0.0,10
+180°,extracto+kaolin_a,3,2.5,645,utilizable,2,29.631969,0.198948,10
+180°,extracto+kaolin_a,3,2.5,645,utilizable,3,29.726339,0.0,10
+180°,extracto+kaolin_a,3,2.5,680,utilizable,1,79.606857,0.446345,10
+180°,extracto+kaolin_a,3,2.5,680,utilizable,2,80.030296,0.546658,10
+180°,extracto+kaolin_a,3,2.5,680,utilizable,3,79.924431,0.55793,10
+180°,extracto+kaolin_a,3,2.5,705,utilizable,1,52.830288,0.0,10
+180°,extracto+kaolin_a,3,2.5,705,utilizable,2,52.922974,0.195397,10
+180°,extracto+kaolin_a,3,2.5,705,utilizable,3,53.247368,0.146548,10
+180°,extracto+kaolin_a,3,2.5,730,utilizable,1,96.80703,0.418683,10
+180°,extracto+kaolin_a,3,2.5,730,utilizable,2,96.644875,0.341853,10
+180°,extracto+kaolin_a,3,2.5,730,utilizable,3,96.563797,0.25639,10
+180°,extracto+kaolin_a,3,2.5,760,utilizable,1,26.557842,0.0,10
+180°,extracto+kaolin_a,3,2.5,760,utilizable,2,26.557842,0.0,10
+180°,extracto+kaolin_a,3,2.5,760,utilizable,3,26.557842,0.0,10
+180°,extracto+kaolin_a,3,2.5,810,utilizable,1,11.987,0.0,10
+180°,extracto+kaolin_a,3,2.5,810,utilizable,2,11.987,0.0,10
+180°,extracto+kaolin_a,3,2.5,810,utilizable,3,11.987,0.0,10
+180°,extracto+kaolin_a,3,2.5,860,utilizable,1,4.407557,0.0,10
+180°,extracto+kaolin_a,3,2.5,860,utilizable,2,4.407557,0.0,10
+180°,extracto+kaolin_a,3,2.5,860,utilizable,3,4.407557,0.0,10
+180°,extracto+kaolin_a,3,2.5,900,utilizable,1,5.05511,0.273259,10
+180°,extracto+kaolin_a,3,2.5,900,utilizable,2,5.184729,0.0,10
+180°,extracto+kaolin_a,3,2.5,900,utilizable,3,5.184729,0.0,10
+180°,extracto+kaolin_a,3,2.5,940,utilizable,1,11.84582,0.0,10
+180°,extracto+kaolin_a,3,2.5,940,utilizable,2,11.84582,0.0,10
+180°,extracto+kaolin_a,3,2.5,940,utilizable,3,11.84582,0.0,10

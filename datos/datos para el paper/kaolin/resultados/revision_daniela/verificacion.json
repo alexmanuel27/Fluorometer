@@ -1,0 +1,34 @@
+{
+  "pandas": "2.2.3",
+  "numpy": "2.3.5",
+  "source_sha256": "92015d9b72a422a88e3f52661746da83861d06d6740f8551f855196e1fee8f58",
+  "summary": {
+    "90°": {
+      "max_abs_diferencia_media": 2.2737367544323206e-13,
+      "max_abs_diferencia_neta": 2.2737367544323206e-13,
+      "n_valores_anomalos_sin_eliminar": 0,
+      "n_replicas": {
+        "Blanco (Etanol)": 3,
+        "Extracto Puro": 3,
+        "Extracto+Kaolín A": 3,
+        "Extracto+Kaolín B": 3,
+        "Kaolín A solo": 3,
+        "Kaolín B solo": 3
+      }
+    },
+    "180°": {
+      "max_abs_diferencia_media": 2.2737367544323206e-13,
+      "max_abs_diferencia_neta": 2.2737367544323206e-13,
+      "n_valores_anomalos_sin_eliminar": 6,
+      "n_replicas": {
+        "Blanco (Etanol)": 3,
+        "Extracto Puro": 3,
+        "Extracto+Kaolín A": 3,
+        "Extracto+Kaolín B": 3,
+        "Kaolín A solo": 3,
+        "Kaolín B solo": 3
+      }
+    }
+  },
+  "adaptaciones": "RUTA Windows redirigida a los CSV locales; import matplotlib omitido; solo ejecutadas secciones 1–4; 180° es una reproducción adaptada del único archivo plot90°.py aportado"
+}

@@ -1,5 +1,7 @@
 # Resultados principales del artículo: 85 → 9
 
+**Etapa de octubre, conservada con su alcance original.** La entrega posterior de noviembre está en la [guía para Daniela](../datos%20para%20el%20paper/00_LEEME_DANIELA.md). Este análisis sigue siendo reproducible, pero sus datos y ecuación no corresponden al estudio 90°/680 nm.
+
 Versión fijada el 18 de octubre de 2026. Esta carpeta es la referencia vigente para el manuscrito y no depende de los scripts exploratorios anteriores.
 
 **Función:** Chl(a) [µg/mL] = −0,0621128959 + 2,8428103277 × ln(B645 / media_I645).

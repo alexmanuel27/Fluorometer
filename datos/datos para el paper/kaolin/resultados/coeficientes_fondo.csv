@@ -1,0 +1,19 @@
+﻿geometria,referencia_nm,beta,formula,obtenido_de
+90°,460,0.02972291123216841,S = I680 - 0.0297229112322 * I460,solo las tres adquisiciones de etanol
+90°,645,0.555328898892418,S = I680 - 0.555328898892 * I645,solo las tres adquisiciones de etanol
+90°,705,0.21150989303761478,S = I680 - 0.211509893038 * I705,solo las tres adquisiciones de etanol
+90°,730,0.7253662936647786,S = I680 - 0.725366293665 * I730,solo las tres adquisiciones de etanol
+90°,760,1.449462497508013,S = I680 - 1.44946249751 * I760,solo las tres adquisiciones de etanol
+90°,810,2.2078127170320836,S = I680 - 2.20781271703 * I810,solo las tres adquisiciones de etanol
+90°,860,6.862245777709209,S = I680 - 6.86224577771 * I860,solo las tres adquisiciones de etanol
+90°,900,0.9387442377188392,S = I680 - 0.938744237719 * I900,solo las tres adquisiciones de etanol
+90°,940,0.5957666079680429,S = I680 - 0.595766607968 * I940,solo las tres adquisiciones de etanol
+180°,460,0.005880047936492021,S = I680 - 0.00588004793649 * I460,solo las tres adquisiciones de etanol
+180°,645,0.047941695188094574,S = I680 - 0.0479416951881 * I645,solo las tres adquisiciones de etanol
+180°,705,0.054263197396041275,S = I680 - 0.054263197396 * I705,solo las tres adquisiciones de etanol
+180°,730,0.19918425758406955,S = I680 - 0.199184257584 * I730,solo las tres adquisiciones de etanol
+180°,760,0.25324714721851405,S = I680 - 0.253247147219 * I760,solo las tres adquisiciones de etanol
+180°,810,0.23920558169688647,S = I680 - 0.239205581697 * I810,solo las tres adquisiciones de etanol
+180°,860,0.8096554127945562,S = I680 - 0.809655412795 * I860,solo las tres adquisiciones de etanol
+180°,900,0.24034054044666436,S = I680 - 0.240340540447 * I900,solo las tres adquisiciones de etanol
+180°,940,0.08402463281939691,S = I680 - 0.0840246328194 * I940,solo las tres adquisiciones de etanol

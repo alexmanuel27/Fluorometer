@@ -1,0 +1,98 @@
+{
+  "fecha": "2026-11-16",
+  "modelo": {
+    "geometria": "90°",
+    "grupo": "un_canal",
+    "modelo": "cuadratico_680",
+    "terminos": [
+      "dI680",
+      "dI680^2"
+    ],
+    "parametros": [
+      -0.01714639608308932,
+      0.007849688918047307,
+      0.00011094242466074308
+    ],
+    "alpha": 0.0,
+    "canales": [
+      680
+    ],
+    "blancos": {
+      "680": 0.8821683333333337
+    },
+    "intensidad_min": {
+      "680": 0.8821683333333334
+    },
+    "intensidad_max": {
+      "680": 131.372462
+    }
+  },
+  "rango_concentracion_calibrada": [
+    0.15,
+    3.0
+  ],
+  "rango_delta_extractos_sin_blanco": [
+    23.606818,
+    130.49029366666667
+  ],
+  "muestras_nuevas": 20,
+  "adquisiciones_nuevas": 60,
+  "referencias_independientes_de_series": false,
+  "confirmaciones_Alex": {
+    "AO_y_CV": "dos especies en cultivo, células intactas; nombres completos no especificados",
+    "blanco": "medio sin algas",
+    "condiciones": "mismo LED y ajustes de calibración",
+    "concentracion_clorofila": "no disponible"
+  },
+  "tabla_relativa": "cultivos.xlsx es TSV, no un libro XLSX; valores relativos sin unidad absoluta",
+  "fuente_sha256": {
+    "algas/cultivos.zip": "ae2249e0075f191d411ee2c9e2b2dca172f9daa2ee9e5e55ec31fa7bb661bb39",
+    "algas/cultivos.xlsx": "3ed1ad1a503eb89e461aeec369c590bd985671fe0421a9e69a59e9fdd2b66a8b",
+    "resultados/coeficientes.json": "72c729be6ee919dbe3795b10a8bf9e39d50a89b7447c25996455d9a029e2308f",
+    "dataCruda.zip": "981d52ae63a9cf60eec06e8fe8ff5d5e8ff7533b25e69da9492998dbc96e9eaa",
+    "reCalibration_20samples.xlsx": "258d512008cda1e6f12a1365a2bf863e8b0f6edb2917dc01096c0da25a05c44c"
+  },
+  "software": {
+    "python": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:04:32) [Clang 20.1.8 ]",
+    "numpy": "2.5.4"
+  },
+  "resumen": {
+    "AO": {
+      "I680_min": 2.187777,
+      "I680_max": 24.03025866666667,
+      "blanco_680": 0.4940142666666668,
+      "DE_entre_medias_de_3_blancos_680": 0.2203655790366848,
+      "C_equivalente_min": -0.0035326103255801464,
+      "C_equivalente_max": 0.2290628894711494,
+      "salidas_negativas": 4,
+      "salidas_por_debajo_015": 9,
+      "señales_bajo_minimo_extracto": 10,
+      "max_cambio_al_usar_blanco_actual": 0.005057244665107735,
+      "dark_todo_cero": true,
+      "Spearman_cantidad_relativa_I680": 0.960490759014502
+    },
+    "CV": {
+      "I680_min": 0.741021,
+      "I680_max": 5.3635823333333335,
+      "blanco_680": 0.4940142666666668,
+      "DE_entre_medias_de_3_blancos_680": 0.2203655790366848,
+      "C_equivalente_min": -0.015200701210344343,
+      "C_equivalente_max": 0.02370894207945279,
+      "salidas_negativas": 8,
+      "salidas_por_debajo_015": 10,
+      "señales_bajo_minimo_extracto": 10,
+      "max_cambio_al_usar_blanco_actual": 0.0034495677094385432,
+      "dark_todo_cero": true,
+      "Spearman_cantidad_relativa_I680": 0.9393939393939393
+    }
+  },
+  "cambio_blanco": "coeficientes sin cambiar; principal I680−medio actual; literal con blanco original como sensibilidad",
+  "incertidumbre": "DE de adquisiciones con blanco y coeficientes fijos; no intervalo de predicción ni incertidumbre total",
+  "no_realizado": [
+    "reajustar modelo",
+    "recortar negativos",
+    "corregir filtro interno",
+    "analizar 180°",
+    "RMSE externo sin C de referencia"
+  ]
+}

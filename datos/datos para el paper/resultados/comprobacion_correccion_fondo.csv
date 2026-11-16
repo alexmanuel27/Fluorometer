@@ -1,0 +1,19 @@
+﻿geometria,referencia_nm,beta,funcion,RMSE_LOO_ug_mL,MAE_LOO_ug_mL,nota
+90°,solo_blanco,,lineal,0.15522133980033398,0.1170170793812487,candidato fijado; 20 extractos; blanco compartido; no CV anidada ni validación externa
+90°,solo_blanco,,cuadratico,0.09378949925080231,0.0812796041278308,candidato fijado; 20 extractos; blanco compartido; no CV anidada ni validación externa
+90°,solo_blanco,,saturacion,0.1099141264044827,0.08830172433140103,candidato fijado; 20 extractos; blanco compartido; no CV anidada ni validación externa
+90°,810,1.103906775634761,lineal,0.15601604795694732,0.11876593552956334,candidato fijado; 20 extractos; blanco compartido; no CV anidada ni validación externa
+90°,810,1.103906775634761,cuadratico,0.09165191032473514,0.07982820436391716,candidato fijado; 20 extractos; blanco compartido; no CV anidada ni validación externa
+90°,810,1.103906775634761,saturacion,0.10807037305779393,0.0870506930467672,candidato fijado; 20 extractos; blanco compartido; no CV anidada ni validación externa
+90°,860,0.8577818247961978,lineal,0.15628679352157987,0.11753928023728917,candidato fijado; 20 extractos; blanco compartido; no CV anidada ni validación externa
+90°,860,0.8577818247961978,cuadratico,0.09329926474889501,0.08131564443484354,candidato fijado; 20 extractos; blanco compartido; no CV anidada ni validación externa
+90°,860,0.8577818247961978,saturacion,0.11028086207019873,0.08696693693377304,candidato fijado; 20 extractos; blanco compartido; no CV anidada ni validación externa
+180°,solo_blanco,,lineal,0.15087442562111378,0.10545848820716582,candidato fijado; 20 extractos; blanco compartido; no CV anidada ni validación externa
+180°,solo_blanco,,cuadratico,0.11966375743606335,0.09439559374745557,candidato fijado; 20 extractos; blanco compartido; no CV anidada ni validación externa
+180°,solo_blanco,,saturacion,0.13554666569688853,0.10179082623137883,candidato fijado; 20 extractos; blanco compartido; no CV anidada ni validación externa
+180°,810,0.24669629761027886,lineal,0.1372701204966392,0.09458966490168033,candidato fijado; 20 extractos; blanco compartido; no CV anidada ni validación externa
+180°,810,0.24669629761027886,cuadratico,0.1116680903088451,0.08821018704612398,candidato fijado; 20 extractos; blanco compartido; no CV anidada ni validación externa
+180°,810,0.24669629761027886,saturacion,0.12809950779127863,0.09650604326020909,candidato fijado; 20 extractos; blanco compartido; no CV anidada ni validación externa
+180°,860,0.8128715875988544,lineal,0.1364180424965381,0.09450782795102881,candidato fijado; 20 extractos; blanco compartido; no CV anidada ni validación externa
+180°,860,0.8128715875988544,cuadratico,0.11378405002625623,0.08885136865128511,candidato fijado; 20 extractos; blanco compartido; no CV anidada ni validación externa
+180°,860,0.8128715875988544,saturacion,0.1329738890360351,0.09854132562250116,candidato fijado; 20 extractos; blanco compartido; no CV anidada ni validación externa

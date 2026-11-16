@@ -4,18 +4,22 @@ Prototipo de instrumento óptico para estimar clorofila a en extractos, con un *
 
 ## Estado del proyecto
 
-Hay dos versiones de calibración que no deben confundirse:
+**Para Daniela y el paper:** empezar por la [guía de entrega de noviembre](datos/datos%20para%20el%20paper/00_LEEME_DANIELA.md). Reúne las figuras seleccionadas, sus pies, las tablas, las fuentes y la reproducción del análisis. Configuración elegida por Alex: **90°/680 nm**; cultivo seleccionado: **AO**.
+
+El firmware y las etapas de investigación deben distinguirse:
 
 | Parte | Estado |
 |---|---|
 | Firmware y binarios existentes | Conservan la fórmula inicial: Chl(a) = −2,7924 × ln(media I645) + 20,1264 |
-| Análisis principal del manuscrito | Calibración con 85 registros y transferencia fija a nueve diluciones, usando el blanco de sesión |
-| Nueva función del estudio | Chl(a) = −0,0621128959 + 2,8428103277 × ln(B645 / media I645) |
-| Instalación de la nueva función en el equipo | Pendiente: el firmware conserva la fórmula inicial, aunque se actualicen otras funciones |
+| Investigación de octubre: 85 → 9 | Calibración con 85 registros y transferencia fija a nueve diluciones, usando el blanco de sesión |
+| Función de esa etapa | Chl(a) = −0,0621128959 + 2,8428103277 × ln(B645 / media I645) |
+| Investigación de noviembre | 20 niveles de extracto a 90°/180°, controles con caolín y aplicación de la calibración de 680 nm a AO |
+| Decisión del 16 de noviembre | 90°/680 nm; AO se informa en equivalentes de clorofila referidos al extracto vegetal, sin validación independiente de concentración |
+| Funciones de investigación en el equipo | No instaladas: el firmware conserva la fórmula inicial, aunque se actualicen otras funciones |
 
-Las once muestras quedan fuera del análisis principal vigente. Los datos y análisis previos se conservan como historial, no como resultados principales.
+Las once muestras quedan fuera del análisis 85 → 9 de octubre. Los documentos y paquetes de cada etapa conservan su fecha y alcance; no mezclar sus ecuaciones, muestras o métricas.
 
-Para la investigación, empezar por [articulo.md](datos/articulo.md). Para utilizar el equipo, seguir la guía rápida de abajo.
+El [índice de investigación y datos](datos/README.md) distingue la entrega de noviembre, la etapa 85 → 9 de octubre y el historial. Para utilizar el equipo, seguir la guía rápida de abajo.
 
 ## Guía rápida
 
@@ -53,7 +57,7 @@ La persistencia del blanco no garantiza que siga siendo válido tras cambiar ses
 
 Con **Enable cooling cycle** activado, el LED se apaga 60 s después de tres ciclos completos de adquisición. **Los ciclos de blanco también cuentan.** Al terminar la pausa, pulsar Start para encenderlo y volver a medir inmediatamente. La casilla permite desactivar esta pausa: se trata de una protección por contador, no de una regulación mediante temperatura medida; no desactivarla sin controlar el calentamiento del montaje.
 
-Guardar un blanco es actualmente un requisito de la interfaz. **La fórmula inicial del firmware todavía no incorpora ese blanco matemáticamente.** La normalización B645/I645 corresponde al análisis nuevo del manuscrito y a su futura implementación.
+Guardar un blanco es actualmente un requisito de la interfaz. **La fórmula inicial del firmware todavía no incorpora ese blanco matemáticamente.** La normalización B645/I645 corresponde al análisis de octubre; la resta del blanco a 680 nm, al análisis de noviembre. Ninguna sustituye automáticamente la ecuación instalada.
 
 ### Medición dark
 
@@ -77,7 +81,15 @@ Longitudes nominales: **410, 435, 460, 485, 510, 535, 560, 585, 610, 645, 680, 7
 
 Los factores CALIBRATION_435 y CALIBRATION_645 de la fuente escalan esos dos canales. Cambiar estos factores o la configuración óptica puede invalidar la aplicación directa de una calibración anterior.
 
-## Investigación: calibración 85 → 9
+## Investigación de noviembre: extractos, caolín y AO
+
+La [entrega para Daniela](datos/datos%20para%20el%20paper/00_LEEME_DANIELA.md) contiene la selección de figuras PNG/SVG, pies en inglés, tablas y las limitaciones que deben acompañarlas. Los generadores y fuentes permanecen juntos en [datos para el paper](datos/datos%20para%20el%20paper/README.md).
+
+La comparación de extractos y controles con caolín apoya la elección de **90°/680 nm** para este estudio. La calibración cuadrática conserva residuos estructurados y un sesgo importante en el extremo inferior. La aplicación a AO es una estimación referida al extracto vegetal, sin concentración independiente de referencia. Una futura calibración más densa a bajas concentraciones está propuesta, no ejecutada.
+
+El [paquete de noviembre para compartir](datos/Paquete_Daniela_noviembre_2026-11-16.zip) es una instantánea de esta entrega con fuentes, tablas, figuras y código. No se ha enviado automáticamente a Daniela.
+
+## Investigación de octubre: calibración 85 → 9
 
 La función elegida se ajustó exclusivamente con las 85 mediciones. Las nueve diluciones se predijeron sin reajustar coeficientes, usando el blanco de su propia sesión.
 
@@ -96,10 +108,10 @@ En las siete diluciones con referencia <1 µg/mL, el error relativo absoluto med
 
 El foco del paper es una **prueba de concepto de estimación empírica de clorofila a en extractos etanólicos**, con evaluación retrospectiva. Las nueve proceden de un único extracto madre, no de nueve extractos independientes. La selección se realizó después de explorar los datos disponibles: no es una validación prospectiva ciega. No se establece desempeño en lagos, LOD/LOQ o exactitud universal entre sesiones.
 
-Materiales vigentes:
+Materiales de la etapa de octubre:
 
-- [Guía del artículo para Daniela](datos/articulo.md): función, enfoque, explicaciones, seis figuras con pies y próximos pasos.
-- [Resumen breve](datos/RESUMEN_PARA_DANIELA.md).
+- [Guía del artículo de octubre para Daniela](datos/articulo.md): función, enfoque, explicaciones, seis figuras con pies y próximos pasos de esa versión.
+- [Resumen de octubre](datos/RESUMEN_PARA_DANIELA.md).
 - [Resultados, figuras PNG/SVG y reproducción](datos/articulo_85_a_9/README.md).
 - [Índice de datos e historial](datos/README.md).
 - [Paquete listo para compartir con Daniela](datos/Paquete_Daniela_85_a_9_2026-10-18.zip).
@@ -107,7 +119,7 @@ Materiales vigentes:
 
 El paquete contiene los dos Excel utilizados y el análisis principal; excluye el conjunto de once y sus análisis. Los originales permanecen intactos y se verifican por SHA-256.
 
-### Reproducir el análisis principal
+### Reproducir el análisis de octubre
 
 Desde la raíz del repositorio, con Python y las dependencias indicadas:
 
@@ -192,9 +204,10 @@ El análisis científico incluye sus propias comprobaciones numéricas: coeficie
 | [Spectro18_V_Flu/](Spectro18_V_Flu/) | Fuente del firmware principal y cálculo de estadísticas espectrales |
 | [output/](output/) | Binarios del firmware principal |
 | [LED_Stability_Test/](LED_Stability_Test/) | Firmware, instrucciones y binarios de estabilidad del LED |
-| [datos/articulo.md](datos/articulo.md) | Guía vigente del manuscrito |
-| [datos/articulo_85_a_9/](datos/articulo_85_a_9/) | Único análisis principal de la versión actual del paper |
-| [datos/README.md](datos/README.md) | Índice de originales, resultados principales e historial exploratorio |
+| [Entrega de noviembre para Daniela](datos/datos%20para%20el%20paper/00_LEEME_DANIELA.md) | Entrada al material de extractos, caolín y AO; figuras, tablas, métodos y límites |
+| [datos/articulo.md](datos/articulo.md) | Guía del manuscrito de octubre, conservada con su alcance original |
+| [datos/articulo_85_a_9/](datos/articulo_85_a_9/) | Calibración 85 → 9 de octubre, separada del estudio de noviembre |
+| [datos/README.md](datos/README.md) | Índice de etapas, originales, entregas e historial |
 | [tests/](tests/) | Comprobaciones del firmware y estadísticas |
 
 Las carpetas históricas no se han movido para conservar trazabilidad y referencias internas. Los temporales locales, cachés de Python y nuevas carpetas de compilación se excluyen mediante .gitignore; los binarios ya versionados se mantienen.

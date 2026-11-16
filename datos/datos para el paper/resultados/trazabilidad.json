@@ -1,0 +1,19 @@
+{
+  "python": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:04:32) [Clang 20.1.8 ]",
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "matplotlib": "3.11.2",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "sources": {
+    "dataCruda.zip": "981d52ae63a9cf60eec06e8fe8ff5d5e8ff7533b25e69da9492998dbc96e9eaa",
+    "reCalibration_20samples.xlsx": "258d512008cda1e6f12a1365a2bf863e8b0f6edb2917dc01096c0da25a05c44c"
+  },
+  "candidates": {
+    "90°": 464,
+    "180°": 379
+  },
+  "dark_all_zero": {
+    "90°": true,
+    "180°": true
+  }
+}

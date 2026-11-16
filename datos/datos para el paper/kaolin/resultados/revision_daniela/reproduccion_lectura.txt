@@ -1,0 +1,99 @@
+GEOMETRIA 90°
+📁 Total de archivos CSV: 19
+
+📄 Archivos encontrados:
+   - blanco_etanol01-spectrum.csv
+   - blanco_etanol02-spectrum.csv
+   - blanco_etanol03-spectrum.csv
+   - dark-reference-2026-11-10-17-13-16.csv
+   - extracto+kaolin_a01-spectrum.csv
+   - extracto+kaolin_a02-spectrum.csv
+   - extracto+kaolin_a03-spectrum.csv
+   - extracto+kaolin_b01-spectrum.csv
+   - extracto+kaolin_b02-spectrum.csv
+   - extracto+kaolin_b03-spectrum.csv
+   - extracto_puro01-spectrum.csv
+   - extracto_puro02-spectrum.csv
+   - extracto_puro03-spectrum.csv
+   - kaolin_a01-spectrum.csv
+   - kaolin_a02-spectrum.csv
+   - kaolin_a03-spectrum.csv
+   - kaolin_b01-spectrum.csv
+   - kaolin_b02-spectrum.csv
+   - kaolin_b03-spectrum.csv
+
+============================================================
+DIAGNÓSTICO DE AGRUPACIÓN
+============================================================
+   Blanco (Etanol): 3 replicados
+   Extracto Puro: 3 replicados
+   Extracto+Kaolín A: 3 replicados
+   Extracto+Kaolín B: 3 replicados
+   Kaolín A solo: 3 replicados
+   Kaolín B solo: 3 replicados
+
+⚠️  Archivos no asignados a ningún grupo:
+   - dark-reference-2026-11-10-17-13-16
+✅ Blanco (Etanol): media max = 781.99, media min = 0.26
+✅ Extracto Puro: media max = 588.43, media min = 3.24
+✅ Extracto+Kaolín A: media max = 1180.11, media min = 3.89
+✅ Extracto+Kaolín B: media max = 923.89, media min = 3.38
+✅ Kaolín A solo: media max = 2368.11, media min = 1.10
+✅ Kaolín B solo: media max = 1836.03, media min = 1.10
+
+============================================================
+ANÁLISIS DE ATENUACIÓN POR KAOLÍN
+============================================================
+λ = 435 nm | Atenuación Kaolín A: -100.6% | Kaolín B: -57.0%
+λ = 680 nm | Atenuación Kaolín A: -1.4% | Kaolín B: -1.5%
+λ = 730 nm | Atenuación Kaolín A: -6.2% | Kaolín B: -3.4%
+
+GEOMETRIA 180°
+📁 Total de archivos CSV: 19
+
+📄 Archivos encontrados:
+   - blanco_etanol01-spectrum.csv
+   - blanco_etanol02-spectrum.csv
+   - blanco_etanol03-spectrum.csv
+   - dark-reference-2026-11-10-17-51-22.csv
+   - extracto+kaolin_a01-spectrum.csv
+   - extracto+kaolin_a02-spectrum.csv
+   - extracto+kaolin_a03-spectrum.csv
+   - extracto+kaolin_b01-spectrum.csv
+   - extracto+kaolin_b02-spectrum.csv
+   - extracto+kaolin_b03-spectrum.csv
+   - extracto_puro01-spectrum.csv
+   - extracto_puro02-spectrum.csv
+   - extracto_puro03-spectrum.csv
+   - kaolin_a01-spectrum.csv
+   - kaolin_a02-spectrum.csv
+   - kaolin_a03-spectrum.csv
+   - kaolin_b01-spectrum.csv
+   - kaolin_b02-spectrum.csv
+   - kaolin_b03-spectrum.csv
+
+============================================================
+DIAGNÓSTICO DE AGRUPACIÓN
+============================================================
+   Blanco (Etanol): 3 replicados
+   Extracto Puro: 3 replicados
+   Extracto+Kaolín A: 3 replicados
+   Extracto+Kaolín B: 3 replicados
+   Kaolín A solo: 3 replicados
+   Kaolín B solo: 3 replicados
+
+⚠️  Archivos no asignados a ningún grupo:
+   - dark-reference-2026-11-10-17-51-22
+✅ Blanco (Etanol): media max = 4294967296.00, media min = 45.20
+✅ Extracto Puro: media max = 41829.50, media min = 22.04
+✅ Extracto+Kaolín A: media max = 1960.35, media min = 4.41
+✅ Extracto+Kaolín B: media max = 5369.72, media min = 5.51
+✅ Kaolín A solo: media max = 5413.85, media min = 3.18
+✅ Kaolín B solo: media max = 13584.54, media min = 6.00
+
+============================================================
+ANÁLISIS DE ATENUACIÓN POR KAOLÍN
+============================================================
+λ = 435 nm | Atenuación Kaolín A: 95.3% | Kaolín B: 87.2%
+λ = 680 nm | Atenuación Kaolín A: 16.2% | Kaolín B: 12.1%
+λ = 730 nm | Atenuación Kaolín A: 43.3% | Kaolín B: 39.4%

@@ -1,0 +1,7 @@
+﻿preparacion,clorofila_nominal_ug_mL,caolin_nominal_g_L,masa_caolin_g,volumen_preparacion_mL
+blanco_etanol,0,0.0,0,
+extracto_puro,3,0.0,0,
+kaolin_b,0,1.25,0.1,80
+kaolin_a,0,2.5,0.1,40
+extracto+kaolin_b,3,1.25,0.1,80
+extracto+kaolin_a,3,2.5,0.1,40

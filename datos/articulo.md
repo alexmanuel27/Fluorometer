@@ -1,5 +1,7 @@
 # Artículo para Daniela: calibración con 85 y evaluación sobre nueve diluciones
 
+**Documento de la etapa de octubre.** Conserva su fecha y alcance. El material posterior de extractos, caolín y AO se entrega desde la [guía de noviembre para Daniela](datos%20para%20el%20paper/00_LEEME_DANIELA.md). No mezclar sus ecuaciones o métricas con las de este documento.
+
 Documento de trabajo actualizado el 18 de octubre de 2026. Decisión acordada con Alex: **85 → 9, usando el blanco de sesión y una relación lineal en ln(B645/I645)**. Esta versión sustituye la propuesta anterior basada en ND(680,705).
 
 ## 1. Decisión y foco del paper

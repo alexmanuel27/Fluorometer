@@ -1,0 +1,22 @@
+{
+  "analisis": "2026-11-15",
+  "fecha_dark_en_archivos": "2026-11-10",
+  "python": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:04:32) [Clang 20.1.8 ]",
+  "numpy": "2.5.4",
+  "matplotlib": "3.11.2",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "fuente_sha256": "f1bfe2e0889cfc1cbb44499ab507f9c92d4cd330fc810293cf7118023b244b01",
+  "medias_serie_anterior_sha256": "0d43cef4087287b3e46752b44f66b38647fb44acff87e74e464cf23f23177d3d",
+  "usuario": {
+    "excitacion_nm": 430,
+    "mismos_LED_ganancia_integracion_entre_geometrias": true,
+    "agitacion_antes_de_cada_lectura": true,
+    "espera_tras_agitacion_s": null,
+    "clorofila_nominal_extracto_ug_mL": 3,
+    "masa_caolin_g": 0.1,
+    "volumen_a_mL": 40,
+    "volumen_b_mL": 80
+  },
+  "independencia": "tres adquisiciones por preparación; réplicas de preparación no documentadas",
+  "nota_fondo": "coeficientes del blanco; bandas auxiliares revisadas tras ver los datos; prueba exploratoria sin validación externa"
+}
