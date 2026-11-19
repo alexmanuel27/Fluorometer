@@ -1,0 +1,76 @@
+{
+  "fecha": "2026-11-19",
+  "configuracion": "90°/680 nm",
+  "errores_globales": {
+    "region_ug_mL": "0.15–3.00",
+    "n": 20,
+    "RMSE_ug_mL": 0.09378949925080231,
+    "MAE_ug_mL": 0.0812796041278308,
+    "sesgo_ug_mL": 0.0005892878289464526,
+    "MAPE_pct": 8.681033677861793,
+    "RMSRE_pct": 16.042969035725605,
+    "max_error_absoluto_ug_mL": 0.19741248978119774,
+    "max_error_relativo_absoluto_pct": 65.22680248781333
+  },
+  "coeficientes_normalizados_u_deltaI_div_100": [
+    -0.01714639608308932,
+    0.7849688918047307,
+    1.1094242466074307
+  ],
+  "coeficientes_redondeados": [
+    -0.01715,
+    0.78497,
+    1.10942
+  ],
+  "max_error_redondeo_ug_mL": 9.3888324933996e-06,
+  "raiz_positiva_deltaI": 2.1207735350307666,
+  "concentracion_predicha_blanco": -0.01714639608308932,
+  "menor_senal_patron_positivo": 23.606818,
+  "blanco_calibracion": 0.8821683333333337,
+  "blanco_AO": 0.4940142666666668,
+  "medias_tres_blancos_calibracion": [
+    0.9527418000000001,
+    0.6351612000000001,
+    1.058602
+  ],
+  "medias_tres_blancos_AO": [
+    0.7410214000000002,
+    0.4234408,
+    0.3175806
+  ],
+  "SD_entre_tres_medias_blanco_AO": 0.2203655790366848,
+  "AO_negativos": [
+    "AO01",
+    "AO02",
+    "AO03",
+    "AO04"
+  ],
+  "AO_bajo_menor_senal_patron_positivo": 10,
+  "ajuste_anclado_solo_diagnostico": {
+    "coeficientes_u": [
+      0.7392332035847433,
+      1.1360065952527638
+    ],
+    "errores": {
+      "n": 20,
+      "RMSE_ug_mL": 0.09238958925088522,
+      "MAE_ug_mL": 0.08003868553405653,
+      "sesgo_ug_mL": 0.00020058242042976515,
+      "MAPE_pct": 8.456451308897787,
+      "RMSRE_pct": 15.280807976410317,
+      "max_error_absoluto_ug_mL": 0.1946734132381791,
+      "max_error_relativo_absoluto_pct": 61.35993410688773
+    },
+    "primer_patron_predicho_LOO": 0.24203990116033158
+  },
+  "LOD_LOQ": "No establecidos; tres archivos de blanco y adquisiciones técnicas no validan el método",
+  "fuentes_sha256": {
+    "dataCruda.zip": "981d52ae63a9cf60eec06e8fe8ff5d5e8ff7533b25e69da9492998dbc96e9eaa",
+    "reCalibration_20samples.xlsx": "258d512008cda1e6f12a1365a2bf863e8b0f6edb2917dc01096c0da25a05c44c",
+    "resultados/coeficientes.json": "72c729be6ee919dbe3795b10a8bf9e39d50a89b7447c25996455d9a029e2308f",
+    "resultados/residuos_correccion_fondo.csv": "e4fc25f16cc3ed8931ba6343c8d0debc5803a2dcce0a764957bccbe1336b0b09",
+    "algas/cultivos.zip": "ae2249e0075f191d411ee2c9e2b2dca172f9daa2ee9e5e55ec31fa7bb661bb39",
+    "algas/cultivos.xlsx": "3ed1ad1a503eb89e461aeec369c590bd985671fe0421a9e69a59e9fdd2b66a8b",
+    "algas/resultados/predicciones_AO.csv": "81a001b7a57eeaaf8632084492628da1426ead83aa33da7f0a14cee1d4dca9c1"
+  }
+}
