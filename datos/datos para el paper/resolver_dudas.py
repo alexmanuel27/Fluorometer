@@ -18,7 +18,7 @@ sys.path.insert(0, str(ROOT / "algas"))
 import aplicar_modelo_90_680 as algae
 
 OUT = ROOT / "resultados/dudas"
-PETROL, YELLOW, CORAL, GRAY = "#264653", "#E9C46A", "#E76F51", "#6C757D"
+PETROL, TEAL, YELLOW, CORAL, GRAY = "#264653", "#2A9D8F", "#E9C46A", "#E76F51", "#6C757D"
 
 
 def read_csv(path):
@@ -79,6 +79,111 @@ def residual_figure(reference, error, regions):
              "All 20 positive standards retained. No relative error is assigned to the zero blank.\n"
              "These are internal prediction errors, not a 95% uncertainty interval or a detection limit.", fontsize=8)
     save_figure(fig, "01_errores_y_regiones")
+
+
+def linear_comparison(c, data):
+    d = data["90°"]
+    j = list(calibration.W).index(680)
+    signal = d["mean"][:, j]-d["blank"][j]
+    train = np.arange(len(c))
+    previous = read_csv(ROOT / "resultados/residuos_correccion_fondo.csv")
+    fitted = read_csv(ROOT / "resultados/modelos.csv")
+    models, samples, regions = [], [], []
+    for kind, label, color, marker, style in [("lineal", "Lineal", TEAL, "^", "--"),
+                                              ("cuadratico", "Cuadrático", PETROL, "o", "-")]:
+        features = signal[:, None] if kind == "lineal" else np.c_[signal, signal**2]
+        model = dict(kind=kind, alpha=0., x=features)
+        params = calibration.fit(model, c, train)
+        pred = calibration.cv(model, c, train)
+        explicit = np.array([calibration.predict(model, calibration.fit(model, c, train[train != i]), [i])[0]
+                             for i in train[1:]])
+        stored = [r for r in previous if r["geometria"] == "90°" and
+                  r["referencia_nm"] == "solo_blanco" and r["funcion"] == kind]
+        original = next(r for r in fitted if r["geometria"] == "90°" and r["modelo"] == f"{kind}_680")
+        assert len(stored) == 20 and np.allclose(pred, explicit, atol=1e-10, rtol=0)
+        assert np.allclose(pred, [float(r["prediccion_LOO"]) for r in stored], atol=1e-10, rtol=0)
+        assert np.allclose(params, json.loads(original["parametros"]), atol=1e-12, rtol=0)
+        error = pred-c[1:]
+        assert np.isclose(metrics(c[1:], error)["RMSE_ug_mL"], float(original["RMSE"]), atol=1e-12, rtol=0)
+        samples.extend(dict(modelo=kind, muestra=i, referencia_ug_mL=c[i], prediccion_LOO_ug_mL=pred[i-1],
+                            error_LOO_ug_mL=error[i-1], error_relativo_pct=100*error[i-1]/c[i]) for i in train[1:])
+        regional = [dict(modelo=kind, region_ug_mL="0.15–3.00", **metrics(c[1:], error))]
+        for start in range(0, 20, 4):
+            ref, err = c[1:][start:start+4], error[start:start+4]
+            regional.append(dict(modelo=kind, region_ug_mL=f"{ref[0]:.2f}–{ref[-1]:.2f}", **metrics(ref, err)))
+        regions.extend(regional)
+        models.append(dict(model=model, params=params, prediction=pred, error=error, regions=regional,
+                           label=label, color=color, marker=marker, style=style))
+    write_csv("lineal_vs_cuadratico_muestras.csv", samples)
+    write_csv("lineal_vs_cuadratico_regiones.csv", regions)
+
+    plt = calibration.plt
+    plt.rcParams.update({"font.size": 10, "svg.fonttype": "none", "axes.spines.top": False, "axes.spines.right": False})
+    fig, axes = plt.subplots(2, 2, figsize=(11.5, 8.7))
+    fig.subplots_adjust(left=.085, right=.98, top=.90, bottom=.19, hspace=.42, wspace=.28)
+    grid = np.linspace(0, signal.max()*1.025, 300)
+    for ax in axes[0]:
+        ax.errorbar(signal, c, xerr=d["sd"][:, j], color=GRAY, fmt="o", ms=3.5, ls="none",
+                    capsize=2, label="Referencias · media ± DE de señal", zorder=3)
+        ax.axhline(0, color=GRAY, lw=.7)
+        ax.set(xlabel="Intensidad neta a 680 nm (u.a.)", ylabel="Concentración (µg/mL)")
+        for m in models:
+            x = grid[:, None] if m["model"]["kind"] == "lineal" else np.c_[grid, grid**2]
+            curve = calibration.predict(m["model"], m["params"], features=x)
+            ax.plot(grid, curve, color=m["color"], ls=m["style"], lw=1.5, label=m["label"])
+    axes[0, 0].set(title="A  Curvas ajustadas · rango completo", xlim=(-2, grid.max()), ylim=(-.5, 3.2))
+    axes[0, 1].set(title="B  Zona baja · mismos ajustes globales", xlim=(-1, signal[c <= .6].max()*1.12), ylim=(-.48, .78))
+    limit = max(3., max(float(m["prediction"].max()) for m in models))*1.04
+    axes[1, 0].plot([0, limit], [0, limit], color=GRAY, ls=":", lw=1)
+    for m in models:
+        axes[1, 0].plot(c[1:], m["prediction"], marker=m["marker"], color=m["color"], ls="none", ms=4.5)
+        axes[1, 1].plot(c[1:], 100*m["error"]/c[1:], marker=m["marker"], color=m["color"],
+                        ls=m["style"], ms=4, lw=.8)
+    axes[1, 0].set(title="C  Predicción al dejar fuera cada muestra", xlabel="Concentración de referencia (µg/mL)",
+                    ylabel="Concentración predicha (µg/mL)", xlim=(0, limit), ylim=(0, limit))
+    axes[1, 1].axhline(0, color=GRAY, lw=.8)
+    axes[1, 1].set(title="D  Error relativo con signo", xlabel="Concentración de referencia (µg/mL)",
+                    ylabel="Error relativo con signo (%)", xlim=(0, 3.12))
+    for ax in axes.flat:
+        ax.grid(axis="y", color=GRAY, alpha=.14)
+    handles, labels = axes[0, 0].get_legend_handles_labels()
+    fig.legend(handles, labels, loc="lower center", bbox_to_anchor=(.5, .07), ncol=3, frameon=False, fontsize=9)
+    fig.suptitle("90° / 680 nm · ajuste lineal frente a cuadrático", fontsize=14)
+    fig.text(.085, .018, "A/B: curvas ajustadas con los 20 patrones y el blanco. C/D: cada muestra se predice sin usarla en su ajuste.\n"
+             "Blanco de sesión compartido; la diagonal de C indica predicción ideal. Las líneas de D solo guían la lectura.\n"
+             "La ampliación B no es un nuevo ajuste local. Los errores son de validación interna.", fontsize=8.5)
+    save_figure(fig, "04_lineal_vs_cuadratico_curvas")
+
+    fig, axes = plt.subplots(1, 3, figsize=(13.6, 5.1))
+    fig.subplots_adjust(left=.07, right=.985, top=.77, bottom=.29, wspace=.32)
+    positions = np.arange(5)
+    for col, (field, title, ylabel) in enumerate([
+            ("MAPE_pct", "A  Error relativo absoluto medio", "MAPE (%)"),
+            ("RMSE_ug_mL", "B  Error en concentración · RMSE", "RMSE (µg/mL)"),
+            ("sesgo_ug_mL", "C  Sesgo medio con signo", "Predicción − referencia (µg/mL)")]):
+        ax = axes[col]
+        for offset, m in zip((-.19, .19), models):
+            values = [r[field] for r in m["regions"][1:]]
+            bars = ax.bar(positions+offset, values, width=.36, color=m["color"], label=m["label"],
+                          hatch="//" if m["model"]["kind"] == "lineal" else None, edgecolor="white", lw=.4)
+            ax.bar_label(bars, labels=[f"{v:.1f}" if field == "MAPE_pct" else f"{v:.3f}" for v in values],
+                         fontsize=7, padding=3, rotation=0 if field == "MAPE_pct" else 90)
+        ax.axhline(0, color=GRAY, lw=.7)
+        labels = [r["region_ug_mL"].replace(".", ",").replace("–", "–\n") for r in models[0]["regions"][1:]]
+        ax.set(title=title, ylabel=ylabel, xticks=positions, xticklabels=labels,
+               xlabel="Región de referencia (µg/mL)")
+        ax.tick_params(axis="x", labelsize=8)
+        ax.margins(y=.34)
+        ax.grid(axis="y", alpha=.14, color=GRAY)
+        ax.set_axisbelow(True)
+    handles, labels = axes[0].get_legend_handles_labels()
+    fig.legend(handles, labels, loc="upper center", bbox_to_anchor=(.5, .925), ncol=2, frameon=False)
+    fig.suptitle("Error por región · mismos 20 extractos · 90° / 680 nm", fontsize=13)
+    fig.text(.07, .035, "Cada región contiene cuatro referencias positivas. Errores al dejar fuera muestras completas; blanco de sesión compartido.\n"
+             "MAPE: media de los errores relativos absolutos. Sesgo positivo: sobreestimación; negativo: subestimación.\n"
+             "Las barras resumen errores observados; no son intervalos de incertidumbre.", fontsize=8.5)
+    save_figure(fig, "05_lineal_vs_cuadratico_regiones")
+    return regions
 
 
 def ao_figures(rows, coefficients, zero, first_signal):
@@ -246,6 +351,7 @@ def main():
     (OUT / "resumen.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
     residual_figure(c[1:], error, regions)
     ao_figures(rows, coefficients, zero, float(signal[1:].min()))
+    linear_comparison(c, data)
     print(json.dumps(summary, ensure_ascii=False, indent=2))
 
 

@@ -2,6 +2,8 @@
 
 **Análisis del 19 de noviembre de 2026.** Configuración seleccionada: **90° / 680 nm**, excitación a 430 nm; en cultivos, solamente **AO**. Se conservan los datos, los coeficientes elegidos y los resultados anteriores. Los cálculos y las figuras de esta revisión están en [resultados/dudas/](resultados/dudas/).
 
+**Ampliación del 20 de noviembre:** comparación gráfica del lineal y el cuadrático y errores de ambos por región, dentro de la sección 1.
+
 | Duda | Respuesta con los datos actuales |
 |---|---|
 | ¿Qué error tiene? | En extractos, RMSE interno **0,0938 µg/mL** y error relativo absoluto medio **8,68%**. Depende mucho de la región: el punto de 0,15 µg/mL tiene **+65,2%** de error. |
@@ -50,6 +52,42 @@ El MAE global es **0,0813 µg/mL** y el RMSRE global **16,04%**. Las regiones re
 **Cómo expresarlo en el paper:** «La validación interna dejando fuera muestras completas del modelo cuadrático de 680 nm a 90° produjo un RMSE de 0,0938 µg/mL y un error relativo absoluto medio de 8,68% sobre las 20 referencias positivas. El desempeño dependió de la concentración y mostró sesgos locales, con un error relativo de +65,2% en 0,15 µg/mL».
 
 **No escribir “el fluorómetro tiene un error de ±8,68%” ni “±0,0938 µg/mL”.** MAPE y RMSE no son intervalos de cobertura ni garantizan el error de una muestra nueva. Estas cifras corresponden a la calibración con extracto y sus referencias asignadas, bajo un blanco compartido. No incluyen una caracterización completa de la incertidumbre de la referencia, de preparaciones o días independientes, ni de la transferencia a cultivos. La búsqueda original de todos los candidatos tuvo un RMSE anidado de **0,0990 µg/mL** a 90°; es una evaluación distinta de la selección completa, no el error del cuadrático fijado presentado aquí.
+
+### Comparación gráfica del lineal y el cuadrático — 20 de noviembre
+
+**Sí se probó un ajuste lineal.** La siguiente comparación usa las mismas 20 referencias positivas, el mismo blanco y la misma señal neta de 680 nm. Ambos modelos se ajustan sobre todo el rango; la ampliación de la zona baja no es una recta ajustada solo a esa zona.
+
+![Comparación de curvas, predicciones internas y errores relativos](resultados/dudas/04_lineal_vs_cuadratico_curvas.png)
+
+[SVG editable de curvas y residuos](resultados/dudas/04_lineal_vs_cuadratico_curvas.svg) · [Predicciones y errores por muestra](resultados/dudas/lineal_vs_cuadratico_muestras.csv).
+
+- **A y B:** ajustes completos y referencias; las barras horizontales son la DE entre tres adquisiciones de intensidad. El lineal es la línea discontinua teal; el cuadrático, la línea continua azul petróleo. B muestra la misma comparación ampliada.
+- **C:** predicciones de muestras que no entraron en su propio ajuste, frente a su referencia. La diagonal corresponde a una predicción ideal.
+- **D:** errores relativos de esas predicciones. Un valor positivo significa sobreestimación y uno negativo, subestimación. Ninguno de los dos presenta residuos uniformemente dispersos alrededor de cero.
+
+![Comparación de errores por región de concentración](resultados/dudas/05_lineal_vs_cuadratico_regiones.png)
+
+[SVG editable de errores por región](resultados/dudas/05_lineal_vs_cuadratico_regiones.svg) · [Tabla completa sin redondear](resultados/dudas/lineal_vs_cuadratico_regiones.csv).
+
+| Región de referencia (µg/mL) | MAPE lineal (%) | MAPE cuadrático (%) | RMSE lineal (µg/mL) | RMSE cuadrático (µg/mL) |
+|---|---:|---:|---:|---:|
+| 0,15–0,60 | **11,49** | 22,08 | **0,0415** | 0,0576 |
+| 0,75–1,20 | **8,15** | 8,25 | **0,0787** | 0,0809 |
+| 1,35–1,80 | 13,49 | **5,69** | 0,2095 | **0,0890** |
+| 1,95–2,40 | **2,05** | 2,82 | **0,0513** | 0,0790 |
+| 2,55–3,00 | 7,60 | **4,55** | 0,2569 | **0,1413** |
+| **Global: 0,15–3,00** | **8,55** | 8,68 | 0,1552 | **0,0938** |
+
+Cada región contiene cuatro muestras; la fila global, veinte. El MAPE representa el error relativo **absoluto** medio y no permite ver su signo; por eso la figura también muestra el sesgo. El blanco no entra en los errores relativos.
+
+**Interpretación:**
+
+1. **El cuadrático no gana en todas las regiones.** En el grupo bajo, el MAPE pasa de 22,08% con el cuadrático a 11,49% con el lineal. En el primer patrón, de 0,15 µg/mL, los errores son +65,23% y −17,03%, respectivamente.
+2. **El lineal también tiene un patrón de sesgo claro.** Entre 1,35 y 1,80 µg/mL sobreestima en promedio +0,2065 µg/mL; entre 2,55 y 3,00 subestima −0,2175 µg/mL. Estas desviaciones aumentan su RMSE global.
+3. **La elección depende de la métrica y del uso.** Los MAPE globales son muy parecidos: 8,55% frente a 8,68%. La preferencia original por el cuadrático se apoya en el RMSE global menor, 0,0938 frente a 0,1552 µg/mL. Eso no acredita una mejor exactitud en todas las concentraciones.
+4. **La zona baja merece una calibración específica.** Este resultado justifica comparar una recta local y otras opciones sencillas con una serie baja más densa. Aquí no se ha ajustado ni validado una recta local, ni se han combinado tramos escogiendo retrospectivamente el mejor modelo de cada región.
+
+Se comprobaron de nuevo ambos ajustes y sus predicciones contra los resultados originales y mediante reajustes explícitos dejando fuera cada muestra. La elección de coeficientes se mantiene; no se volvió a buscar entre todos los modelos ni se alteraron datos o referencias.
 
 ### Qué límite de medición se puede declarar
 
