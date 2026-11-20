@@ -1,3 +1,5 @@
+> **Selección vigente desde el 20/11/2026: 90°/680 nm y modelo lineal.** Aplicación histórica del cuadrático a cultivos. [Abrir la versión actual](../../lineal_90_680/INFORME.md).
+
 # Aplicación de la calibración de extracto a cultivos AO y CV
 
 16 de noviembre de 2026. Alex elige 90°/680 nm y confirma dos especies en cultivo con células intactas, referencia de medio sin algas y las mismas condiciones instrumentales. No se conocen concentraciones de clorofila de estos cultivos.

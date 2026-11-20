@@ -1,4 +1,8 @@
-"""Extract-only calibration. Run with Python + numpy, scipy, matplotlib.
+"""Historical analysis: the active model since 2026-11-20 is the global linear
+90°/680 nm model in lineal_90_680/generar_entrega.py (relative to the paper root).
+This module preserves the previous analysis and is also reused for its readers.
+
+Extract-only calibration. Run with Python + numpy, scipy, matplotlib.
 
 Reads the ZIP and the external XLSX without changing either. Outputs are replaced
 only under resultados/. The three acquisitions are averaged before any split.
@@ -591,6 +595,7 @@ def report(c,data,analyses,channels):
              "3. scikit-learn. [Nested versus non-nested cross-validation](https://scikit-learn.org/stable/auto_examples/model_selection/plot_nested_cross_validation_iris.html). "
              "Justificación de separar selección y evaluación; el cálculo de este proyecto se implementa con NumPy/SciPy."]
     # Separate prose paragraphs while retaining contiguous Markdown table rows.
+    text.insert(0, "> **Análisis histórico.** Desde el 20/11/2026, la elección actual es el lineal 90°/680 nm. [Informe vigente](../lineal_90_680/INFORME.md).")
     (OUT/"informe.md").write_text("\n\n".join(text).replace("|\n\n|","|\n|"),encoding="utf-8")
 
 

@@ -1,8 +1,10 @@
+> **Entrega actual:** [informe lineal](../lineal_90_680/INFORME.md), [19 figuras](../lineal_90_680/FIGURAS_Y_PIES.md) y [aplicación exploratoria a caolín](../lineal_90_680/resultados/kaolin_90_muestras.csv). Los porcentajes de señal siguientes no cambian al elegir otra ecuación de concentración.
+
 # Extracto y caolín
 
 Comparación de 90° y 180° con LED azul de 430 nm, mismos ajustes y agitación antes de cada lectura, según confirma Alex. Seis preparaciones, tres adquisiciones por preparación y geometría. Clorofila nominal: 0 o 3 µg/mL; caolín nominal: 0, 1,25 g/L (b) o 2,50 g/L (a).
 
-**Para la señal principal elegiría 90° y 680 nm:** con blanco habitual, las mezclas conservan 101,5% y 101,4% de la respuesta del extracto puro. El caolín sin extracto produce un cambio neto de solo 0,07–0,35% de esa respuesta.
+**Selección confirmada por Alex: 90° y 680 nm, con modelo lineal de concentración desde el 20/11/2026.** Para la respuesta directa de este ensayo: con blanco habitual, las mezclas conservan 101,5% y 101,4% de la respuesta del extracto puro. El caolín sin extracto produce un cambio neto de solo 0,07–0,35% de esa respuesta.
 
 **180° ofrece información complementaria del fondo:** su señal neta de 680 nm conserva 77,0% y 69,2% con blanco fijo. La prueba exploratoria `S = I680 − 0,239205582·I810`, con coeficiente calculado solo del etanol, mejora esa conservación a 103,4% y 99,9%. No se considera una corrección de fluorescencia ya validada.
 

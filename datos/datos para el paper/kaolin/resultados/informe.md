@@ -1,3 +1,5 @@
+> **Selección vigente desde el 20/11/2026: 90°/680 nm y modelo lineal.** Las observaciones de señal con caolín se conservan; la selección actual de concentración es lineal. [Abrir la versión actual](../../lineal_90_680/INFORME.md).
+
 # Extracto con partículas de caolín: elección de geometría
 
 Análisis: 15 de noviembre de 2026. Los nombres de los dark indican adquisiciones del 10 de noviembre.

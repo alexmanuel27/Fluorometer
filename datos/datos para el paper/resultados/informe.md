@@ -1,3 +1,5 @@
+> **Selección vigente desde el 20/11/2026: 90°/680 nm y modelo lineal.** Búsqueda histórica de modelos del 15 de noviembre. [Abrir la versión actual](../lineal_90_680/INFORME.md).
+
 # Calibración de extractos para el paper
 
 Fecha del análisis: 15 de noviembre de 2026. Excitación: LED azul de 430 nm, según Alex.

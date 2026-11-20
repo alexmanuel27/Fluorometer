@@ -1,4 +1,8 @@
-"""Explain the frozen intensity-to-concentration conversion using AO only."""
+"""Historical analysis: the active model since 2026-11-20 is the global linear
+90°/680 nm model in lineal_90_680/generar_entrega.py (relative to the paper root).
+This module preserves the previous analysis and is also reused for its readers.
+
+Explain the frozen intensity-to-concentration conversion using AO only."""
 import csv
 import json
 import numpy as np

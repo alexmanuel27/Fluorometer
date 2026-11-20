@@ -1,32 +1,24 @@
-# Extractos: datos y análisis para el paper
+# Datos para el paper · selección actual lineal 90°/680 nm
 
-**Para preparar el manuscrito, empezar por [00_LEEME_DANIELA.md](00_LEEME_DANIELA.md):** figuras seleccionadas, pies en inglés, tablas, fuentes, reproducción y límites. Este índice conserva el detalle del análisis de extractos.
+**Actualizado el 20 de noviembre de 2026. Alex selecciona 90°, 680 nm y la recta global con intercepto libre.**
 
-El rango de referencia es **0,15–3 µg/mL**, más el **blanco medido a 0 µg/mL**. Las concentraciones se toman del Excel externo al ZIP, sin recalcularlas. Excitación indicada por Alex: LED azul de 430 nm. Se analizan por separado 90° y 180°.
+- [Empezar por la guía de Daniela](00_LEEME_DANIELA.md).
+- [Informe actual](lineal_90_680/INFORME.md), [19 figuras y pies en inglés](lineal_90_680/FIGURAS_Y_PIES.md) y [modelo elegido](lineal_90_680/resultados/modelo_seleccionado.json).
+- [Error por región](lineal_90_680/resultados/errores_regiones.csv), [extractos](lineal_90_680/resultados/extractos_muestras.csv) y [AO](lineal_90_680/resultados/AO_muestras.csv).
+- [Dudas resueltas y límites pendientes de experimento](dudas.md).
 
-- [Informe y ecuaciones](resultados/informe.md): selección de canales, comparación de modelos, validación por muestra y límites.
-- [Elección de configuración con toda la evidencia](resultados/decision_configuracion.md): integra diluciones, partículas, correcciones multicanal y revisión de Daniela.
-- [Figura principal](resultados/figuras/01_figura_principal.png) · [SVG editable](resultados/figuras/01_figura_principal.svg): respuesta roja y predicción de concentración con validación anidada.
-- [Residuos de la selección anidada](resultados/figuras/03_residuos.png) y [revisión comparando los mismos cuadráticos](resultados/figuras/05_revision_residuos.png): errores en µg/mL y relativos, sin eliminar muestras. La [síntesis](resultados/decision_configuracion.md) explica el patrón compartido y la sensibilidad a la muestra 19.
-- Los 18 canales: [90°](resultados/figuras/02_canales_90.png) · [180°](resultados/figuras/02_canales_180.png).
-- [Datos procesados](resultados/medias.csv), [referencias y blanco](resultados/concentraciones.csv), [modelos y parámetros](resultados/modelos.csv), [predicciones fuera del ajuste](resultados/predicciones.csv).
+La recta tiene RMSE LOO interno 0,1552 µg/mL y MAPE 8,55%; conserva sesgos locales y no es el mínimo de RMSE entre las funciones ensayadas. En AO da nueve medias equivalentes negativas, conservadas y explicadas sin atribuirles significado de concentración física negativa. CV permanece como histórico.
 
-Alex selecciona **90° y 680 nm** el 16 de noviembre de 2026; la calibración cuadrática de extracto sigue siendo una candidata empírica con residuos estructurados y errores relativos grandes en el extremo inferior. A 180°, el modelo sencillo elegido para concentración usa ln(I810/B810), una señal decreciente que no se identifica como fluorescencia. El informe distingue este resultado de la alternativa roja de 680 nm. Añadir canales no aporta una mejora convincente en la validación anidada.
+## Fuentes y ejecución
 
-## Reproducir
+20 referencias positivas de 0,15–3 µg/mL más blanco a 0, extraídas del Excel externo al ZIP; LED azul de 430 nm. Se conservan `dataCruda.zip`, `dataCruda/` y `reCalibration_20samples.xlsx` sin modificar. Ensayo con [caolín](kaolin/README.md) y [cultivo AO](algas/README.md).
 
-Ejecutar `python3 analizar_extractos.py` desde esta carpeta, en un entorno con NumPy, SciPy y Matplotlib. Se regeneran únicamente los resultados en `resultados/`. La interpretación del informe corresponde a esta serie concreta de noviembre; revisarla antes de sustituir las fuentes por otra serie.
+Para la entrega actual: `python lineal_90_680/generar_entrega.py`, con [requirements.txt](requirements.txt). Los resultados actuales quedan en `lineal_90_680/` y no sobrescriben salidas históricas.
 
-La comprobación posterior de fondo escalado, residuos y sensibilidad se reproduce con `python3 comparar_correccion_fondo.py`; reutiliza los ajustes originales y escribe sus tablas y `05_revision_residuos`, sin repetir la selección de modelos ni sustituir las salidas anteriores.
+## Análisis anteriores, conservados como antecedentes
 
-Se conservan sin modificar `dataCruda.zip`, `dataCruda/` y `reCalibration_20samples.xlsx`. Las huellas de las fuentes y las versiones usadas están en [trazabilidad](resultados/trazabilidad.json).
+- [Búsqueda original de funciones y ecuaciones](resultados/informe.md), [elección previa de configuración](resultados/decision_configuracion.md), [modelos ensayados](resultados/modelos.csv) y [predicciones originales](resultados/predicciones.csv).
+- [Comparación gráfica lineal/cuadrático del 20 de noviembre](resultados/dudas/04_lineal_vs_cuadratico_curvas.png) y [errores por región de ambos](resultados/dudas/05_lineal_vs_cuadratico_regiones.png). Sus colores históricos no sustituyen la convención de la nueva colección.
+- [Guía del 16 de noviembre](00_LEEME_DANIELA_2026-11-16_HISTORICO.md). La anterior aplicación cuadrática de AO está en `algas/resultados/`; sus coeficientes y salidas no son los elegidos ahora.
 
-La validación es interna y comparte el blanco de sesión. No valida nuevas sesiones o extractos, selectividad química ni límites de detección.
-
-## Ensayo posterior con caolín
-
-El [análisis de extracto con partículas](kaolin/README.md) compara las dos geometrías con controles de etanol, extracto puro y dos cargas nominales de caolín. Favorece 90°/680 nm como respuesta directa estable; 180° aporta información del fondo y permite probar una corrección multicanal exploratoria. Sus resultados y figuras están separados del análisis de diluciones puras.
-
-## Cultivos de algas
-
-La [aplicación a cultivos](algas/README.md) mantiene los coeficientes de 90°/680 nm y utiliza el medio sin algas como blanco de sesión. **El foco actual es solo AO**; CV se conserva como histórico. La [figura AO para el paper](algas/resultados/figuras/03_AO_paper.png) y la [tabla AO](algas/resultados/predicciones_AO.csv) recogen diez niveles. Sin concentraciones independientes de clorofila, se informan equivalentes de extracto; nueve de las diez salidas AO quedan por debajo de 0,15 µg/mL.
+`analizar_extractos.py`, `comparar_correccion_fondo.py`, `resolver_dudas.py` y los generadores antiguos de algas reproducen sus versiones históricas. No usarlos para sustituir el modelo actual. La validación sigue siendo interna; LOD/LOQ y exactitud absoluta en cultivos no están establecidos. El firmware no cambia.

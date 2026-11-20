@@ -1,4 +1,8 @@
-"""Apply the frozen extract calibration to the two intact-culture series.
+"""Historical analysis: the active model since 2026-11-20 is the global linear
+90°/680 nm model in lineal_90_680/generar_entrega.py (relative to the paper root).
+This module preserves the previous analysis and is also reused for its readers.
+
+Apply the frozen extract calibration to the two intact-culture series.
 
 No fitting or clipping. Read the original ZIP and relative-quantity table;
 replace only outputs under resultados/. Python + NumPy/SciPy/Matplotlib.
@@ -265,6 +269,7 @@ def report(rows, metadata):
               "El archivo fuente llamado `cultivos.xlsx` es en realidad una tabla TSV con comas decimales; se lee sin modificarlo. "
               "Los 136 CSV del ZIP coinciden con la carpeta extraída. Se modelan solo las 60 adquisiciones a 90°; "
               "no se reabre la comparación con 180° ni se modifican calibraciones, datos fuente o firmware."]
+    lines.insert(0, "> **Aplicación cuadrática histórica.** La selección actual es lineal 90°/680 nm. [Informe vigente](../../lineal_90_680/INFORME.md).")
     (OUT / "informe.md").write_text("\n\n".join(lines).replace("|\n\n|", "|\n|"), encoding="utf-8")
 
 

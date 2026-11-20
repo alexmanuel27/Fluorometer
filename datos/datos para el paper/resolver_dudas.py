@@ -1,4 +1,8 @@
-"""Check the three paper questions without replacing previous analysis outputs.
+"""Historical analysis: the active model since 2026-11-20 is the global linear
+90°/680 nm model in lineal_90_680/generar_entrega.py (relative to the paper root).
+This module preserves the previous analysis and is also reused for its readers.
+
+Check the three paper questions without replacing previous analysis outputs.
 
 Run with the environment in requirements.txt. Only resultados/dudas/ is written.
 The zero-intercept quadratic is a sensitivity check, not a replacement model.

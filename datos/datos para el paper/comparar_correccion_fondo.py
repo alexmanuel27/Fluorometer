@@ -1,4 +1,8 @@
-"""Exploratory LOO check of blank-scaled 680 nm proxies in pure extracts.
+"""Historical analysis: the active model since 2026-11-20 is the global linear
+90°/680 nm model in lineal_90_680/generar_entrega.py (relative to the paper root).
+This module preserves the previous analysis and is also reused for its readers.
+
+Exploratory LOO check of blank-scaled 680 nm proxies in pure extracts.
 
 Reuses the original sample splits and fit functions. No kaolin mixtures enter
 the fits. The two auxiliary bands were reviewed after the kaolin experiment;

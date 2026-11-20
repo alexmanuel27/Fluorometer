@@ -1,3 +1,5 @@
+> **Selección vigente desde el 20/11/2026: 90°/680 nm y modelo lineal.** Síntesis histórica de geometría y comparación de funciones. [Abrir la versión actual](../lineal_90_680/INFORME.md).
+
 # Elección de configuración con toda la evidencia disponible
 
 15 de noviembre de 2026. Evaluación basada exclusivamente en las diluciones de extracto, el ensayo con caolín, los controles y la revisión del código aportado.

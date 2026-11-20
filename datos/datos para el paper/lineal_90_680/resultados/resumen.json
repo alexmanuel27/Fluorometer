@@ -1,0 +1,57 @@
+{
+  "fecha": "2026-11-20",
+  "modelo": {
+    "fecha_decision": "2026-11-20",
+    "geometria": "90°",
+    "excitacion_nm": 430,
+    "canal_nm": 680,
+    "modelo": "lineal_680",
+    "parametros": [
+      -0.4360132754746229,
+      0.023914842024960126
+    ],
+    "orden_parametros": [
+      "intercepto",
+      "pendiente"
+    ],
+    "variable": "I680 − blanco de sesión",
+    "unidad_intensidad": "u.a.",
+    "unidad_concentracion": "µg/mL",
+    "blanco_calibracion": 0.8821683333333337,
+    "criterio": "elección explícita de Alex; recta global, no mínimo RMSE ni recta local",
+    "intercepto_libre": true,
+    "recorte_negativos": false,
+    "rango_patrones_positivos": [
+      0.15,
+      3.0
+    ],
+    "coeficientes_normalizados_u": [
+      -0.4360132754746229,
+      2.3914842024960126
+    ],
+    "error_maximo_redondeo_presentacion_ug_mL": 2.7547462289057023e-07
+  },
+  "error_global": {
+    "region": "0.15–3.00",
+    "n": 20,
+    "RMSE_ug_mL": 0.15522133980033398,
+    "MAE_ug_mL": 0.1170170793812487,
+    "sesgo_ug_mL": 0.020257299278316508,
+    "MAPE_pct": 8.553927680444257,
+    "RMSRE_pct": 9.88343791468141,
+    "max_error_absoluto_ug_mL": 0.36309365043489716,
+    "max_error_relativo_absoluto_pct": 17.63344090459508
+  },
+  "blanco_AO": 0.4940142666666668,
+  "AO_medias_negativas": 9,
+  "AO10_C_equiv": 0.12685229121222952,
+  "incertidumbre": "SD de adquisiciones con parámetros/blanco fijos; no incertidumbre total",
+  "fuentes_sha256": {
+    "dataCruda.zip": "981d52ae63a9cf60eec06e8fe8ff5d5e8ff7533b25e69da9492998dbc96e9eaa",
+    "reCalibration_20samples.xlsx": "258d512008cda1e6f12a1365a2bf863e8b0f6edb2917dc01096c0da25a05c44c",
+    "resultados/modelos.csv": "75e3052129a90f2635261fba14908e86e1261f85871464c8c329a4284f234f5d",
+    "algas/cultivos.zip": "ae2249e0075f191d411ee2c9e2b2dca172f9daa2ee9e5e55ec31fa7bb661bb39",
+    "algas/cultivos.xlsx": "3ed1ad1a503eb89e461aeec369c590bd985671fe0421a9e69a59e9fdd2b66a8b",
+    "kaolin/kaolin+extracto.zip": "f1bfe2e0889cfc1cbb44499ab507f9c92d4cd330fc810293cf7118023b244b01"
+  }
+}

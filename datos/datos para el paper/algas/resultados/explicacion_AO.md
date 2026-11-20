@@ -1,3 +1,5 @@
+> **Selección vigente desde el 20/11/2026: 90°/680 nm y modelo lineal.** Explicación histórica de la conversión cuadrática AO. [Abrir la versión actual](../../lineal_90_680/INFORME.md).
+
 # Cómo leer el resultado del modelo: solo AO
 
 Desde el 16 de noviembre de 2026, Alex limita el trabajo posterior a AO. Se mantienen los resultados AO/CV anteriores como histórico. No se modifican coeficientes ni lecturas.

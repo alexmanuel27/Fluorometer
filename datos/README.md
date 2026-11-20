@@ -1,17 +1,17 @@
 # Datos y paper: empezar aquí
 
-**Índice actualizado el 16 de noviembre de 2026.** Los originales y análisis se conservan en sus rutas para mantener la trazabilidad y la ejecución de los generadores.
+**Índice actualizado el 20 de noviembre de 2026.** Los originales y análisis se conservan en sus rutas para mantener la trazabilidad y la ejecución de los generadores.
 
 ## Para Daniela: entrega de noviembre
 
 **Abrir [00_LEEME_DANIELA.md](datos%20para%20el%20paper/00_LEEME_DANIELA.md).** Contiene la selección de figuras PNG/SVG, pies propuestos en inglés, tablas, fuentes y límites para redactar el paper.
 
-- [ZIP de entrega del 16 de noviembre](Paquete_Daniela_noviembre_2026-11-16.zip): copia portátil del material de noviembre. No se ha enviado a Daniela.
+- [ZIP actual: lineal 90°/680 nm, 20 de noviembre](Paquete_Daniela_lineal_90_680_2026-11-20.zip): copia portátil del material de noviembre. No se ha enviado a Daniela.
 - [Extractos y calibración](datos%20para%20el%20paper/README.md): 20 niveles de 0,15–3 µg/mL y blanco a cero; comparación de 90°/180° y revisión de residuos.
 - [Caolín](datos%20para%20el%20paper/kaolin/README.md): extracto, etanol y dos cargas de partículas; respuesta relativa y correcciones exploratorias.
 - [AO](datos%20para%20el%20paper/algas/README.md): cultivo intacto, medio sin algas y aplicación de la curva de extracto. CV permanece como histórico.
 
-Alex elige **90° y 680 nm** el 16 de noviembre. Esa elección no convierte la calibración en una validación externa: conserva errores sistemáticos bajos y las concentraciones de AO son equivalentes referidos al extracto vegetal. La guía identifica los resultados que pueden sostenerse y los que siguen siendo exploratorios.
+Alex elige **90° y 680 nm** el 16 de noviembre y confirma el **modelo lineal global con intercepto libre** el 20 de noviembre. La colección actual tiene 19 figuras PNG/SVG y pies en inglés. Esa elección no convierte la calibración en una validación externa: conserva sesgos locales y las concentraciones de AO son equivalentes exploratorios referidos al extracto vegetal. La guía identifica los resultados que pueden sostenerse y los que siguen siendo exploratorios.
 
 El primer [análisis de geometrías del 6 de noviembre](analisis_geometrias_2026-11-06/README.md) usa la misma serie de 20 extractos. Se conserva como antecedente y no debe contarse como un conjunto experimental independiente. Su protocolo propuesto no acredita por sí solo que se ejecutaran todas las pruebas planeadas; el ensayo real de caolín se documenta en la entrega actual.
 
@@ -24,7 +24,7 @@ Se conserva íntegra la calibración con 85 registros y transferencia fija a nue
 | [articulo.md](articulo.md) | Guía del manuscrito de esa versión, con métodos, seis figuras y pies |
 | [Resumen para Daniela](RESUMEN_PARA_DANIELA.md) | Decisión 85 → 9 y alcance fechado en octubre |
 | [Análisis reproducible](articulo_85_a_9/README.md) | Coeficientes, CV85, transferencia, CSV y figuras |
-| [Paquete del 18 de octubre](Paquete_Daniela_85_a_9_2026-10-18.zip) | Copia para compartir de esa etapa; distinta de la entrega de noviembre |
+| Paquete del 18 de octubre (archivo histórico no presente en esta copia) | Copia para compartir de esa etapa; distinta de la entrega de noviembre |
 | [Bibliografía previamente descargada](bibliografia/README.md) | Documentos y notas de comparabilidad |
 
 Originales de octubre, sin editar:

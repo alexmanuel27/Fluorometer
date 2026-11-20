@@ -4,7 +4,7 @@ Prototipo de instrumento óptico para estimar clorofila a en extractos, con un *
 
 ## Estado del proyecto
 
-**Para Daniela y el paper:** empezar por la [guía de entrega de noviembre](datos/datos%20para%20el%20paper/00_LEEME_DANIELA.md). Reúne las figuras seleccionadas, sus pies, las tablas, las fuentes y la reproducción del análisis. Configuración elegida por Alex: **90°/680 nm**; cultivo seleccionado: **AO**.
+**Para Daniela y el paper:** empezar por la [guía de entrega de noviembre](datos/datos%20para%20el%20paper/00_LEEME_DANIELA.md). Reúne las figuras seleccionadas, sus pies, las tablas, las fuentes y la reproducción del análisis. Configuración elegida por Alex: **90°/680 nm y modelo lineal global** (20/11/2026); cultivo seleccionado: **AO**.
 
 El firmware y las etapas de investigación deben distinguirse:
 
@@ -14,7 +14,7 @@ El firmware y las etapas de investigación deben distinguirse:
 | Investigación de octubre: 85 → 9 | Calibración con 85 registros y transferencia fija a nueve diluciones, usando el blanco de sesión |
 | Función de esa etapa | Chl(a) = −0,0621128959 + 2,8428103277 × ln(B645 / media I645) |
 | Investigación de noviembre | 20 niveles de extracto a 90°/180°, controles con caolín y aplicación de la calibración de 680 nm a AO |
-| Decisión del 16 de noviembre | 90°/680 nm; AO se informa en equivalentes de clorofila referidos al extracto vegetal, sin validación independiente de concentración |
+| Decisión actual del 20 de noviembre | 90°/680 nm y recta global con intercepto libre; AO conserva equivalentes exploratorios y respuesta medida, sin validación absoluta |
 | Funciones de investigación en el equipo | No instaladas: el firmware conserva la fórmula inicial, aunque se actualicen otras funciones |
 
 Las once muestras quedan fuera del análisis 85 → 9 de octubre. Los documentos y paquetes de cada etapa conservan su fecha y alcance; no mezclar sus ecuaciones, muestras o métricas.
@@ -85,9 +85,9 @@ Los factores CALIBRATION_435 y CALIBRATION_645 de la fuente escalan esos dos can
 
 La [entrega para Daniela](datos/datos%20para%20el%20paper/00_LEEME_DANIELA.md) contiene la selección de figuras PNG/SVG, pies en inglés, tablas y las limitaciones que deben acompañarlas. Los generadores y fuentes permanecen juntos en [datos para el paper](datos/datos%20para%20el%20paper/README.md).
 
-La comparación de extractos y controles con caolín apoya la elección de **90°/680 nm** para este estudio. La calibración cuadrática conserva residuos estructurados y un sesgo importante en el extremo inferior. La aplicación a AO es una estimación referida al extracto vegetal, sin concentración independiente de referencia. Una futura calibración más densa a bajas concentraciones está propuesta, no ejecutada.
+La comparación de extractos y controles con caolín apoya la elección de **90°/680 nm** para este estudio. Alex selecciona el **modelo lineal global** el 20 de noviembre: RMSE interno 0,1552 µg/mL y MAPE 8,55%, con residuos estructurados. El cuadrático queda como comparación histórica. La aplicación a AO es una estimación referida al extracto vegetal, sin concentración independiente de referencia. Una futura calibración más densa a bajas concentraciones está propuesta, no ejecutada.
 
-El [paquete de noviembre para compartir](datos/Paquete_Daniela_noviembre_2026-11-16.zip) es una instantánea de esta entrega con fuentes, tablas, figuras y código. No se ha enviado automáticamente a Daniela.
+El [paquete de noviembre para compartir](datos/Paquete_Daniela_lineal_90_680_2026-11-20.zip) es una instantánea de esta entrega con fuentes, tablas, figuras y código. No se ha enviado automáticamente a Daniela.
 
 ## Investigación de octubre: calibración 85 → 9
 
@@ -114,7 +114,7 @@ Materiales de la etapa de octubre:
 - [Resumen de octubre](datos/RESUMEN_PARA_DANIELA.md).
 - [Resultados, figuras PNG/SVG y reproducción](datos/articulo_85_a_9/README.md).
 - [Índice de datos e historial](datos/README.md).
-- [Paquete listo para compartir con Daniela](datos/Paquete_Daniela_85_a_9_2026-10-18.zip).
+- Paquete listo para compartir con Daniela (archivo histórico no presente en esta copia).
 - [Bibliografía y documentos descargados](datos/bibliografia/README.md).
 
 El paquete contiene los dos Excel utilizados y el análisis principal; excluye el conjunto de once y sus análisis. Los originales permanecen intactos y se verifican por SHA-256.

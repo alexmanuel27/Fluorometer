@@ -1,3 +1,5 @@
+> **Selección vigente desde el 20/11/2026: 90°/680 nm y modelo lineal.** El contexto bibliográfico se conserva; las conversiones cuadráticas descritas son históricas. [Abrir la versión actual](../../lineal_90_680/INFORME.md).
+
 # Cómo expresar la relación entre cultivo in vivo y clorofila extraída
 
 Consulta bibliográfica del 16 de noviembre de 2026, a petición de Alex. Foco experimental: AO, 90° y canal de 680 nm. Esta nota no ajusta una ecuación ni modifica predicciones.

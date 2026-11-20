@@ -1,0 +1,31 @@
+{
+  "fecha_decision": "2026-11-20",
+  "geometria": "90°",
+  "excitacion_nm": 430,
+  "canal_nm": 680,
+  "modelo": "lineal_680",
+  "parametros": [
+    -0.4360132754746229,
+    0.023914842024960126
+  ],
+  "orden_parametros": [
+    "intercepto",
+    "pendiente"
+  ],
+  "variable": "I680 − blanco de sesión",
+  "unidad_intensidad": "u.a.",
+  "unidad_concentracion": "µg/mL",
+  "blanco_calibracion": 0.8821683333333337,
+  "criterio": "elección explícita de Alex; recta global, no mínimo RMSE ni recta local",
+  "intercepto_libre": true,
+  "recorte_negativos": false,
+  "rango_patrones_positivos": [
+    0.15,
+    3.0
+  ],
+  "coeficientes_normalizados_u": [
+    -0.4360132754746229,
+    2.3914842024960126
+  ],
+  "error_maximo_redondeo_presentacion_ug_mL": 2.7547462289057023e-07
+}

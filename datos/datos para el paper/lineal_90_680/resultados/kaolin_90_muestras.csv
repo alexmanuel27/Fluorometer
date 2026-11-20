@@ -1,0 +1,7 @@
+﻿preparacion,kaolin_nominal_g_L,clorofila_nominal_ug_mL,delta_I680,DE_I680,C_equiv_lineal,DE_C_lecturas,estado
+blanco_etanol,0.0,0.0,0.0,0.4278286738251658,-0.4360132754746229,0.010231455148277033,aplicación exploratoria entre series; no recuperación validada
+extracto_puro,0.0,3.0,100.74360366666667,0.4007759258317939,1.9732540912389045,0.009584492953674487,aplicación exploratoria entre series; no recuperación validada
+kaolin_b,1.25,0.0,0.07057366666666653,0.12223659899282764,-0.43432551738516734,0.0029232689545818733,aplicación exploratoria entre series; no recuperación validada
+kaolin_a,2.5,0.0,0.3528669999999998,0.0,-0.4275745169138013,0.0,aplicación exploratoria entre series; no recuperación validada
+extracto+kaolin_b,1.25,3.0,102.296211,0.4614363686934534,2.0103844503423653,0.011035177861875195,aplicación exploratoria entre series; no recuperación validada
+extracto+kaolin_a,2.5,3.0,102.15507233333335,0.16171200419367326,2.007009141425419,0.0038673170338313855,aplicación exploratoria entre series; no recuperación validada

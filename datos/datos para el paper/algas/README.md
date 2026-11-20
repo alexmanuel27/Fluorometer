@@ -1,24 +1,16 @@
-# Cultivos AO y CV: aplicación del modelo 90°/680 nm
+# AO · aplicación actual del modelo lineal 90°/680 nm
 
-**Foco actual: solo AO**, por indicación de Alex el 16 de noviembre de 2026. [Explicación de la conversión](resultados/explicacion_AO.md) · [Figura solo AO con ejes lineales](resultados/figuras/02_explicacion_modelo_AO.png) · [Tabla solo AO](resultados/predicciones_AO.csv). Los resultados conjuntos siguientes se conservan como histórico.
+**Actualizado el 20 de noviembre de 2026. Solo AO; CV queda como histórico.** Alex elige la recta global de extracto, con intercepto libre y resta del medio de la sesión de cultivo.
 
-**Figura recomendada para el manuscrito:** [AO, PNG](resultados/figuras/03_AO_paper.png) · [SVG editable](resultados/figuras/03_AO_paper.svg). Muestra la señal medida y los equivalentes estimados sin incluir CV. El pie propuesto y el contexto están en la [guía para Daniela](../00_LEEME_DANIELA.md). Se regenera con `python3 mostrar_modelo_AO.py` a partir de las predicciones guardadas.
+- [Informe actual](../lineal_90_680/INFORME.md) y [modelo seleccionado](../lineal_90_680/resultados/modelo_seleccionado.json).
+- [Figura principal: respuesta medida AO](../lineal_90_680/resultados/figuras/F3_AO_respuesta_medida.png) · [SVG](../lineal_90_680/resultados/figuras/F3_AO_respuesta_medida.svg).
+- [Aplicación lineal con signo y negativos](../lineal_90_680/resultados/figuras/S06_AO_conversion_lineal.png) · [tabla actual de AO](../lineal_90_680/resultados/AO_muestras.csv).
+- [19 figuras y pies](../lineal_90_680/FIGURAS_Y_PIES.md) y [guía de Daniela](../00_LEEME_DANIELA.md).
 
-[Relación cultivo in vivo–clorofila extraída: bibliografía y forma de expresarla](resultados/relacion_in_vivo_extracto.md). Distingue la fluorescencia por unidad de clorofila del cultivo de la aplicación numérica de la curva de extracto de hoja.
+El medio sin algas se midió con el mismo LED azul y ajustes, según Alex. AO y CV son especies en cultivo con células intactas; no se conoce la concentración absoluta de clorofila. La tabla de cantidades relativas se usa tal como está registrada, sin convertirla en concentración de clorofila.
 
-La calibración con pigmento de origen vegetal y la lectura posterior de células intactas tienen precedentes bibliográficos. Las salidas actuales pueden informarse como **concentración equivalente de clorofila a estimada por fluorescencia in vivo, mediante calibración con extracto vegetal**. Extraer AO no es un requisito para presentar esas estimaciones; permitiría validar su exactitud en el cultivo.
+**Con la recta elegida, nueve de las diez medias AO producen equivalentes negativos y AO10 da 0,126852 µg/mL equivalentes.** Todas las señales netas medias son positivas y menores que la del primer patrón positivo. No recortar salidas ni interpretar su signo como concentración física negativa; tampoco afirmar ausencia de clorofila, no detección o <LOQ. F3 muestra la respuesta medida; S06 documenta la conversión exploratoria.
 
-Alex selecciona 90° y 680 nm el 16 de noviembre de 2026. Confirma que AO y CV son dos especies en cultivo con células intactas; las referencias son medio sin algas medido en las mismas condiciones que la calibración. No se conoce la concentración de clorofila de los cultivos.
+Para regenerar lo actual, ejecutar `python lineal_90_680/generar_entrega.py` desde la carpeta superior. `aplicar_modelo_90_680.py`, `mostrar_modelo_AO.py` y los archivos de `resultados/` conservan la aplicación cuadrática anterior como histórico; no son el modelo actual. Las fuentes `cultivos.zip`, sus CSV extraídos y `cultivos.xlsx` (realmente TSV) permanecen sin editar.
 
-Se aplica el cuadrático de extracto con sus coeficientes fijados y el blanco del medio actual. La aplicación literal con el blanco de calibración se conserva como sensibilidad. **Las salidas se expresan como concentraciones equivalentes de extracto, sin validación de concentración en cultivos.**
-
-- [Informe y resultados por nivel](resultados/informe.md).
-- Figura conjunta histórica: [AO/CV](resultados/figuras/01_aplicacion_modelo_90_680.png) · [SVG editable](resultados/figuras/01_aplicacion_modelo_90_680.svg).
-- [Predicciones de las 20 muestras](resultados/predicciones.csv) y [60 adquisiciones a 680 nm](resultados/adquisiciones_680.csv).
-- [Medias de los 18 canales](resultados/medias_18_canales.csv), [referencias](resultados/referencias.csv) y [trazabilidad y resumen](resultados/resumen.json).
-
-AO10 y CV10 dan aproximadamente 0,229 y 0,0237 µg/mL equivalentes. Diecinueve de las veinte salidas quedan por debajo del menor nivel de referencia de 0,15 µg/mL. La señal de AO10 roza la del extracto calibrado más bajo; las demás están más alejadas por debajo. Las salidas negativas se conservan, sin atribuirles significado de concentración física negativa.
-
-La tabla denominada `cultivos.xlsx` es realmente texto separado por tabulaciones. Se conserva intacta y se leen sus cantidades relativas tal como están registradas. Los 136 CSV del ZIP coinciden con los extraídos; se aplicó el modelo únicamente a 90°. Las referencias duplicadas entre AO y CV se consideran compartidas.
-
-Ejecutar `python3 aplicar_modelo_90_680.py` en un entorno con NumPy, SciPy y Matplotlib. Solo se regeneran archivos en `resultados/`. No se ajustan modelos nuevos, no se modifica el firmware y no se aplica corrección de filtro interno.
+La [bibliografía in vivo–extracto](resultados/relacion_in_vivo_extracto.md) se conserva como contexto. Validar la exactitud de las concentraciones AO requeriría una referencia independiente; actualmente se informan señales y equivalentes exploratorios. El firmware no cambia.
